@@ -26,6 +26,7 @@ SECRET_KEY = 'django-insecure-@3092qn97d$5)-4r0sxw16f-_m_#y*kiu=7-7i!nozkh$m#6xu
 DEBUG = True
 
 ALLOWED_HOSTS = []
+SITE_ID = 1
 
 
 # Application definition
@@ -37,6 +38,11 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'django.contrib.sites',
+    'django.contrib.flatpages',
+
+    ##my app
+    'main',
 ]
 
 MIDDLEWARE = [
@@ -54,7 +60,9 @@ ROOT_URLCONF = 'ecommerce.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [
+            './templates/'
+        ],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
