@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+
+{% block title %}
+Welcome to the Best ecommerce store!
+{% endblock %}
+
+{% block content %}
+
+<h1>Начальная страница</h1>
+<h2>Список страниц:</h2>
+<ul>
+    {% for page in pages %}
+    <li><a href="{{ page.url }}">{{ page.title }}</a></li>
+    {% endfor %}
+</ul>
+
+{% endblock %}
+
+
