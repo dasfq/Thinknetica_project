@@ -34,7 +34,7 @@ class CustomUser(AbstractBaseUser, PermissionsMixin):
 
 class Category(models.Model):
     name = models.CharField(verbose_name='Название категории', max_length=15)
-    slug = models.SlugField(blank=True, null=True)
+    slug = models.SlugField(blank=True, null=True, unique=True)
 
     class Meta:
         verbose_name = "Категория"
