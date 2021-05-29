@@ -1,9 +1,10 @@
 from django.db import models
-from django.contrib.auth.models import AbstractUser
+from django.contrib.auth.base_user import AbstractBaseUser
+from django.contrib.auth.models import PermissionsMixin
 from .managers import CustomUserManager
 from django.template.defaultfilters import slugify
 
-class CustomUser(AbstractUser):
+class CustomUser(AbstractBaseUser, PermissionsMixin):
     email = models.EmailField(verbose_name="E-mail", unique=True)
     first_name = models.CharField(verbose_name='Имя', max_length=30, blank=True)
     last_name = models.CharField(verbose_name="Фамилия", max_length=30, blank=True)
@@ -38,7 +39,7 @@ class Category(models.Model):
     class Meta:
         verbose_name = "Категория"
         verbose_name_plural = "Категории"
-        ordering = ('name')
+        ordering = ('name',)
 
     def __str__(self):
         return str(self.name)
@@ -55,7 +56,7 @@ class Tag(models.Model):
         verbose_name_plural = "Теги"
 
 class Seller(models.Model):
-    user = models.OneToOneField(CustomUser, on_delete=models.CASCADE)
+    user = models.OneToOneField(CustomUser, related_name='sellers', on_delete=models.CASCADE)
 
     @property
     def ticket_qty(self):
