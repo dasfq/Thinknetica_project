@@ -1,2 +1,5 @@
 /.idea/
 /venv395/
+/ecommerce/.idea/
+/ecommerce/ecommerce/static/
+/ecommerce/ecommerce/db.sqlite3

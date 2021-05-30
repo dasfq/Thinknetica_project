@@ -22,6 +22,7 @@ from django.contrib.flatpages.views import flatpage
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', IndexView, name='index'),
+    path('ckeditor/', include('ckeditor_uploader.urls')),
 ]
 
 urlpatterns += [
