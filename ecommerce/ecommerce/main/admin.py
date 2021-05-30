@@ -13,3 +13,6 @@ class FlatPageAdmin(FlatPageAdmin):
 
 admin.site.unregister(FlatPage)
 admin.site.register(FlatPage, FlatPageAdmin)
+
+
+# Register your models here.
