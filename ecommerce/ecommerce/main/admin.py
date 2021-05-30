@@ -39,4 +39,3 @@ admin.site.register(CustomUser, CustomUserAdmin)
 admin.site.register(Seller, SellerAdmin)
 admin.site.register(Tag, TagAdmin)
 admin.site.register(Ticket, TicketAdmin)
-
