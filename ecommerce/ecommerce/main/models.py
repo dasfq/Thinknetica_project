@@ -81,6 +81,7 @@ class Ticket(models.Model):
     date_created = models.DateTimeField(auto_now_add=True)
     date_modified = models.DateTimeField()
     tag = models.ManyToManyField(Tag, verbose_name="Тег", related_name='tickets')
+    price = models.PositiveIntegerField(verbose_name="Цена", default=1)
 
     class Meta:
         verbose_name = 'Объявление'

@@ -30,7 +30,7 @@ class TagAdmin(admin.ModelAdmin):
     pass
 
 class TicketAdmin(admin.ModelAdmin):
-    list_display = ('date_modified', 'name', 'seller',)
+    list_display = ('date_modified', 'name', 'seller', 'price',)
 
 admin.site.unregister(FlatPage)
 admin.site.register(FlatPage, FlatPageAdmin)
