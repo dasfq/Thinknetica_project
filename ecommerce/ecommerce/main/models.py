@@ -138,3 +138,23 @@ class TicketItem(BaseTicket):
         verbose_name = 'Объявление - вещи'
         verbose_name_plural = 'Объявления - вещи'
 
+
+class TicketServiceArchive(TicketService):
+
+    class Meta:
+        verbose_name_plural = 'Архив - Услуги'
+        proxy = True
+
+
+class TicketCarArchive(TicketCar):
+
+    class Meta:
+        verbose_name_plural = 'Архив - Авто '
+        proxy = True
+
+
+class TicketItemArchive(TicketItem):
+
+    class Meta:
+        verbose_name_plural = 'Архив - Вещи'
+        proxy = True
