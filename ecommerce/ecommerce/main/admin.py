@@ -4,7 +4,7 @@ from django import forms
 from django.contrib.flatpages.models import FlatPage
 from django.contrib.flatpages.admin import FlatPageAdmin
 from ckeditor.widgets import CKEditorWidget
-from .models import Category, CustomUser, Seller, Tag, Ticket
+from .models import Category, CustomUser, Seller, Tag, TicketCar, TicketItem, TicketService
 
 
 class FlatPageAdmin(FlatPageAdmin):
@@ -32,11 +32,22 @@ class TagAdmin(admin.ModelAdmin):
 class TicketAdmin(admin.ModelAdmin):
     list_display = ('date_modified', 'name', 'seller', 'price',)
 
+class TicketCarAdmin(TicketAdmin):
+    pass
+
+class TicketServiceAdmin(TicketAdmin):
+    pass
+
+class TicketItemAdmin(TicketAdmin):
+    pass
+
 admin.site.unregister(FlatPage)
 admin.site.register(FlatPage, FlatPageAdmin)
 admin.site.register(Category, CategoryAdmin)
 admin.site.register(CustomUser, CustomUserAdmin)
 admin.site.register(Seller, SellerAdmin)
 admin.site.register(Tag, TagAdmin)
-admin.site.register(Ticket, TicketAdmin)
+admin.site.register(TicketCar, TicketCarAdmin)
+admin.site.register(TicketItem, TicketItemAdmin)
+admin.site.register(TicketService, TicketServiceAdmin)
 

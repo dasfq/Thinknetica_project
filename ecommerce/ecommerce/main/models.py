@@ -3,6 +3,7 @@ from django.contrib.auth.base_user import AbstractBaseUser
 from django.contrib.auth.models import PermissionsMixin
 from .managers import CustomUserManager
 from django.template.defaultfilters import slugify
+import uuid
 
 class CustomUser(AbstractBaseUser, PermissionsMixin):
     email = models.EmailField(verbose_name="E-mail", unique=True)
@@ -33,6 +34,12 @@ class CustomUser(AbstractBaseUser, PermissionsMixin):
         ordering = ('email',)
 
 class Category(models.Model):
+
+    class CatChoices(models.TextChoices):
+        ITEMS = 'items', 'Вещи'
+        CARS = 'cars', 'Авто'
+        SERVICES = 'services', 'услуги'
+
     name = models.CharField(verbose_name='Название категории', max_length=15)
     slug = models.SlugField(blank=True, null=True, unique=True)
 
@@ -45,7 +52,8 @@ class Category(models.Model):
         return str(self.name)
 
     def save(self, *args, **kwargs):
-        self.slug = slugify(self.name)
+        if self.slug is None:
+            self.slug = slugify(self.name)
         super(Category, self).save(*args, **kwargs)
 
 class Tag(models.Model):
@@ -73,20 +81,44 @@ class Seller(models.Model):
         verbose_name = 'Продавец'
         verbose_name_plural = 'Продавцы'
 
-class Ticket(models.Model):
+class BaseTicket(models.Model):
     name = models.CharField(verbose_name="Название", max_length=15)
     text = models.CharField(verbose_name="Текст", max_length=200)
-    category = models.ManyToManyField(Category, verbose_name="Категория", related_name="tickets")
-    seller = models.ForeignKey(Seller, verbose_name="Продавец", related_name="tickets", on_delete=models.CASCADE)
+    seller = models.ForeignKey(Seller, verbose_name="Продавец", related_name="%(app_label)s_%(class)s_related", on_delete=models.CASCADE)
     date_created = models.DateTimeField(auto_now_add=True)
     date_modified = models.DateTimeField()
-    tag = models.ManyToManyField(Tag, verbose_name="Тег", related_name='tickets')
+    tag = models.ManyToManyField(Tag, verbose_name="Тег", related_name='%(app_label)s_%(class)s_related')
     price = models.PositiveIntegerField(verbose_name="Цена", default=1)
 
     class Meta:
         verbose_name = 'Объявление'
         verbose_name_plural = "Объявления"
         ordering = ('-date_modified',)
+        abstract = True
 
     def __str__(self):
         return str(self.name)
+
+
+class TicketService(BaseTicket):
+    category = models.ManyToManyField(Category, verbose_name="Категория", related_name="TicketServices")
+
+
+    class Meta:
+        verbose_name = 'Объявление - услуги'
+        verbose_name_plural = 'Объявления - услуги'
+
+class TicketCar(BaseTicket):
+    category = models.ManyToManyField(Category, verbose_name="Категория", related_name="TicketCars")
+
+    class Meta:
+        verbose_name = 'Объявление - авто'
+        verbose_name_plural = 'Объявления - авто'
+
+class TicketItem(BaseTicket):
+    category = models.ManyToManyField(Category, verbose_name="Категория", related_name="TicketItems")
+
+    class Meta:
+        verbose_name = 'Объявление - вещи'
+        verbose_name_plural = 'Объявления - вещи'
+
