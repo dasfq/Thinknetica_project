@@ -22,7 +22,7 @@ class SellerAdmin(admin.ModelAdmin):
     list_display = ('user','tickets_number',)
 
     def tickets_number(self, obj):
-        return len(obj.ticket_qty)
+        return obj.ticket_qty
 
     tickets_number.short_description = 'Кол-во объявлений'
 
