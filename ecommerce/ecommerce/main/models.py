@@ -3,6 +3,7 @@ from django.contrib.auth.base_user import AbstractBaseUser
 from django.contrib.auth.models import PermissionsMixin
 from .managers import CustomUserManager
 from django.template.defaultfilters import slugify
+import uuid
 
 class CustomUser(AbstractBaseUser, PermissionsMixin):
     email = models.EmailField(verbose_name="E-mail", unique=True)
@@ -33,8 +34,15 @@ class CustomUser(AbstractBaseUser, PermissionsMixin):
         ordering = ('email',)
 
 class Category(models.Model):
+
+    class CatChoices(models.TextChoices):
+        ITEMS = 'items', 'Вещи'
+        CARS = 'cars', 'Авто'
+        SERVICES = 'services', 'услуги'
+
     name = models.CharField(verbose_name='Название категории', max_length=15)
-    slug = models.SlugField(default='')
+    slug = models.SlugField(unique=True, default='')
+
 
     class Meta:
         verbose_name = "Категория"
@@ -45,7 +53,8 @@ class Category(models.Model):
         return str(self.name)
 
     def save(self, *args, **kwargs):
-        self.slug = slugify(self.name)
+        if self.slug is None:
+            self.slug = slugify(self.name)
         super(Category, self).save(*args, **kwargs)
 
 class Tag(models.Model):
@@ -63,8 +72,11 @@ class Seller(models.Model):
 
     @property
     def ticket_qty(self):
-        return Ticket.objects.filter(seller=self)
-
+        subclasses = BaseTicket.__subclasses__()
+        count = 0
+        for i in subclasses:
+            count += i.objects.filter(seller=self).count()
+        return count
 
     def __str__(self):
         return str(f'{self.user.first_name} {self.user.last_name}')
@@ -73,20 +85,77 @@ class Seller(models.Model):
         verbose_name = 'Продавец'
         verbose_name_plural = 'Продавцы'
 
-class Ticket(models.Model):
+class BaseTicket(models.Model):
     name = models.CharField(verbose_name="Название", max_length=15)
     text = models.CharField(verbose_name="Текст", max_length=200)
-    category = models.ManyToManyField(Category, verbose_name="Категория", related_name="tickets")
-    seller = models.ForeignKey(Seller, verbose_name="Продавец", related_name="tickets", on_delete=models.CASCADE)
+    seller = models.ForeignKey(Seller, verbose_name="Продавец", related_name="%(app_label)s_%(class)s_seller",
+                               on_delete=models.CASCADE, related_query_name='%(app_label)s_%(class)s_seller')
     date_created = models.DateTimeField(auto_now_add=True)
     date_modified = models.DateTimeField()
-    tag = models.ManyToManyField(Tag, verbose_name="Тег", related_name='tickets')
+    tag = models.ManyToManyField(Tag, verbose_name="Тег", related_name='%(app_label)s_%(class)s_tag',
+                                 related_query_name='%(app_label)s_%(class)s_tag')
     price = models.PositiveIntegerField(verbose_name="Цена", default=1)
 
     class Meta:
         verbose_name = 'Объявление'
         verbose_name_plural = "Объявления"
         ordering = ('-date_modified',)
+        abstract = True
 
     def __str__(self):
         return str(self.name)
+
+
+class TicketService(BaseTicket):
+    category = models.ManyToManyField(Category, verbose_name="Категория", related_name="TicketServices")
+    term_days = models.PositiveIntegerField(verbose_name='Срок выполнения')
+    warranty_days = models.PositiveIntegerField(verbose_name='Гарантийный срок')
+
+    class Meta:
+        verbose_name = 'Объявление - услуги'
+        verbose_name_plural = 'Объявления - услуги'
+
+class TicketCar(BaseTicket):
+    category = models.ManyToManyField(Category, verbose_name="Категория", related_name="TicketCars")
+    model = models.CharField(verbose_name='Модель', max_length=10)
+    year = models.PositiveIntegerField(verbose_name="Год выпуска")
+    color = models.CharField(verbose_name='Цвет', max_length=10)
+
+    class Meta:
+        verbose_name = 'Объявление - авто'
+        verbose_name_plural = 'Объявления - авто'
+
+class TicketItem(BaseTicket):
+    STATE_CHOICES = [
+        ('new', 'новое'),
+        ('used', 'б/у')
+    ]
+
+    category = models.ManyToManyField(Category, verbose_name="Категория", related_name="TicketItems")
+    state = models.CharField(verbose_name="Состояние", max_length=10, choices=STATE_CHOICES)
+    qty = models.PositiveIntegerField(verbose_name='Количество')
+
+    class Meta:
+        verbose_name = 'Объявление - вещи'
+        verbose_name_plural = 'Объявления - вещи'
+
+
+class TicketServiceArchive(TicketService):
+
+    class Meta:
+        verbose_name_plural = 'Архив - Услуги'
+        proxy = True
+
+
+class TicketCarArchive(TicketCar):
+
+    class Meta:
+        verbose_name_plural = 'Архив - Авто '
+        proxy = True
+
+
+class TicketItemArchive(TicketItem):
+
+    class Meta:
+        verbose_name_plural = 'Архив - Вещи'
+        proxy = True
