@@ -34,7 +34,7 @@ class CustomUser(AbstractBaseUser, PermissionsMixin):
 
 class Category(models.Model):
     name = models.CharField(verbose_name='Название категории', max_length=15)
-    slug = models.SlugField(blank=True, null=True, unique=True)
+    slug = models.SlugField(default='')
 
     class Meta:
         verbose_name = "Категория"
@@ -81,6 +81,7 @@ class Ticket(models.Model):
     date_created = models.DateTimeField(auto_now_add=True)
     date_modified = models.DateTimeField()
     tag = models.ManyToManyField(Tag, verbose_name="Тег", related_name='tickets')
+    price = models.PositiveIntegerField(verbose_name="Цена", default=1)
 
     class Meta:
         verbose_name = 'Объявление'
