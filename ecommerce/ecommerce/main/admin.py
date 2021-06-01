@@ -64,4 +64,5 @@ admin.site.register(TicketService, TicketServiceAdmin)
 admin.site.register(TicketCarArchive, TicketCarArchiveAdmin)
 admin.site.register(TicketItemArchive, TicketItemArchiveAdmin)
 admin.site.register(TicketServiceArchive, TicketServiceArchiveAdmin)
+admin.site.register(Ticket, TicketAdmin)
 
