@@ -43,7 +43,6 @@ INSTALLED_APPS = [
     'django.contrib.flatpages',
     'ckeditor',
     'ckeditor_uploader',
-    'bootstrap3',
     'constance',
     'constance.backends.database',
 
@@ -147,7 +146,7 @@ CKEDITOR_BASEPATH = "/static/ckeditor/ckeditor/"
 
 AUTH_USER_MODEL = 'main.CustomUser'
 
-MAINTENANCE_MODE = True
+MAINTENANCE_MODE = False
 TEMPLATE_CONTEXT_PROCESSORS = (
     'constance.context_processors.config',
 )
