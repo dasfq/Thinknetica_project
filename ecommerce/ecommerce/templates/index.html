@@ -1,5 +1,5 @@
 {% extends 'base.html' %}
-
+{% load main_tags %}
 
 {% block title %}
 Welcome to the Best ecommerce store!
@@ -26,7 +26,7 @@ Welcome to the Best ecommerce store!
 
         {% if turn_on_block %}
             <div id="maintenance">
-                <span>На сайте проводятся технические работы! {%  %}</span>
+                <span>На сайте проводятся технические работы! </span>
             </div>
         {% endif %}
 

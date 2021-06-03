@@ -1,8 +1,8 @@
 from django import template
-from datetime import datetime
+import datetime
 
 register = template.Library()
 
-@register.filter()
-def current_time():
-    return datetime.now()
+@register.simple_tag
+def current_time(format_string):
+    return datetime.datetime.now().strftime(format_string)
