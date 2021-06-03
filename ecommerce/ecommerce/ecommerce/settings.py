@@ -11,6 +11,7 @@ https://docs.djangoproject.com/en/3.2/ref/settings/
 """
 
 from pathlib import Path
+import constance.backends.database
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -43,6 +44,8 @@ INSTALLED_APPS = [
     'ckeditor',
     'ckeditor_uploader',
     'bootstrap3',
+    'constance',
+    'constance.backends.database',
 
     ##my app
     'main',
@@ -143,3 +146,10 @@ CKEDITOR_FILENAME_GENERATOR = 'utils.get_filename'
 CKEDITOR_BASEPATH = "/static/ckeditor/ckeditor/"
 
 AUTH_USER_MODEL = 'main.CustomUser'
+
+MAINTENANCE_MODE = True
+TEMPLATE_CONTEXT_PROCESSORS = (
+    'constance.context_processors.config',
+)
+CONSTANCE_BACKEND = constance.backends.database.DatabaseBackend
+
