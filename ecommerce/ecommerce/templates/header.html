@@ -32,7 +32,7 @@
             <button class="btn btn-secondary my-2 my-sm-0" type="submit">Search</button>
         </form>
         <div id="username">
-            <span style='color:#ff0000'>Имя пользователя: {{ user }}. {% current_time "%d.%B.%Y %A %H:%M" %}</span>
+            <span style='color:#ff0000'>Имя пользователя: {{ user|convert_string }}. {% current_time "%d.%B.%Y %A %H:%M" %}</span>
         </div>
     </div>
 </nav>
