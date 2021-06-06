@@ -10,4 +10,4 @@ def current_time(format_string):
 @register.filter
 def convert_string(string):
     string = str(string)
-    return "".join([x for x in string[::-1]])
+    return "".join(string[::-1])
