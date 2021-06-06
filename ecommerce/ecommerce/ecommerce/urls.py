@@ -17,6 +17,8 @@ from django.contrib import admin
 from django.urls import path, include
 from main.views import IndexView
 from django.contrib.flatpages.views import flatpage
+from main.views import CarList, ServiceList, ItemList
+from django.conf.urls import url
 
 
 urlpatterns = [
@@ -28,4 +30,6 @@ urlpatterns = [
 urlpatterns += [
     path('about/', flatpage, {'url': '/about/'}, name='about'),
     path('contacts/', flatpage, {'url': '/contacts/'}, name='contacts'),
+    url(r'^cars/(?P<pk>\d+)$', CarList.as_view(), name='car_list'),
+    url(r'^cars/$', CarList.as_view(), name='car_list'),
 ]
