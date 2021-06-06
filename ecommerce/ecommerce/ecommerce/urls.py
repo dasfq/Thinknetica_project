@@ -32,4 +32,6 @@ urlpatterns += [
     path('contacts/', flatpage, {'url': '/contacts/'}, name='contacts'),
     url(r'^cars/(?P<pk>\d+)$', CarList.as_view(), name='car_list'),
     url(r'^cars/$', CarList.as_view(), name='car_list'),
+    url(r'^items/$', ItemList.as_view(), name='item_list'),
+    url(r'^services/$', ServiceList.as_view(), name='service_list'),
 ]
