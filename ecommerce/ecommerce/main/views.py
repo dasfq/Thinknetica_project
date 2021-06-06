@@ -37,6 +37,8 @@ class ServiceList(ListView):
 
 class ServiceDetailView(DetailView):
     model = TicketService
+    template_name = 'ticket_service_detail.html'
+    context_object_name = 'ticket_service_detail'
 
 
 class ItemList(ListView):
@@ -47,3 +49,5 @@ class ItemList(ListView):
 
 class ItemDetailView(DetailView):
     model = TicketItem
+    template_name = 'ticket_item_detail.html'
+    context_object_name = "ticket_item_detail"
