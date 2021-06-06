@@ -23,12 +23,27 @@ class CarList(ListView):
     template_name = 'ticket_car_list.html'
 
 
+class CarDetailView(DetailView):
+    model = TicketCar
+    template_name = 'ticket_car_detail.html'
+    context_object_name = 'ticket_car_detail'
+
 
 class ServiceList(ListView):
     model = TicketService
     context_object_name = "ticket_service_list"
     template_name = 'ticket_service_list.html'
+
+
+class ServiceDetailView(DetailView):
+    model = TicketService
+
+
 class ItemList(ListView):
     model = TicketItem
     context_object_name = "ticket_item_list"
     template_name = 'ticket_item_list.html'
+
+
+class ItemDetailView(DetailView):
+    model = TicketItem
