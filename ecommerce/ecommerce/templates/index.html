@@ -58,6 +58,15 @@ Welcome to the Best ecommerce store!
             {% endfor %}
         </ul>
 
+        {% if turn_on_block %}
+            <div id="maintenance">
+                <p>На сайте проводятся технические работы!</p>
+            </div>
+        {% endif %}
+
+        <div>
+            <span style='color:#ff0000'>Имя пользователя: {{ user }}</span>
+        </div>
     </main>
 
 {% endblock %}

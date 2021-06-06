@@ -3,7 +3,6 @@ from django.contrib.auth.base_user import AbstractBaseUser
 from django.contrib.auth.models import PermissionsMixin
 from .managers import CustomUserManager
 from django.template.defaultfilters import slugify
-import uuid
 
 class CustomUser(AbstractBaseUser, PermissionsMixin):
     email = models.EmailField(verbose_name="E-mail", unique=True)
