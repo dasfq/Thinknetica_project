@@ -109,7 +109,7 @@ class TicketService(BaseTicket):
     term_days = models.PositiveIntegerField(verbose_name='Срок выполнения')
     warranty_days = models.PositiveIntegerField(verbose_name='Гарантийный срок')
 
-    class Meta:
+    class Meta(BaseTicket.Meta):
         verbose_name = 'Объявление - услуги'
         verbose_name_plural = 'Объявления - услуги'
 
@@ -119,7 +119,7 @@ class TicketCar(BaseTicket):
     year = models.PositiveIntegerField(verbose_name="Год выпуска")
     color = models.CharField(verbose_name='Цвет', max_length=10)
 
-    class Meta:
+    class Meta(BaseTicket.Meta):
         verbose_name = 'Объявление - авто'
         verbose_name_plural = 'Объявления - авто'
 
@@ -133,7 +133,7 @@ class TicketItem(BaseTicket):
     state = models.CharField(verbose_name="Состояние", max_length=10, choices=STATE_CHOICES)
     qty = models.PositiveIntegerField(verbose_name='Количество')
 
-    class Meta:
+    class Meta(BaseTicket.Meta):
         verbose_name = 'Объявление - вещи'
         verbose_name_plural = 'Объявления - вещи'
 
