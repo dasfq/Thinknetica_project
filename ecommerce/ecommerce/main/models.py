@@ -84,7 +84,7 @@ class Seller(models.Model):
         verbose_name_plural = 'Продавцы'
 
 class BaseTicket(models.Model):
-    name = models.CharField(verbose_name="Название", max_length=15)
+    name = models.CharField(verbose_name="Название", max_length=25)
     text = models.CharField(verbose_name="Текст", max_length=200)
     seller = models.ForeignKey(Seller, verbose_name="Продавец", related_name="%(app_label)s_%(class)s_seller",
                                on_delete=models.CASCADE, related_query_name='%(app_label)s_%(class)s_seller')
