@@ -89,7 +89,7 @@ class BaseTicket(models.Model):
     seller = models.ForeignKey(Seller, verbose_name="Продавец", related_name="%(app_label)s_%(class)s_seller",
                                on_delete=models.CASCADE, related_query_name='%(app_label)s_%(class)s_seller')
     date_created = models.DateTimeField(auto_now_add=True)
-    date_modified = models.DateTimeField()
+    date_modified = models.DateTimeField(auto_now=True)
     tag = models.ManyToManyField(Tag, verbose_name="Тег", related_name='%(app_label)s_%(class)s_tag',
                                  related_query_name='%(app_label)s_%(class)s_tag')
     price = models.PositiveIntegerField(verbose_name="Цена", default=1)
