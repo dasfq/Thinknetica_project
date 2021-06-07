@@ -21,7 +21,7 @@ class CarList(ListView):
     model = TicketCar
     context_object_name = 'ticket_car_list'
     template_name = 'ticket_car_list.html'
-
+    paginate_by = 10
 
 class CarDetailView(DetailView):
     model = TicketCar
@@ -33,7 +33,7 @@ class ServiceList(ListView):
     model = TicketService
     context_object_name = "ticket_service_list"
     template_name = 'ticket_service_list.html'
-
+    paginate_by = 10
 
 class ServiceDetailView(DetailView):
     model = TicketService
@@ -45,7 +45,7 @@ class ItemList(ListView):
     model = TicketItem
     context_object_name = "ticket_item_list"
     template_name = 'ticket_item_list.html'
-
+    paginate_by = 10
 
 class ItemDetailView(DetailView):
     model = TicketItem
