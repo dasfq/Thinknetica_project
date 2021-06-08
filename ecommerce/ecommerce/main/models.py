@@ -85,12 +85,12 @@ class Seller(models.Model):
         verbose_name_plural = 'Продавцы'
 
 class BaseTicket(models.Model):
-    name = models.CharField(verbose_name="Название", max_length=15)
+    name = models.CharField(verbose_name="Название", max_length=25)
     text = models.CharField(verbose_name="Текст", max_length=200)
     seller = models.ForeignKey(Seller, verbose_name="Продавец", related_name="%(app_label)s_%(class)s_seller",
                                on_delete=models.CASCADE, related_query_name='%(app_label)s_%(class)s_seller')
     date_created = models.DateTimeField(auto_now_add=True)
-    date_modified = models.DateTimeField()
+    date_modified = models.DateTimeField(auto_now=True)
     tag = models.ManyToManyField(Tag, verbose_name="Тег", related_name='%(app_label)s_%(class)s_tag',
                                  related_query_name='%(app_label)s_%(class)s_tag')
     price = models.PositiveIntegerField(verbose_name="Цена", default=1)
@@ -110,7 +110,7 @@ class TicketService(BaseTicket):
     term_days = models.PositiveIntegerField(verbose_name='Срок выполнения')
     warranty_days = models.PositiveIntegerField(verbose_name='Гарантийный срок')
 
-    class Meta:
+    class Meta(BaseTicket.Meta):
         verbose_name = 'Объявление - услуги'
         verbose_name_plural = 'Объявления - услуги'
 
@@ -120,7 +120,7 @@ class TicketCar(BaseTicket):
     year = models.PositiveIntegerField(verbose_name="Год выпуска")
     color = models.CharField(verbose_name='Цвет', max_length=10)
 
-    class Meta:
+    class Meta(BaseTicket.Meta):
         verbose_name = 'Объявление - авто'
         verbose_name_plural = 'Объявления - авто'
 
@@ -134,7 +134,7 @@ class TicketItem(BaseTicket):
     state = models.CharField(verbose_name="Состояние", max_length=10, choices=STATE_CHOICES)
     qty = models.PositiveIntegerField(verbose_name='Количество')
 
-    class Meta:
+    class Meta(BaseTicket.Meta):
         verbose_name = 'Объявление - вещи'
         verbose_name_plural = 'Объявления - вещи'
 

@@ -31,7 +31,7 @@ class TagAdmin(admin.ModelAdmin):
     pass
 
 class TicketAdmin(admin.ModelAdmin):
-    list_display = ('date_modified', 'name', 'seller', 'price',)
+    list_display = ('name', 'seller', 'price',)
     ordering = ('date_modified',)
 
 class TicketCarAdmin(TicketAdmin):

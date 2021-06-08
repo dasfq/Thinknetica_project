@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+    <h1>Объявления в категории "{{ ticket_item_list.0.category.name }}"</h1>
+
+    <ul>
+        {% for ticket in ticket_item_list %}
+            <li>#{{ ticket.id }}. {{ ticket.name }}. {{ ticket.price }} руб.</li>
+        {% endfor %}
+    </ul>
+
+{% endblock content %}
