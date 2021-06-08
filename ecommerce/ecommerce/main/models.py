@@ -32,6 +32,18 @@ class CustomUser(AbstractBaseUser, PermissionsMixin):
         verbose_name_plural = "Список пользователей"
         ordering = ('email',)
 
+
+
+
+class Profile(CustomUser):
+    birth_date = models.DateTimeField(blank=True)
+
+    class Meta:
+        verbose_name = 'Профиль'
+        verbose_name_plural = 'Профили'
+
+
+
 class Category(models.Model):
 
     class CatChoices(models.TextChoices):
