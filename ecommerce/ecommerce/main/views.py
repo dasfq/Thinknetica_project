@@ -3,6 +3,7 @@ from django.contrib.flatpages.models import FlatPage
 from .models import TicketCar, TicketItem, TicketService, Profile
 from django.conf import settings
 from django.views.generic import ListView, DetailView, UpdateView
+from .forms import ProfileForm
 
 
 # Create your views here.
@@ -96,6 +97,7 @@ class ItemDetailView(DetailView):
 
 class ProfileUpdateView(UpdateView):
     model = Profile
+    form_class = ProfileForm
     template_name_suffix = '_update_form'
-    fields = ('birth_date',)
+    # fields = ('birth_date',)
     success_url = '/'
