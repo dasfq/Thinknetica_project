@@ -1,6 +1,6 @@
 from django.shortcuts import render, reverse
 from django.contrib.flatpages.models import FlatPage
-from .models import TicketCar, TicketItem, TicketService, Profile
+from .models import TicketCar, TicketItem, TicketService, Profile, Seller
 from django.conf import settings
 from django.views.generic import ListView, DetailView, UpdateView, CreateView
 from .forms import ProfileForm, TicketCarForm, TicketItemForm, TicketServiceForm
@@ -19,7 +19,7 @@ def IndexView(request):
     }
     return render(request, template_name,context)
 
-class BaseListView():
+class BaseView():
 
     def base_queryset(self, model_name):
         tag = self.request.GET.get('tag')
@@ -34,6 +34,12 @@ class BaseListView():
         tags_list = set(tags_list)
         return tags_list
 
+    def get_seller(self, form):
+        user = self.request.user
+        form.instance.seller = Seller.objects.get(user=user)
+        return form
+
+
 class CarList(ListView):
     model = TicketCar
     context_object_name = 'ticket_car_list'
@@ -41,11 +47,11 @@ class CarList(ListView):
     paginate_by = 10
 
     def get_queryset(self):
-        return BaseListView.base_queryset(self, self.model)
+        return BaseView.base_queryset(self, self.model)
 
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
-        context['tags_list'] = BaseListView.base_get_tags(self.model)
+        context['tags_list'] = BaseView.base_get_tags(self.model)
         return context
 
 class CarDetailView(DetailView):
@@ -56,9 +62,13 @@ class CarDetailView(DetailView):
 
 class CarCreateView(CreateView):
     model = TicketCar
-    template_name_suffix = "_create_form"
-    succes_url = '/'
+    template_name = "cars/ticket_car_create_form.html"
+    success_url = '/'
     form_class = TicketCarForm
+
+    def form_valid(self, form):
+        BaseView.get_seller(self, form)
+        return super().form_valid(form)
 
 
 class CarUpdateView(UpdateView):
@@ -75,11 +85,11 @@ class ServiceList(ListView):
     paginate_by = 10
 
     def get_queryset(self):
-        return BaseListView.base_queryset(self, self.model)
+        return BaseView.base_queryset(self, self.model)
 
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
-        context['tags_list'] = BaseListView.base_get_tags(self.model)
+        context['tags_list'] = BaseView.base_get_tags(self.model)
         return context
 
 class ServiceDetailView(DetailView):
@@ -89,7 +99,14 @@ class ServiceDetailView(DetailView):
 
 
 class ServiceCreateView(CreateView):
-    pass
+    model = TicketService
+    form_class = TicketServiceForm
+    success_url = '/'
+    template_name = 'services/ticket_service_create_form.html'
+
+    def form_valid(self, form):
+        BaseView.get_seller(self, form)
+        return super().form_valid(form)
 
 
 
@@ -109,20 +126,29 @@ class ItemList(ListView):
     paginate_by = 10
 
     def get_queryset(self):
-        return BaseListView.base_queryset(self, self.model)
+        return BaseView.base_queryset(self, self.model)
 
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
-        context['tags_list'] = BaseListView.base_get_tags(self.model)
+        context['tags_list'] = BaseView.base_get_tags(self.model)
         return context
+
 
 class ItemDetailView(DetailView):
     model = TicketItem
     template_name = 'items/ticket_item_detail.html'
     context_object_name = "ticket_item_detail"
 
+
 class ItemCreateView(CreateView):
-    pass
+    model = TicketItem
+    form_class = TicketItemForm
+    success_url = '/'
+    template_name = 'items/ticket_item_create_form.html'
+
+    def form_valid(self, form):
+        BaseView.get_seller(self, form)
+        return super().form_valid(form)
 
 
 class ItemUpdateView(UpdateView):
@@ -132,10 +158,8 @@ class ItemUpdateView(UpdateView):
     success_url = '/'
 
 
-
 class ProfileUpdateView(UpdateView):
     model = Profile
     form_class = ProfileForm
     template_name_suffix = '_update_form'
-    # fields = ('birth_date',)
     success_url = '/'
