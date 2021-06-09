@@ -64,7 +64,6 @@ class CarCreateView(CreateView):
 class CarUpdateView(UpdateView):
     model = TicketCar
     template_name = "cars/ticket_car_update_form.html"
-    # template_name_suffix = "_update_form"
     success_url = '/'
     form_class = TicketCarForm
 
@@ -72,7 +71,7 @@ class CarUpdateView(UpdateView):
 class ServiceList(ListView):
     model = TicketService
     context_object_name = "ticket_service_list"
-    template_name = 'ticket_service_list.html'
+    template_name = 'services/ticket_service_list.html'
     paginate_by = 10
 
     def get_queryset(self):
@@ -85,7 +84,7 @@ class ServiceList(ListView):
 
 class ServiceDetailView(DetailView):
     model = TicketService
-    template_name = 'ticket_service_detail.html'
+    template_name = 'services/ticket_service_detail.html'
     context_object_name = 'ticket_service_detail'
 
 
@@ -95,7 +94,10 @@ class ServiceCreateView(CreateView):
 
 
 class ServiceUpdateView(UpdateView):
-    pass
+    model = TicketService
+    form_class = TicketServiceForm
+    template_name = 'services/ticket_service_update_form.html'
+    success_url = '/'
 
 
 
@@ -103,7 +105,7 @@ class ServiceUpdateView(UpdateView):
 class ItemList(ListView):
     model = TicketItem
     context_object_name = "ticket_item_list"
-    template_name = 'ticket_item_list.html'
+    template_name = 'items/ticket_item_list.html'
     paginate_by = 10
 
     def get_queryset(self):
@@ -116,7 +118,7 @@ class ItemList(ListView):
 
 class ItemDetailView(DetailView):
     model = TicketItem
-    template_name = 'ticket_item_detail.html'
+    template_name = 'items/ticket_item_detail.html'
     context_object_name = "ticket_item_detail"
 
 class ItemCreateView(CreateView):
@@ -124,7 +126,10 @@ class ItemCreateView(CreateView):
 
 
 class ItemUpdateView(UpdateView):
-    pass
+    model = TicketItem
+    form_class = TicketItemForm
+    template_name = 'items/ticket_item_update_form.html'
+    success_url = '/'
 
 
 
