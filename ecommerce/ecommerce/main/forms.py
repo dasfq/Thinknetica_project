@@ -11,17 +11,16 @@ class TicketCarForm(forms.ModelForm):
 
     class Meta:
         model = TicketCar
-        fields = ('name', 'text', 'seller',)
+        exclude = ('seller', 'category', )
 
 class TicketItemForm(forms.ModelForm):
 
     class Meta:
         model = TicketItem
-        fields = ('name', 'text', 'seller',)
-
+        exclude = ('seller', 'category', )
 
 class TicketServiceForm(forms.ModelForm):
 
     class Meta:
         model = TicketService
-        fields = ('name', 'text', 'seller',)
+        exclude = ('seller', 'category', )
