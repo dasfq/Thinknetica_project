@@ -5,8 +5,11 @@ from django.contrib.flatpages.models import FlatPage
 from django.contrib.flatpages.admin import FlatPageAdmin
 from ckeditor.widgets import CKEditorWidget
 from .models import Category, CustomUser, Seller, Tag, TicketCar, TicketItem, TicketService,\
-    TicketServiceArchive, TicketCarArchive, TicketItemArchive
+    TicketServiceArchive, TicketCarArchive, TicketItemArchive, Profile
 
+
+class ProfileAdmin(admin.ModelAdmin):
+    pass
 
 class FlatPageAdmin(FlatPageAdmin):
     formfield_overrides = {
@@ -64,5 +67,7 @@ admin.site.register(TicketService, TicketServiceAdmin)
 admin.site.register(TicketCarArchive, TicketCarArchiveAdmin)
 admin.site.register(TicketItemArchive, TicketItemArchiveAdmin)
 admin.site.register(TicketServiceArchive, TicketServiceArchiveAdmin)
+admin.site.register(Profile, ProfileAdmin)
 admin.site.register(Ticket, TicketAdmin)
+
 

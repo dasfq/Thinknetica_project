@@ -1,8 +1,9 @@
-from django.shortcuts import render
+from django.shortcuts import render, reverse
 from django.contrib.flatpages.models import FlatPage
-from .models import TicketCar, TicketItem, TicketService
+from .models import TicketCar, TicketItem, TicketService, Profile
 from django.conf import settings
-from django.views.generic import ListView, DetailView
+from django.views.generic import ListView, DetailView, UpdateView
+from .forms import ProfileForm
 
 
 # Create your views here.
@@ -93,3 +94,10 @@ class ItemDetailView(DetailView):
     model = TicketItem
     template_name = 'ticket_item_detail.html'
     context_object_name = "ticket_item_detail"
+
+class ProfileUpdateView(UpdateView):
+    model = Profile
+    form_class = ProfileForm
+    template_name_suffix = '_update_form'
+    # fields = ('birth_date',)
+    success_url = '/'

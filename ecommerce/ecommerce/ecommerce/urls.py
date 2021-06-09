@@ -17,7 +17,7 @@ from django.contrib import admin
 from django.urls import path, include
 from main.views import IndexView
 from django.contrib.flatpages.views import flatpage
-from main.views import CarList, ServiceList, ItemList, CarDetailView, ServiceDetailView, ItemDetailView
+from main.views import CarList, ServiceList, ItemList, CarDetailView, ServiceDetailView, ItemDetailView, ProfileUpdateView
 from django.conf.urls import url
 
 
@@ -36,4 +36,5 @@ urlpatterns += [
     url(r'^cars/$', CarList.as_view(), name='car_list'),
     url(r'^items/$', ItemList.as_view(), name='item_list'),
     url(r'^services/$', ServiceList.as_view(), name='service_list'),
+    path('accounts/profile/<int:pk>/', ProfileUpdateView.as_view(), name='profile_update'),
 ]
