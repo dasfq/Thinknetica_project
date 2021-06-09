@@ -19,14 +19,17 @@ from main.views import IndexView
 from django.contrib.flatpages.views import flatpage
 from main.views import CarList, ServiceList, ItemList, CarDetailView, ServiceDetailView, ItemDetailView, ProfileUpdateView,\
 CarCreateView, ItemCreateView, ServiceCreateView, CarUpdateView, ItemUpdateView, ServiceUpdateView
-from django.conf.urls import url
-
+from django.conf.urls.static import static
+from django.conf import settings
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', IndexView, name='index'),
     path('ckeditor/', include('ckeditor_uploader.urls')),
 ]
+
+if settings.DEBUG:
+    urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 
 urlpatterns += [
     path('about/', flatpage, {'url': '/about/'}, name='about'),

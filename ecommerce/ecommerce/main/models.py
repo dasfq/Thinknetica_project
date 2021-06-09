@@ -37,6 +37,7 @@ class CustomUser(AbstractBaseUser, PermissionsMixin):
 
 class Profile(CustomUser):
     birth_date = models.DateTimeField(blank=True)
+    avatar = models.ImageField(upload_to='avatars', default='avatars/default_ava.png')
 
     class Meta:
         verbose_name = 'Профиль'
