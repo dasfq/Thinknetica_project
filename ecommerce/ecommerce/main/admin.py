@@ -5,8 +5,10 @@ from django.contrib.flatpages.models import FlatPage
 from django.contrib.flatpages.admin import FlatPageAdmin
 from ckeditor.widgets import CKEditorWidget
 from .models import Category, CustomUser, Seller, Tag, TicketCar, TicketItem, TicketService,\
-    TicketServiceArchive, TicketCarArchive, TicketItemArchive, Profile
+    TicketServiceArchive, TicketCarArchive, TicketItemArchive, Profile, Picture
 
+class PictureAdmin(admin.ModelAdmin):
+    pass
 
 class ProfileAdmin(admin.ModelAdmin):
     pass
@@ -68,4 +70,4 @@ admin.site.register(TicketCarArchive, TicketCarArchiveAdmin)
 admin.site.register(TicketItemArchive, TicketItemArchiveAdmin)
 admin.site.register(TicketServiceArchive, TicketServiceArchiveAdmin)
 admin.site.register(Profile, ProfileAdmin)
-
+admin.site.register(Picture, PictureAdmin)
