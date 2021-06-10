@@ -1,5 +1,16 @@
-<form method="POST">
+<form method="POST" xmlns="http://www.w3.org/1999/html">
     {% csrf_token %}
-    {{ form.as_p }}
-    <input type="submit" value="Create">
+
+    {{ formset.management_form }}
+
+    <table>
+        {{ form.as_p }}
+        {% for form in inline_formset %}
+                {{ form }}
+        {% endfor %}
+    </table>
+
+        <input type="submit" value="Создать">
+
 </form>
+

@@ -1,11 +1,9 @@
 from django.shortcuts import render, reverse
 from django.contrib.flatpages.models import FlatPage
-from .models import TicketCar, TicketItem, TicketService, Profile, Seller
+from .models import TicketCar, TicketItem, TicketService, Profile, Seller, Picture
 from django.conf import settings
 from django.views.generic import ListView, DetailView, UpdateView, CreateView
-from .forms import ProfileForm, TicketCarForm, TicketItemForm, TicketServiceForm
-from django.core import serializers
-
+from .forms import ProfileForm, TicketCarForm, TicketItemForm, TicketServiceForm, PictureFormSet, CarFormSet
 
 # Create your views here.
 
@@ -60,14 +58,35 @@ class CarDetailView(DetailView):
     context_object_name = 'ticket_car_detail'
 
 
+
 class CarCreateView(CreateView):
     model = TicketCar
     template_name = "cars/ticket_car_create_form.html"
     success_url = '/'
     form_class = TicketCarForm
+    inline_formset = PictureFormSet()
+
+
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        context['inline_formset'] = self.inline_formset
+        return context
 
     def form_valid(self, form):
         BaseView.get_seller(self, form)
+        form.save()
+
+        if self.request.method=='POST':
+            pictures = PictureFormSet(self.request.POST, self.request.FILES)
+        else:
+            pictures = PictureFormSet()
+
+        if pictures.is_valid():
+            pictures.instance = form
+            pictures.save()
+        return super().form_valid(form)
+
+
         return super().form_valid(form)
 
 
@@ -107,6 +126,7 @@ class ServiceCreateView(CreateView):
     def form_valid(self, form):
         BaseView.get_seller(self, form)
         return super().form_valid(form)
+
 
 
 

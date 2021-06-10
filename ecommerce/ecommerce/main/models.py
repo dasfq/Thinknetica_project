@@ -181,4 +181,4 @@ class Picture(models.Model):
         verbose_name_plural = 'Изображения'
 
     def __str__(self):
-        return self.car.title+self.id
+        return self.car.name+str(self.id)
