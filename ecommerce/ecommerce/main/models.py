@@ -37,6 +37,7 @@ class CustomUser(AbstractBaseUser, PermissionsMixin):
 
 class Profile(CustomUser):
     birth_date = models.DateTimeField(blank=True)
+    avatar = models.ImageField(upload_to='avatars', default='avatars/default_ava.png')
 
     class Meta:
         verbose_name = 'Профиль'
@@ -170,3 +171,8 @@ class TicketItemArchive(TicketItem):
     class Meta:
         verbose_name_plural = 'Архив - Вещи'
         proxy = True
+
+
+class Picture(models.Model):
+    image = models.ImageField(upload_to='')
+    car = models.ForeignKey(TicketCar, on_delete=models.CASCADE, verbose_name='Автомобили', related_name='pictures')
