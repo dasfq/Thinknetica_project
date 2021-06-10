@@ -17,7 +17,8 @@ from django.contrib import admin
 from django.urls import path, include
 from main.views import IndexView
 from django.contrib.flatpages.views import flatpage
-from main.views import CarList, ServiceList, ItemList, CarDetailView, ServiceDetailView, ItemDetailView, ProfileUpdateView
+from main.views import CarList, ServiceList, ItemList, CarDetailView, ServiceDetailView, ItemDetailView, ProfileUpdateView,\
+CarCreateView, ItemCreateView, ServiceCreateView, CarUpdateView, ItemUpdateView, ServiceUpdateView
 from django.conf.urls import url
 
 
@@ -30,11 +31,17 @@ urlpatterns = [
 urlpatterns += [
     path('about/', flatpage, {'url': '/about/'}, name='about'),
     path('contacts/', flatpage, {'url': '/contacts/'}, name='contacts'),
+    path('cars/', CarList.as_view(), name='car_list'),
+    path('cars/add/', CarCreateView.as_view(), name='car_add'),
     path('cars/<int:pk>/', CarDetailView.as_view(), name='car_detail'),
+    path('cars/<int:pk>/edit/', CarUpdateView.as_view(), name='car_detail_edit'),
+    path('items/', ItemList.as_view(), name='item_list'),
+    path('items/add/', ItemCreateView.as_view(), name='item_add'),
     path('items/<int:pk>/', ItemDetailView.as_view(), name='item_detail'),
+    path('items/<int:pk>/edit/', ItemUpdateView.as_view(), name='item_detail_edit'),
+    path('services/', ServiceList.as_view(), name='service_list'),
+    path('services/add/', ServiceCreateView.as_view(), name='service_add'),
     path('services/<int:pk>/', ServiceDetailView.as_view(), name='service_detail'),
-    url(r'^cars/$', CarList.as_view(), name='car_list'),
-    url(r'^items/$', ItemList.as_view(), name='item_list'),
-    url(r'^services/$', ServiceList.as_view(), name='service_list'),
+    path('services/<int:pk>/edit/', ServiceUpdateView.as_view(), name='service_detail_edit'),
     path('accounts/profile/<int:pk>/', ProfileUpdateView.as_view(), name='profile_update'),
 ]

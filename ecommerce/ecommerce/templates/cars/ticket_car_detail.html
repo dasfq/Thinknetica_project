@@ -1,0 +1,10 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <p>Объявление: {{ ticket_car_detail.name }}</p>
+    <p>Текст: {{ ticket_car_detail.name }}</p>
+
+    {% for field in fields %}
+    <p>{{ field.verbose_name }}: {{ field.values }}</p>
+    {% endfor %}
+{% endblock content %}
