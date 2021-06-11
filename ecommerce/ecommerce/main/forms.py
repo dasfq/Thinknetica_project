@@ -33,7 +33,7 @@ PictureFormSet = inlineformset_factory(
     TicketCar,
     Picture,
     fields=('image',),
-    max_num=1
+    max_num=3
 )
 
 CarFormSet = modelformset_factory(
