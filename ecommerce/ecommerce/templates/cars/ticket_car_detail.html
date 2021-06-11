@@ -2,9 +2,9 @@
 
 {% block content %}
     <p>Объявление: {{ ticket_car_detail.name }}</p>
-    <p>Текст: {{ ticket_car_detail.name }}</p>
-
-    {% for field in fields %}
-    <p>{{ field.verbose_name }}: {{ field.values }}</p>
-    {% endfor %}
+    <p>Текст: {{ ticket_car_detail.text }}</p>
+    {{ ticket_car_detail.pictures }}
+    <p>
+        Картинка:<img src="{{ ticket_car_detail.pictures.0.url }}" alt="">
+    </p>
 {% endblock content %}

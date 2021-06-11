@@ -57,44 +57,65 @@ class CarDetailView(DetailView):
     template_name = 'cars/ticket_car_detail.html'
     context_object_name = 'ticket_car_detail'
 
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        print(context['ticket_car_detail'])
+        return context
 
 
 class CarCreateView(CreateView):
     model = TicketCar
-    template_name = "cars/ticket_car_create_form.html"
+    template_name = "cars/ticket_car_create_update.html"
     success_url = '/'
     form_class = TicketCarForm
-    inline_formset = PictureFormSet()
+
+    def form_valid(self, form):
+        """ получаем Seller и сохраняем форму """
+        BaseView.get_seller(self, form)
+        self.object = form.save(commit=False)
+
+        ''' создаём форму и кладём в неё картинку'''
+        if self.request.POST:
+            pictures = PictureFormSet(self.request.POST, self.request.FILES, instance=self.object)
+
+            """ провека валидности формсета. Соединяем обычную форму form и формсет с картинкой """
+            if pictures.is_valid():
+                pictures.instance = form.save()
+                pictures.save()
+
+        """ возвращаем обычную форму с присоединённым формсетом картинки"""
+        return super(CarCreateView, self).form_valid(form)
 
 
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
-        context['inline_formset'] = self.inline_formset
+        context['inline_formset'] = PictureFormSet()
         return context
-
-    def form_valid(self, form):
-        BaseView.get_seller(self, form)
-        form.save()
-
-        if self.request.method=='POST':
-            pictures = PictureFormSet(self.request.POST, self.request.FILES)
-        else:
-            pictures = PictureFormSet()
-
-        if pictures.is_valid():
-            pictures.instance = form
-            pictures.save()
-        return super().form_valid(form)
-
-
-        return super().form_valid(form)
 
 
 class CarUpdateView(UpdateView):
     model = TicketCar
-    template_name = "cars/ticket_car_update_form.html"
+    template_name = "cars/ticket_car_create_update.html"
     success_url = '/'
     form_class = TicketCarForm
+
+    def form_valid(self, form):
+        self.object = form.save(commit=False)
+
+        if self.request.POST:
+            pictures = PictureFormSet(self.request.POST, self.request.FILES, instance=self.object)
+
+        if pictures.is_valid():
+            pictures.instance = form.save()
+            pictures.save()
+        return super(CarUpdateView, self).form_valid(form)
+
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        context['picture_formset'] = PictureFormSet()
+        return context
+
+
 
 
 class ServiceList(ListView):
