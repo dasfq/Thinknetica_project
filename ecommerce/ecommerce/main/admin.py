@@ -10,6 +10,9 @@ from .models import Category, CustomUser, Seller, Tag, TicketCar, TicketItem, Ti
 class PictureAdmin(admin.ModelAdmin):
     pass
 
+class PictureInline(admin.TabularInline):
+    model = Picture
+
 class ProfileAdmin(admin.ModelAdmin):
     pass
 
@@ -39,8 +42,9 @@ class TicketAdmin(admin.ModelAdmin):
     list_display = ('name', 'seller', 'price',)
     ordering = ('date_modified',)
 
+
 class TicketCarAdmin(TicketAdmin):
-    pass
+    inlines = [PictureInline]
 
 class TicketServiceAdmin(TicketAdmin):
     pass
