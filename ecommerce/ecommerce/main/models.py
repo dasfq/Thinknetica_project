@@ -5,6 +5,7 @@ from .managers import CustomUserManager
 from django.template.defaultfilters import slugify
 
 class CustomUser(AbstractBaseUser, PermissionsMixin):
+    username = models.CharField(verbose_name="Логин", null=True, blank=True, max_length=10)
     email = models.EmailField(verbose_name="E-mail", unique=True)
     first_name = models.CharField(verbose_name='Имя', max_length=30, blank=True)
     last_name = models.CharField(verbose_name="Фамилия", max_length=30, blank=True)
