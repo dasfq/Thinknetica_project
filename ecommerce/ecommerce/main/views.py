@@ -4,6 +4,7 @@ from .models import TicketCar, TicketItem, TicketService, Profile, Seller, Pictu
 from django.conf import settings
 from django.views.generic import ListView, DetailView, UpdateView, CreateView
 from .forms import ProfileForm, TicketCarForm, TicketItemForm, TicketServiceForm, PictureFormSet, CarFormSet
+from django.contrib.auth.mixins import LoginRequiredMixin
 
 # Create your views here.
 
@@ -199,7 +200,8 @@ class ItemUpdateView(UpdateView):
     success_url = '/'
 
 
-class ProfileUpdateView(UpdateView):
+class ProfileUpdateView(LoginRequiredMixin, UpdateView):
+
     model = Profile
     form_class = ProfileForm
     template_name_suffix = '_update_form'
