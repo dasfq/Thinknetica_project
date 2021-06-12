@@ -100,22 +100,22 @@ class CarUpdateView(UpdateView):
     form_class = TicketCarForm
 
     def form_valid(self, form):
-        self.object = form.save(commit=False)
+        self.object = form.save()
 
         if self.request.POST:
             pictures = PictureFormSet(self.request.POST, self.request.FILES, instance=self.object)
 
+        """ form.is_valid() проверять не нужно, так как она уже вызвана в self.post(), который уже, в случае успешной
+        валидации, и запускает self.form_valid()"""
         if pictures.is_valid():
-            pictures.instance = form.save()
             pictures.save()
+
         return super(CarUpdateView, self).form_valid(form)
 
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
         context['picture_formset'] = PictureFormSet()
         return context
-
-
 
 
 class ServiceList(ListView):
