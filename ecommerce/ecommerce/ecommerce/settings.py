@@ -28,7 +28,7 @@ SECRET_KEY = 'django-insecure-@3092qn97d$5)-4r0sxw16f-_m_#y*kiu=7-7i!nozkh$m#6xu
 DEBUG = True
 
 ALLOWED_HOSTS = []
-SITE_ID = 1
+SITE_ID = 2
 
 
 # Application definition
@@ -60,13 +60,12 @@ INSTALLED_APPS = [
 
 SOCIALACCOUNT_PROVIDERS = {
     'google': {
-        # For each OAuth based provider, either add a ``SocialApp``
-        # (``socialaccount`` app) containing the required client
-        # credentials, or list them here:
-        'APP': {
-            'client_id': '123',
-            'secret': '456',
-            'key': ''
+        'SCOPE': [
+            'profile',
+            'email',
+        ],
+        'AUTH_PARAMS': {
+            'access_type': 'online',
         }
     }
 }
@@ -181,6 +180,8 @@ CKEDITOR_FILENAME_GENERATOR = 'utils.get_filename'
 CKEDITOR_BASEPATH = "/static/ckeditor/ckeditor/"
 
 AUTH_USER_MODEL = 'main.CustomUser'
+ACCOUNT_AUTHENTICATION_METHOD = 'email'
+ACCOUNT_EMAIL_REQUIRED = True
 
 MAINTENANCE_MODE = False
 TEMPLATE_CONTEXT_PROCESSORS = (
@@ -188,3 +189,5 @@ TEMPLATE_CONTEXT_PROCESSORS = (
 )
 CONSTANCE_BACKEND = constance.backends.database.DatabaseBackend
 LOGIN_URL = '/admin/login/?next=/admin/'
+LOGIN_REDIRECT_URL = '/'
+LOGOUT_REDIRECT_URL = '/'

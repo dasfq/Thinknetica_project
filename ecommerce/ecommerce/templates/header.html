@@ -1,6 +1,7 @@
 {% block header %}
 {% load main_tags %}
 {% load thumbnail %}
+{% load socialaccount %}
 
 <nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
     <a class="navbar-brand" href="#">Navbar</a>
@@ -39,7 +40,13 @@
                         <img src="{{ im.url }}" width="{{ im.width }}" height="{{ im.height }}">
                     {% endthumbnail %}
             </div>
-            <span style='color:#ff0000'>Имя пользователя: {{ user|convert_string | convert_string }}. {% current_time "%d.%B.%Y %A %H:%M" %}</span>
+
+            {% if user.is_authenticated %}
+            <span style='color:#ff0000'>Имя пользователя: {{ user|convert_string | convert_string }} |
+                           {% else %}
+                                <a href="{% provider_login_url 'google' %}">Login With Google</a>
+            {% endif %}
+            {% current_time "%d.%B.%Y %A %H:%M" %}</span>
         </div>
     </div>
 </nav>
