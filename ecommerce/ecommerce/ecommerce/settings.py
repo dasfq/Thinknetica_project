@@ -160,4 +160,4 @@ TEMPLATE_CONTEXT_PROCESSORS = (
     'constance.context_processors.config',
 )
 CONSTANCE_BACKEND = constance.backends.database.DatabaseBackend
-
+LOGIN_URL = '/admin/login/?next=/admin/'
