@@ -47,4 +47,5 @@ urlpatterns += [
     path('services/<int:pk>/', ServiceDetailView.as_view(), name='service_detail'),
     path('services/<int:pk>/edit/', ServiceUpdateView.as_view(), name='service_detail_edit'),
     path('accounts/profile/<int:pk>/', ProfileUpdateView.as_view(), name='profile_update'),
+    path('accounts/', include('allauth.urls')),
 ]
