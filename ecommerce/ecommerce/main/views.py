@@ -4,7 +4,7 @@ from .models import TicketCar, TicketItem, TicketService, Profile, Seller, Pictu
 from django.conf import settings
 from django.views.generic import ListView, DetailView, UpdateView, CreateView
 from .forms import ProfileForm, TicketCarForm, TicketItemForm, TicketServiceForm, PictureFormSet, CarFormSet
-from django.contrib.auth.mixins import LoginRequiredMixin
+from django.contrib.auth.mixins import LoginRequiredMixin, PermissionRequiredMixin
 
 # Create your views here.
 
@@ -182,7 +182,8 @@ class ItemDetailView(DetailView):
     context_object_name = "ticket_item_detail"
 
 
-class ItemCreateView(CreateView):
+class ItemCreateView(PermissionRequiredMixin, CreateView):
+    permission_required = 'main.TicketItem_all'
     model = TicketItem
     form_class = TicketItemForm
     success_url = '/'
