@@ -1,6 +1,6 @@
 from django.db import models
 from django.contrib.auth.base_user import AbstractBaseUser
-from django.contrib.auth.models import PermissionsMixin
+from django.contrib.auth.models import PermissionsMixin, Group
 from .managers import CustomUserManager
 from django.template.defaultfilters import slugify
 
@@ -10,6 +10,7 @@ class CustomUser(AbstractBaseUser, PermissionsMixin):
     first_name = models.CharField(verbose_name='Имя', max_length=30, blank=True)
     last_name = models.CharField(verbose_name="Фамилия", max_length=30, blank=True)
     middle_name = models.CharField(verbose_name="Отчество", max_length=30, blank=True)
+    group = models.ManyToManyField(Group, verbose_name="Группа", related_name='users', blank=True)
 
     is_staff = models.BooleanField(('staff status'), default=False,
                                    help_text=('Designates whether the user can log into this admin site.'), )
