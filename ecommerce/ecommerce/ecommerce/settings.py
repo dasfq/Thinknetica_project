@@ -191,3 +191,12 @@ CONSTANCE_BACKEND = constance.backends.database.DatabaseBackend
 LOGIN_URL = '/admin/login/?next=/admin/'
 LOGIN_REDIRECT_URL = '/'
 LOGOUT_REDIRECT_URL = '/'
+
+EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
+EMAIL_HOST = 'smtp.yandex.ru'
+EMAIL_PORT = '587'
+EMAIL_HOST_USER = 'username'
+EMAIL_HOST_PASSWORD = 'password'
+EMAIL_USE_TLS = True
+DEFAULT_FROM_EMAIL = 'Name'
+ADMINS = [('Denis', "Denis-966@mail.ru")]
