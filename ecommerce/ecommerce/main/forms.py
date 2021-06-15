@@ -35,9 +35,3 @@ PictureFormSet = inlineformset_factory(
     fields=('image',),
     max_num=3
 )
-
-CarFormSet = modelformset_factory(
-    TicketCar,
-    fields=('name', 'text', 'model', 'year', 'color', 'price', 'tag',),
-    max_num=1,
-)
