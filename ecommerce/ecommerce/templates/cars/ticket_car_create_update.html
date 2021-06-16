@@ -4,6 +4,7 @@
     Автомобиль
 {% endblock %}
 
+{% block content %}
 <form method="POST" enctype="multipart/form-data" xmlns="http://www.w3.org/1999/html">
     {% csrf_token %}
 
@@ -20,4 +21,4 @@
         <input type="submit" value="Создать">
 
 </form>
-
+{% endblock content %}

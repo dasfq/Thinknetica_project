@@ -117,6 +117,7 @@ class CarUpdateView(UpdateView):
         context['picture_formset'] = PictureFormSet()
         return context
 
+
 class ServiceList(ListView):
     model = TicketService
     context_object_name = "ticket_service_list"
