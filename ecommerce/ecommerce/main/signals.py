@@ -4,7 +4,7 @@ from main.models import CustomUser, Profile
 from django.contrib.auth.models import Group
 from django.core.mail import EmailMultiAlternatives
 from django.conf import settings
-from mail.asserts.email import email_send
+from main.asserts.emails import email_send
 
 
 @receiver(post_save, sender = CustomUser, dispatch_uid = 'signal_1')
