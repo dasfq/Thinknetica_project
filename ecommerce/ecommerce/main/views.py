@@ -1,11 +1,9 @@
 from django.shortcuts import render, reverse
 from django.contrib.flatpages.models import FlatPage
-from .models import TicketCar, TicketItem, TicketService, Profile, Seller
+from .models import TicketCar, TicketItem, TicketService, Profile, Seller, Picture
 from django.conf import settings
 from django.views.generic import ListView, DetailView, UpdateView, CreateView
-from .forms import ProfileForm, TicketCarForm, TicketItemForm, TicketServiceForm
-from django.core import serializers
-
+from .forms import ProfileForm, TicketCarForm, TicketItemForm, TicketServiceForm, PictureFormSet, CarFormSet
 
 # Create your views here.
 
@@ -59,24 +57,65 @@ class CarDetailView(DetailView):
     template_name = 'cars/ticket_car_detail.html'
     context_object_name = 'ticket_car_detail'
 
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        print(context['ticket_car_detail'])
+        return context
+
 
 class CarCreateView(CreateView):
     model = TicketCar
-    template_name = "cars/ticket_car_create_form.html"
+    template_name = "cars/ticket_car_create_update.html"
     success_url = '/'
     form_class = TicketCarForm
 
     def form_valid(self, form):
+        """ получаем Seller и сохраняем форму """
         BaseView.get_seller(self, form)
-        return super().form_valid(form)
+        self.object = form.save(commit=False)
+
+        ''' создаём форму и кладём в неё картинку'''
+        if self.request.POST:
+            pictures = PictureFormSet(self.request.POST, self.request.FILES, instance=self.object)
+
+            """ провека валидности формсета. Соединяем обычную форму form и формсет с картинкой """
+            if pictures.is_valid():
+                pictures.instance = form.save()
+                pictures.save()
+
+        """ возвращаем обычную форму с присоединённым формсетом картинки"""
+        return super(CarCreateView, self).form_valid(form)
+
+
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        context['inline_formset'] = PictureFormSet()
+        return context
 
 
 class CarUpdateView(UpdateView):
     model = TicketCar
-    template_name = "cars/ticket_car_update_form.html"
+    template_name = "cars/ticket_car_create_update.html"
     success_url = '/'
     form_class = TicketCarForm
 
+    def form_valid(self, form):
+        self.object = form.save()
+
+        if self.request.POST:
+            pictures = PictureFormSet(self.request.POST, self.request.FILES, instance=self.object)
+
+        """ form.is_valid() проверять не нужно, так как она уже вызвана в self.post(), который уже, в случае успешной
+        валидации, и запускает self.form_valid()"""
+        if pictures.is_valid():
+            pictures.save()
+
+        return super(CarUpdateView, self).form_valid(form)
+
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        context['picture_formset'] = PictureFormSet()
+        return context
 
 class ServiceList(ListView):
     model = TicketService
@@ -107,6 +146,7 @@ class ServiceCreateView(CreateView):
     def form_valid(self, form):
         BaseView.get_seller(self, form)
         return super().form_valid(form)
+
 
 
 

@@ -1,5 +1,8 @@
 from django import forms
-from .models import Profile, TicketCar, TicketItem, TicketService
+from .models import Profile, TicketCar, TicketItem, TicketService, Picture
+from django.forms.models import inlineformset_factory
+from django.forms import modelformset_factory
+
 
 class ProfileForm(forms.ModelForm):
 
@@ -24,3 +27,11 @@ class TicketServiceForm(forms.ModelForm):
     class Meta:
         model = TicketService
         exclude = ('seller', 'category', )
+
+
+PictureFormSet = inlineformset_factory(
+    TicketCar,
+    Picture,
+    fields=('image',),
+    max_num=3
+)

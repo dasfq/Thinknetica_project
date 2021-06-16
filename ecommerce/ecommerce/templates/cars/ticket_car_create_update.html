@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+
+{% block title %}
+    Автомобиль
+{% endblock %}
+
+<form method="POST" enctype="multipart/form-data" xmlns="http://www.w3.org/1999/html">
+    {% csrf_token %}
+
+    {{ picture_formset.management_form }}
+
+    <table>
+        {{ form.as_p }}
+
+        {% for form in picture_formset %}
+                {{ form }}
+        {% endfor %}
+    </table>
+
+        <input type="submit" value="Создать">
+
+</form>
+

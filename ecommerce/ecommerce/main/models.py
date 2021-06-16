@@ -174,5 +174,12 @@ class TicketItemArchive(TicketItem):
 
 
 class Picture(models.Model):
-    image = models.ImageField(upload_to='')
     car = models.ForeignKey(TicketCar, on_delete=models.CASCADE, verbose_name='Автомобили', related_name='pictures')
+    image = models.ImageField(upload_to='', verbose_name='Изображение')
+
+    class Meta:
+        verbose_name = 'Изображение'
+        verbose_name_plural = 'Изображения'
+
+    def __str__(self):
+        return self.car.name+str(self.id)
