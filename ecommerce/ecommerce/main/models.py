@@ -184,3 +184,15 @@ class Picture(models.Model):
 
     def __str__(self):
         return self.car.name+str(self.id)
+
+class Subscriber(models.Model):
+    profile = models.OneToOneField(Profile, verbose_name="Подписчик", on_delete=models.CASCADE, related_name = "subscribers")
+    is_active = models.BooleanField(verbose_name='Подписка активна', default=True)
+    from_date = models.DateTimeField(auto_now_add=True)
+
+    class Meta:
+        verbose_name: "Подписчик"
+        verbose_name_plural: "Подписчики"
+
+    def __str__(self):
+        return str(self.profile)
