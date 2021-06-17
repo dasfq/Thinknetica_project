@@ -193,9 +193,13 @@ LOGIN_REDIRECT_URL = '/'
 LOGOUT_REDIRECT_URL = '/'
 
 EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
+DEFAULT_FROM_EMAIL = 'Name'
 ADMINS = [('Denis', "Denis-966@mail.ru")]
 
 # E-Mail confirmation
 ACCOUNT_EMAIL_REQUIRED=True
 ACCOUNT_EMAIL_VERIFICATION="mandatory"
 ACCOUNT_EMAIL_CONFIRMATION_EXPIRE_DAYS=1
+
+
+
