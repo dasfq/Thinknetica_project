@@ -79,3 +79,4 @@ admin.site.register(TicketServiceArchive, TicketServiceArchiveAdmin)
 admin.site.register(Profile, ProfileAdmin)
 admin.site.register(Picture, PictureAdmin)
 admin.site.register(Subscriber, SubscriberAdmin)
+
