@@ -40,7 +40,7 @@ def delete_old_job_executions(max_age=604_800):
     DjangoJobExecution.objects.delete_old_job_executions(max_age)
 
 
-class Comand(BaseCommand):
+class Command(BaseCommand):
     help = "Runs APScheduler."
     trigger = AndTrigger([IntervalTrigger(days=7), CronTrigger(day_of_week='mon')])
 
@@ -66,7 +66,7 @@ class Comand(BaseCommand):
         logger.info("Added weekly job: 'delete_old_jobs'.")
 
         try:
-            logger.info("startinf of scheduler")
+            logger.info("starting of scheduler")
             scheduler.start()
         except KeyboardInterrupt:
             logger.info('Keyboard interrupted.')
