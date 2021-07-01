@@ -1,0 +1,8 @@
+<p>Новые объявления в разделе {{ ticket_car.0.category.name }}</p>
+<ol>
+    {{ for ticket in tickets }}
+    <li>
+    <a href={% url "car_detail" ticket.id  %}>{{ ticket.name }}</a>
+    </li>
+    {{ endfor }}
+</ol>
