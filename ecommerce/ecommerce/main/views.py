@@ -5,12 +5,16 @@ from django.conf import settings
 from django.views.generic import ListView, DetailView, UpdateView, CreateView
 from .forms import ProfileForm, TicketCarForm, TicketItemForm, TicketServiceForm, PictureFormSet, CarFormSet
 from django.contrib.auth.mixins import LoginRequiredMixin, PermissionRequiredMixin
+from main.tasks import test1, test2, test3
 
 # Create your views here.
 
 def IndexView(request):
     template_name = 'index.html'
     queryset = FlatPage.objects.all()
+    test3.delay()
+    test1.delay()
+    test2.delay()
     context = {
         'pages': queryset,
         'user': request.user,
