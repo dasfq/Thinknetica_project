@@ -58,8 +58,6 @@ def weekly_send():
 def send_notification(instance):
     """Уведомление при создании нового объявления  """
     to = [profile.profile.email for profile in Subscriber.objects.filter(is_active=True)]
-    print('123333333333333112312312323123213123123')
-    print(instance)
     ticket_name = instance['name']
     price = instance["price"]
     condition = instance["state"]

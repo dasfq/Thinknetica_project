@@ -58,6 +58,10 @@ INSTALLED_APPS = [
     'allauth.socialaccount.providers.google',
 
     "django_apscheduler",
+
+    #celery
+    "django_celery_results",
+    "django_celery_beat",
 ]
 
 SOCIALACCOUNT_PROVIDERS = {
@@ -151,7 +155,9 @@ AUTH_PASSWORD_VALIDATORS = [
 
 LANGUAGE_CODE = 'en-us'
 
-TIME_ZONE = 'UTC'
+TIME_ZONE = 'Europe/Moscow'
+#celery timezone
+timezone = 'Europe/Moscow'
 
 USE_I18N = True
 
@@ -200,3 +206,4 @@ ADMINS = [('Denis', "Denis-966@mail.ru")]
 
 CELERY_BROKER_URL = os.environ.get("CELERY_BROKER", "redis://redis:6379/0")
 CELERY_RESULT_BACKEND = os.environ.get("CELERY_BROKER", "redis://redis:6379/0")
+beat_scheduler = 'DatabaseScheduler'
