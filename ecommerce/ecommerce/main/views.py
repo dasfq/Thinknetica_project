@@ -5,7 +5,9 @@ from django.conf import settings
 from django.views.generic import ListView, DetailView, UpdateView, CreateView
 from .forms import ProfileForm, TicketCarForm, TicketItemForm, TicketServiceForm, PictureFormSet, CarFormSet
 from django.contrib.auth.mixins import LoginRequiredMixin, PermissionRequiredMixin
-from main.tasks import test1, test2, test3
+from main.tasks import test1, test2, test3, send_notification
+from django.forms import model_to_dict
+
 
 # Create your views here.
 
@@ -193,8 +195,11 @@ class ItemCreateView(PermissionRequiredMixin, CreateView):
     success_url = '/'
     template_name = 'items/ticket_item_create_form.html'
 
+
     def form_valid(self, form):
         BaseView.get_seller(self, form)
+        instance = model_to_dict(form.instance)
+        send_notification.delay(instance)
         return super().form_valid(form)
 
 

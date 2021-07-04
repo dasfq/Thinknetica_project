@@ -48,7 +48,7 @@ class Command(BaseCommand):
         scheduler = BackgroundScheduler()
         scheduler.add_jobstore(DjangoJobStore(), "default")
         scheduler.add_job(
-            email_send,
+            weekly_send,
             trigger=self.trigger,
             id='weekly_newsletter',
             max_instances=1,
