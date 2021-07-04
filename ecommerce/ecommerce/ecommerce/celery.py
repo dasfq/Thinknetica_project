@@ -5,6 +5,7 @@ https://docs.celeryproject.org/en/stable/django/first-steps-with-django.html
 from __future__ import absolute_import, unicode_literals
 import os
 from celery import Celery
+from celery.schedules import crontab
 
 # этот код скопирован с manage.py
 # он установит модуль настроек по умолчанию Django для приложения 'celery'.
@@ -29,9 +30,13 @@ app.autodiscover_tasks()
 #     sender.add_periodic_task(10.0, add.s(3,5), name='test task')
 
 app.conf.beat_schedule = {
-    'add_every_30_seconds': {
+    'random_name': {
         'task': "main.tasks.add",
         "schedule": 10.0,
-        "args": (16,10)
+        "args": (15,10)
     },
+    "send_weekly_newsletter": {
+        "task": "main.tasks.weekly_send",
+        "schedule": crontab(day_of_week=1, hour=12, minute=0)
+    }
 }
