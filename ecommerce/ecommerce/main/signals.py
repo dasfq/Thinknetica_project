@@ -35,30 +35,3 @@ def send_hello_email(sender, instance, **kwargs):
         html_content,
         reply_to,
     )
-
-# @receiver(post_save, sender = TicketItem)
-# def send_newsletter(sender, instance, created, **kwargs):
-#     """Рассылка при создании нового объявления  """
-#     if created:
-#         to = [profile.profile.email for profile in Subscriber.objects.filter(is_active=True)]
-#         ticket_name = instance
-#         price = instance.price
-#         qty = instance.qty
-#         condition = instance.state
-#         tags = list(instance.tag.all())
-#         subject = 'Новые объявления на нашем сайте!'
-#         text_content = f"{instance}, ознакомьтесь с новыми объявлениями на нашем сайте!"
-#         html_content = f'<p><strong>{ticket_name}</strong></p><p>Цена:</p>{price}</p><p>Состояние: {condition}</p>'
-#         from_email = "from@mail.com"
-#         reply_to = [from_email]
-#         email_send(
-#             subject,
-#             text_content,
-#             from_email,
-#             to,
-#             html_content,
-#             reply_to
-#         )
-
-
-
