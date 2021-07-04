@@ -40,6 +40,7 @@ class CustomUser(AbstractBaseUser, PermissionsMixin):
 class Profile(CustomUser):
     birth_date = models.DateTimeField(blank=True)
     avatar = models.ImageField(upload_to='avatars', default='avatars/default_ava.png')
+    phone_number = models.CharField(max_length=12, verbose_name="Номер телефона", null=True, blank=True)
 
     class Meta:
         verbose_name = 'Профиль'
@@ -196,3 +197,9 @@ class Subscriber(models.Model):
 
     def __str__(self):
         return str(self.profile)
+
+
+class SMSLog(models.Model):
+    code = models.CharField(max_length=4, verbose_name="Код")
+    response = models.JSONField(max_length=50, verbose_name="Ответ сервера")
+    phone_number = models.CharField(max_length=12, verbose_name="Номер телефона")
