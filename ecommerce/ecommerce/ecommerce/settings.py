@@ -206,4 +206,9 @@ ADMINS = [('Denis', "Denis-966@mail.ru")]
 
 CELERY_BROKER_URL = os.environ.get("CELERY_BROKER", "redis://redis:6379/0")
 CELERY_RESULT_BACKEND = os.environ.get("CELERY_BROKER", "redis://redis:6379/0")
+
 beat_scheduler = 'DatabaseScheduler'
+
+TWILIO_ACCOUNT_SID = "AC61b71c449e9cff9c595b7bf0c7d21f1a"
+TWILIO_AUTH_TOKEN = "2a4f5e3c2dd59d7cb66b1f8f69a368d5"
+TWILIO_PHONE = '+16507537401'
