@@ -10,6 +10,7 @@ from django.contrib.auth.mixins import LoginRequiredMixin, PermissionRequiredMix
 from main.tasks import test1, test2, test3, send_notification, send_sms_phone_confirm
 from django.forms import model_to_dict
 
+
 # Create your views here.
 
 def IndexView(request):
@@ -48,7 +49,7 @@ class BaseView():
         return form
 
 
-class CarList(ListView):
+class CarList(ListView, BaseView):
     model = TicketCar
     context_object_name = 'ticket_car_list'
     template_name = 'cars/ticket_car_list.html'
@@ -62,7 +63,7 @@ class CarList(ListView):
         context['tags_list'] = BaseView.base_get_tags(self.model)
         return context
 
-class CarDetailView(DetailView):
+class CarDetailView(DetailView, BaseView):
     model = TicketCar
     template_name = 'cars/ticket_car_detail.html'
     context_object_name = 'ticket_car_detail'
@@ -128,7 +129,7 @@ class CarUpdateView(UpdateView):
         return context
 
 
-class ServiceList(ListView):
+class ServiceList(ListView, BaseView):
     model = TicketService
     context_object_name = "ticket_service_list"
     template_name = 'services/ticket_service_list.html'
@@ -142,7 +143,7 @@ class ServiceList(ListView):
         context['tags_list'] = BaseView.base_get_tags(self.model)
         return context
 
-class ServiceDetailView(DetailView):
+class ServiceDetailView(DetailView, BaseView):
     model = TicketService
     template_name = 'services/ticket_service_detail.html'
     context_object_name = 'ticket_service_detail'
@@ -170,7 +171,7 @@ class ServiceUpdateView(UpdateView):
 
 
 
-class ItemList(ListView):
+class ItemList(ListView, BaseView):
     model = TicketItem
     context_object_name = "ticket_item_list"
     template_name = 'items/ticket_item_list.html'
@@ -185,7 +186,7 @@ class ItemList(ListView):
         return context
 
 
-class ItemDetailView(DetailView):
+class ItemDetailView(DetailView, BaseView):
     model = TicketItem
     template_name = 'items/ticket_item_detail.html'
     context_object_name = "ticket_item_detail"
