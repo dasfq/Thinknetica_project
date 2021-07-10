@@ -15,7 +15,7 @@ class ProfileForm(forms.ModelForm):
 
     class Meta:
         model = Profile
-        fields = ('birth_date', "email", "last_name", "first_name", "groups", 'group',)
+        fields = ('birth_date', "email", "last_name", "first_name", "groups", 'group', 'phone_number')
 
 class TicketCarForm(forms.ModelForm):
 

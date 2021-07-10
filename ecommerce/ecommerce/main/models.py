@@ -3,6 +3,7 @@ from django.contrib.auth.base_user import AbstractBaseUser
 from django.contrib.auth.models import PermissionsMixin, Group
 from .managers import CustomUserManager
 from django.template.defaultfilters import slugify
+from django.urls import reverse
 
 class CustomUser(AbstractBaseUser, PermissionsMixin):
     username = models.CharField(verbose_name="Логин", null=True, blank=True, max_length=10)
@@ -46,6 +47,8 @@ class Profile(CustomUser):
         verbose_name = 'Профиль'
         verbose_name_plural = 'Профили'
 
+    def get_absolute_url(self):
+        return reverse('profile_update', kwargs={'pk': self.pk})
 
 
 class Category(models.Model):

@@ -1,13 +1,12 @@
 from django.shortcuts import render, reverse
 from django.contrib.flatpages.models import FlatPage
-from .models import TicketCar, TicketItem, TicketService, Profile, Seller, Picture
+from .models import TicketCar, TicketItem, TicketService, Profile, Seller, Picture, SMSLog
 from django.conf import settings
 from django.views.generic import ListView, DetailView, UpdateView, CreateView
 from .forms import ProfileForm, TicketCarForm, TicketItemForm, TicketServiceForm, PictureFormSet, CarFormSet
 from django.contrib.auth.mixins import LoginRequiredMixin, PermissionRequiredMixin
-from main.tasks import test1, test2, test3, send_notification
+from main.tasks import test1, test2, test3, send_notification, send_sms_phone_confirm
 from django.forms import model_to_dict
-
 
 # Create your views here.
 
@@ -215,4 +214,11 @@ class ProfileUpdateView(LoginRequiredMixin, UpdateView):
     model = Profile
     form_class = ProfileForm
     template_name_suffix = '_update_form'
-    success_url = '/'
+
+    def form_valid(self, form):
+        phone = form.instance.phone_number
+        print('form.instance.phone_number', phone)
+        # profile = form.save(commit=False)
+        if phone:
+            response = send_sms_phone_confirm.delay(phone)
+        return super().form_valid(form)
