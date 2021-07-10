@@ -1,17 +1,33 @@
 from django.shortcuts import render, reverse
 from django.contrib.flatpages.models import FlatPage
-from .models import TicketCar, TicketItem, TicketService, Profile, Seller, Picture, SMSLog
 from django.conf import settings
 from django.views.generic import ListView, DetailView, UpdateView, CreateView
+from django.views.generic.base import View
 from django.utils.decorators import method_decorator
 from django.views.decorators.cache import cache_page
 from .forms import ProfileForm, TicketCarForm, TicketItemForm, TicketServiceForm, PictureFormSet, CarFormSet
 from django.contrib.auth.mixins import LoginRequiredMixin, PermissionRequiredMixin
-from main.tasks import test1, test2, test3, send_notification, send_sms_phone_confirm
 from django.forms import model_to_dict
+from django.core.cache import caches
+import random
+from main.models import TicketCar, TicketItem, TicketService, Profile, Seller, Picture, SMSLog
+from main.tasks import test1, test2, test3, send_notification, send_sms_phone_confirm
+from main.asserts.generators import generate_cache_key
 
+class DetailView(DetailView):
+    '''Общая detailview для всех объявлений'''
 
-# Create your views here.
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        obj = context['object']
+        cache = caches['default']
+        if obj.price:
+            new_price = round(obj.price * random.uniform(0.8, 1.2))
+            cache_key = generate_cache_key(obj)
+            cache_price = cache.get_or_set(cache_key, new_price, 60)
+            context['object'].price = cache_price
+        return context
+
 
 def IndexView(request):
     template_name = 'index.html'
@@ -27,12 +43,12 @@ def IndexView(request):
     return render(request, template_name,context)
 
 
-@method_decorator(cache_page(), name='dispatch')
-class BaseView():
+@method_decorator(cache_page(settings.CACHE_TIMEOUT), name='dispatch')
+class BaseView(View):
+    '''Общий класс для всех ListView, через который применяется кэширование'''
 
     def base_queryset(self, model_name):
         tag = self.request.GET.get('tag')
-
         if tag:
             return model_name.objects.filter(tag__id=tag)
         else:
@@ -63,15 +79,10 @@ class CarList(ListView, BaseView):
         context['tags_list'] = BaseView.base_get_tags(self.model)
         return context
 
-class CarDetailView(DetailView, BaseView):
+class CarDetailView(DetailView):
     model = TicketCar
     template_name = 'cars/ticket_car_detail.html'
     context_object_name = 'ticket_car_detail'
-
-    def get_context_data(self, **kwargs):
-        context = super().get_context_data(**kwargs)
-        print(context['ticket_car_detail'])
-        return context
 
 
 class CarCreateView(CreateView):
@@ -143,7 +154,7 @@ class ServiceList(ListView, BaseView):
         context['tags_list'] = BaseView.base_get_tags(self.model)
         return context
 
-class ServiceDetailView(DetailView, BaseView):
+class ServiceDetailView(DetailView):
     model = TicketService
     template_name = 'services/ticket_service_detail.html'
     context_object_name = 'ticket_service_detail'
@@ -186,7 +197,7 @@ class ItemList(ListView, BaseView):
         return context
 
 
-class ItemDetailView(DetailView, BaseView):
+class ItemDetailView(DetailView):
     model = TicketItem
     template_name = 'items/ticket_item_detail.html'
     context_object_name = "ticket_item_detail"

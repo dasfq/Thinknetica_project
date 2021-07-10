@@ -1,5 +1,9 @@
 {% extends 'base.html' %}
 
 {% block content %}
-    Объявление: "{{ ticket_item_detail.name }}"
+    <p>Объявление: {{ ticket_item_detail.name }}</p>
+    <p>Описание: {{ ticket_item_detail.text }}</p>
+    <p>Цена: {{ ticket_item_detail.price }} руб.</p>
+
+
 {% endblock content %}
