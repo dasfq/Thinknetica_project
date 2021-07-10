@@ -3,10 +3,21 @@ from django.contrib.flatpages.models import FlatPage
 from .models import TicketCar, TicketItem, TicketService, Profile, Seller, Picture, SMSLog
 from django.conf import settings
 from django.views.generic import ListView, DetailView, UpdateView, CreateView
+from django.utils.decorators import method_decorator
+from django.views.decorators.cache import cache_page
 from .forms import ProfileForm, TicketCarForm, TicketItemForm, TicketServiceForm, PictureFormSet, CarFormSet
 from django.contrib.auth.mixins import LoginRequiredMixin, PermissionRequiredMixin
 from main.tasks import test1, test2, test3, send_notification, send_sms_phone_confirm
 from django.forms import model_to_dict
+
+
+@method_decorator(cache_page(), name='dispatch')
+class ListView(ListView):
+    pass
+
+@method_decorator(cache_page(), name='dispatch')
+class DetailView(DetailView):
+    pass
 
 # Create your views here.
 
