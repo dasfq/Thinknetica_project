@@ -220,10 +220,12 @@ TWILIO_PHONE = '+16507537401'
 CACHES = {
     'default': {
         'BACKEND': 'django_redis.cache.RedisCache',
-        'LOCATION': 'redis://127.0.0.1:6379/1',
-        'TIMEOUT': 300,
+        'LOCATION': 'redis://redis:6379/1',
+        'CACHE_MIDDLEWARE_ALIAS': 'default',
         'OPTIONS': {
             'CLIENT_CLASS': 'django_redis.client.DefaultClient',
         }
     }
 }
+
+CACHE_TIMEOUT = 300
