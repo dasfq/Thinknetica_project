@@ -1,15 +1,19 @@
 from __future__ import absolute_import, unicode_literals
 
 # Это позволит убедиться, что приложение всегда импортируется, когда запускается Django
-from celery import shared_task
+from django.conf import settings
 from ecommerce.celery import app
-# from celery import Celery
-# from celery.schedules import crontab
+from main.asserts.emails import email_send
+from main.models import TicketCar, Subscriber, SMSLog
 import time
 import datetime
-from main.asserts.emails import email_send
-from main.models import TicketCar, Subscriber
-import json
+from celery import shared_task
+from celery.utils.log import get_task_logger
+from twilio.rest import Client
+from main.asserts.generators import generate_code
+
+
+logger = get_task_logger(__name__)
 
 
 @shared_task
@@ -74,3 +78,22 @@ def send_notification(instance):
         html_content,
         reply_to
     )
+
+@shared_task
+def send_sms_phone_confirm(phone_number):
+    client = Client(settings.TWILIO_ACCOUNT_SID, settings.TWILIO_AUTH_TOKEN)
+    code_digits_qty = 4
+    code = generate_code(code_digits_qty)
+    logger.info('confirmation code is generated')
+    message = client.messages.create(
+        body=f'Your confirmation code: {code}',
+        from_=settings.TWILIO_PHONE,
+        to=phone_number
+    )
+    logger.info('SMS is sent')
+    SMSLog.objects.get_or_create(
+        code=code,
+        response=message.sid,
+        phone_number=phone_number
+    )
+    logger.info('Data is saved')
