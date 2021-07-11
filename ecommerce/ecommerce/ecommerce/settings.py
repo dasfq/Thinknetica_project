@@ -217,6 +217,7 @@ TWILIO_ACCOUNT_SID = "AC61b71c449e9cff9c595b7bf0c7d21f1a"
 TWILIO_AUTH_TOKEN = "2a4f5e3c2dd59d7cb66b1f8f69a368d5"
 TWILIO_PHONE = '+16507537401'
 
+
 CACHES = {
     'default': {
         'BACKEND': 'django_redis.cache.RedisCache',
@@ -226,3 +227,8 @@ CACHES = {
         }
     }
 }
+
+TWILIO_ACCOUNT_SID = "AC61b71c449e9cff9c595b7bf0c7d21f1a"
+TWILIO_AUTH_TOKEN = "2a4f5e3c2dd59d7cb66b1f8f69a368d5"
+TWILIO_PHONE = '+16507537401'
+

@@ -83,4 +83,3 @@ admin.site.register(Profile, ProfileAdmin)
 admin.site.register(Picture, PictureAdmin)
 admin.site.register(Subscriber, SubscriberAdmin)
 admin.site.register(SMSLog, SMSLogAdmin)
-
