@@ -3,6 +3,8 @@ from django.contrib.flatpages.models import FlatPage
 from .models import TicketCar, TicketItem, TicketService, Profile, Seller, Picture, SMSLog
 from django.conf import settings
 from django.views.generic import ListView, DetailView, UpdateView, CreateView
+from django.utils.decorators import method_decorator
+from django.views.decorators.cache import cache_page
 from .forms import ProfileForm, TicketCarForm, TicketItemForm, TicketServiceForm, PictureFormSet, CarFormSet
 from django.contrib.auth.mixins import LoginRequiredMixin, PermissionRequiredMixin
 from main.tasks import test1, test2, test3, send_notification, send_sms_phone_confirm
@@ -23,6 +25,8 @@ def IndexView(request):
     }
     return render(request, template_name,context)
 
+
+@method_decorator(cache_page(), name='dispatch')
 class BaseView():
 
     def base_queryset(self, model_name):
@@ -44,7 +48,7 @@ class BaseView():
         return form
 
 
-class CarList(ListView):
+class CarList(ListView, BaseView):
     model = TicketCar
     context_object_name = 'ticket_car_list'
     template_name = 'cars/ticket_car_list.html'
@@ -58,7 +62,7 @@ class CarList(ListView):
         context['tags_list'] = BaseView.base_get_tags(self.model)
         return context
 
-class CarDetailView(DetailView):
+class CarDetailView(DetailView, BaseView):
     model = TicketCar
     template_name = 'cars/ticket_car_detail.html'
     context_object_name = 'ticket_car_detail'
@@ -124,7 +128,7 @@ class CarUpdateView(UpdateView):
         return context
 
 
-class ServiceList(ListView):
+class ServiceList(ListView, BaseView):
     model = TicketService
     context_object_name = "ticket_service_list"
     template_name = 'services/ticket_service_list.html'
@@ -138,7 +142,7 @@ class ServiceList(ListView):
         context['tags_list'] = BaseView.base_get_tags(self.model)
         return context
 
-class ServiceDetailView(DetailView):
+class ServiceDetailView(DetailView, BaseView):
     model = TicketService
     template_name = 'services/ticket_service_detail.html'
     context_object_name = 'ticket_service_detail'
@@ -166,7 +170,7 @@ class ServiceUpdateView(UpdateView):
 
 
 
-class ItemList(ListView):
+class ItemList(ListView, BaseView):
     model = TicketItem
     context_object_name = "ticket_item_list"
     template_name = 'items/ticket_item_list.html'
@@ -181,7 +185,7 @@ class ItemList(ListView):
         return context
 
 
-class ItemDetailView(DetailView):
+class ItemDetailView(DetailView, BaseView):
     model = TicketItem
     template_name = 'items/ticket_item_detail.html'
     context_object_name = "ticket_item_detail"
