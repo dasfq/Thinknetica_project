@@ -79,6 +79,7 @@ class CarList(ListView, BaseView):
         context['tags_list'] = BaseView.base_get_tags(self.model)
         return context
 
+      
 class CarDetailView(DetailView):
     model = TicketCar
     template_name = 'cars/ticket_car_detail.html'
@@ -107,7 +108,6 @@ class CarCreateView(CreateView):
 
         """ возвращаем обычную форму с присоединённым формсетом картинки"""
         return super(CarCreateView, self).form_valid(form)
-
 
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
@@ -171,15 +171,11 @@ class ServiceCreateView(CreateView):
         return super().form_valid(form)
 
 
-
-
 class ServiceUpdateView(UpdateView):
     model = TicketService
     form_class = TicketServiceForm
     template_name = 'services/ticket_service_update_form.html'
     success_url = '/'
-
-
 
 
 class ItemList(ListView, BaseView):
@@ -210,7 +206,6 @@ class ItemCreateView(PermissionRequiredMixin, CreateView):
     success_url = '/'
     template_name = 'items/ticket_item_create_form.html'
 
-
     def form_valid(self, form):
         BaseView.get_seller(self, form)
         instance = model_to_dict(form.instance)
@@ -226,7 +221,6 @@ class ItemUpdateView(UpdateView):
 
 
 class ProfileUpdateView(LoginRequiredMixin, UpdateView):
-
     model = Profile
     form_class = ProfileForm
     template_name_suffix = '_update_form'
