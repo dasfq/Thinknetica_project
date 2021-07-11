@@ -10,7 +10,6 @@ from django.contrib.auth.mixins import LoginRequiredMixin, PermissionRequiredMix
 from main.tasks import test1, test2, test3, send_notification, send_sms_phone_confirm
 from django.forms import model_to_dict
 
-
 # Create your views here.
 
 def IndexView(request):
