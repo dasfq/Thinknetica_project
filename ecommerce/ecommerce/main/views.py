@@ -1,18 +1,19 @@
-from django.shortcuts import render, reverse
+from django.shortcuts import render
 from django.contrib.flatpages.models import FlatPage
 from django.conf import settings
 from django.views.generic import ListView, DetailView, UpdateView, CreateView
 from django.views.generic.base import View
 from django.utils.decorators import method_decorator
 from django.views.decorators.cache import cache_page
-from .forms import ProfileForm, TicketCarForm, TicketItemForm, TicketServiceForm, PictureFormSet, CarFormSet
+from .forms import ProfileForm, TicketCarForm, TicketItemForm, TicketServiceForm, PictureFormSet
 from django.contrib.auth.mixins import LoginRequiredMixin, PermissionRequiredMixin
 from django.forms import model_to_dict
 from django.core.cache import caches
 import random
-from main.models import TicketCar, TicketItem, TicketService, Profile, Seller, Picture, SMSLog
+from main.models import TicketCar, TicketItem, TicketService, Profile, Seller
 from main.tasks import test1, test2, test3, send_notification, send_sms_phone_confirm
 from main.asserts.generators import generate_cache_key
+
 
 class DetailView(DetailView):
     '''Общая detailview для всех объявлений'''
@@ -40,7 +41,7 @@ def IndexView(request):
         'user': request.user,
         'turn_on_block': settings.MAINTENANCE_MODE
     }
-    return render(request, template_name,context)
+    return render(request, template_name, context)
 
 
 @method_decorator(cache_page(settings.CACHE_TIMEOUT), name='dispatch')
@@ -79,6 +80,7 @@ class CarList(ListView, BaseView):
         context['tags_list'] = BaseView.base_get_tags(self.model)
         return context
 
+
 class CarDetailView(DetailView):
     model = TicketCar
     template_name = 'cars/ticket_car_detail.html'
@@ -107,7 +109,6 @@ class CarCreateView(CreateView):
 
         """ возвращаем обычную форму с присоединённым формсетом картинки"""
         return super(CarCreateView, self).form_valid(form)
-
 
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
@@ -154,6 +155,7 @@ class ServiceList(ListView, BaseView):
         context['tags_list'] = BaseView.base_get_tags(self.model)
         return context
 
+
 class ServiceDetailView(DetailView):
     model = TicketService
     template_name = 'services/ticket_service_detail.html'
@@ -171,15 +173,11 @@ class ServiceCreateView(CreateView):
         return super().form_valid(form)
 
 
-
-
 class ServiceUpdateView(UpdateView):
     model = TicketService
     form_class = TicketServiceForm
     template_name = 'services/ticket_service_update_form.html'
     success_url = '/'
-
-
 
 
 class ItemList(ListView, BaseView):
@@ -210,7 +208,6 @@ class ItemCreateView(PermissionRequiredMixin, CreateView):
     success_url = '/'
     template_name = 'items/ticket_item_create_form.html'
 
-
     def form_valid(self, form):
         BaseView.get_seller(self, form)
         instance = model_to_dict(form.instance)
@@ -233,8 +230,6 @@ class ProfileUpdateView(LoginRequiredMixin, UpdateView):
 
     def form_valid(self, form):
         phone = form.instance.phone_number
-        print('form.instance.phone_number', phone)
-        # profile = form.save(commit=False)
         if phone:
-            response = send_sms_phone_confirm.delay(phone)
+            send_sms_phone_confirm.delay(phone)
         return super().form_valid(form)

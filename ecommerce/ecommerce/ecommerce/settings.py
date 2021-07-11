@@ -48,10 +48,10 @@ INSTALLED_APPS = [
     'constance.backends.database',
     'sorl.thumbnail',
 
-    ##my app
+    # my app
     'main',
 
-    ## auth
+    # auth
     'allauth',
     'allauth.account',
     'allauth.socialaccount',
@@ -59,7 +59,7 @@ INSTALLED_APPS = [
 
     "django_apscheduler",
 
-    #celery
+    # celery
     "django_celery_results",
     "django_celery_beat",
 ]
@@ -85,7 +85,7 @@ MIDDLEWARE = [
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 
-    ## flatpages
+    # flatpages
     'django.contrib.flatpages.middleware.FlatpageFallbackMiddleware',
 ]
 
@@ -156,7 +156,7 @@ AUTH_PASSWORD_VALIDATORS = [
 LANGUAGE_CODE = 'en-us'
 
 TIME_ZONE = 'Europe/Moscow'
-#celery timezone
+# celery timezone
 timezone = 'Europe/Moscow'
 
 USE_I18N = True

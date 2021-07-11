@@ -1,5 +1,5 @@
-from django.contrib.auth.base_user import BaseUserManager
-from django.contrib.auth.models import UserManager, BaseUserManager
+from django.contrib.auth.models import BaseUserManager
+
 
 class CustomUserManager(BaseUserManager):
 
@@ -23,4 +23,3 @@ class CustomUserManager(BaseUserManager):
             raise ValueError('Superuser must have is_superuser=True.')
 
         return self.create_user(email, password, **extra_fields)
-

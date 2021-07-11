@@ -5,6 +5,7 @@ from .managers import CustomUserManager
 from django.template.defaultfilters import slugify
 from django.urls import reverse
 
+
 class CustomUser(AbstractBaseUser, PermissionsMixin):
     username = models.CharField(verbose_name="Логин", null=True, blank=True, max_length=10)
     email = models.EmailField(verbose_name="E-mail", unique=True)
@@ -19,7 +20,7 @@ class CustomUser(AbstractBaseUser, PermissionsMixin):
         'Designates whether this user should be treated as active. '
         'Unselect this instead of deleting accounts.'
     ),
-                                    )
+    )
     date_joined = models.DateTimeField(('date joined'), auto_now_add=True)
 
     USERNAME_FIELD = 'email'
@@ -34,8 +35,6 @@ class CustomUser(AbstractBaseUser, PermissionsMixin):
         verbose_name = 'Пользователь'
         verbose_name_plural = "Список пользователей"
         ordering = ('email',)
-
-
 
 
 class Profile(CustomUser):
@@ -74,6 +73,7 @@ class Category(models.Model):
             self.slug = slugify(self.name)
         super(Category, self).save(*args, **kwargs)
 
+
 class Tag(models.Model):
     name = models.CharField(max_length=10, verbose_name="Название тега")
 
@@ -83,6 +83,7 @@ class Tag(models.Model):
 
     def __str__(self):
         return str(self.name)
+
 
 class Seller(models.Model):
     user = models.OneToOneField(CustomUser, related_name='sellers', on_delete=models.CASCADE)
@@ -101,6 +102,7 @@ class Seller(models.Model):
     class Meta:
         verbose_name = 'Продавец'
         verbose_name_plural = 'Продавцы'
+
 
 class BaseTicket(models.Model):
     name = models.CharField(verbose_name="Название", max_length=25)
@@ -132,6 +134,7 @@ class TicketService(BaseTicket):
         verbose_name = 'Объявление - услуги'
         verbose_name_plural = 'Объявления - услуги'
 
+
 class TicketCar(BaseTicket):
     category = models.ManyToManyField(Category, verbose_name="Категория", related_name="TicketCars")
     model = models.CharField(verbose_name='Модель', max_length=10)
@@ -141,6 +144,7 @@ class TicketCar(BaseTicket):
     class Meta(BaseTicket.Meta):
         verbose_name = 'Объявление - авто'
         verbose_name_plural = 'Объявления - авто'
+
 
 class TicketItem(BaseTicket):
     STATE_CHOICES = [
@@ -187,16 +191,17 @@ class Picture(models.Model):
         verbose_name_plural = 'Изображения'
 
     def __str__(self):
-        return self.car.name+str(self.id)
+        return self.car.name + str(self.id)
+
 
 class Subscriber(models.Model):
-    profile = models.OneToOneField(Profile, verbose_name="Подписчик", on_delete=models.CASCADE, related_name = "subscribers")
+    profile = models.OneToOneField(Profile, verbose_name="Подписчик", on_delete=models.CASCADE, related_name="subscribers")
     is_active = models.BooleanField(verbose_name='Подписка активна', default=True)
     from_date = models.DateTimeField(auto_now_add=True)
 
     class Meta:
-        verbose_name: "Подписчик"
-        verbose_name_plural: "Подписчики"
+        verbose_name = "Подписчик"
+        verbose_name_plural = "Подписчики"
 
     def __str__(self):
         return str(self.profile)

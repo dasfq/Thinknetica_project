@@ -1,24 +1,18 @@
 from django.db.models.signals import post_save
 from django.dispatch import receiver
-from main.models import CustomUser, Profile, Subscriber, TicketItem
+from main.models import CustomUser
 from django.contrib.auth.models import Group
-from django.core.mail import EmailMultiAlternatives
 from django.conf import settings
 from main.asserts.emails import email_send
 
 
-@receiver(post_save, sender = CustomUser, dispatch_uid = 'signal_1')
+@receiver(post_save, sender=CustomUser, dispatch_uid='signal_1')
 def default_group(sender, instance, **kwargs):
     group, is_created = Group.objects.get_or_create(name='Common Users')
     instance.groups.add(group)
 
 
-@receiver(post_save, sender = Profile, dispatch_uid = 'signal_2')
-def default_group(sender, instance, **kwargs):
-    group, is_created = Group.objects.get_or_create(name='Common Users')
-    instance.groups.add(group)
-
-@receiver(post_save, sender = settings.AUTH_USER_MODEL, dispatch_uid = 'signal_3')
+@receiver(post_save, sender=settings.AUTH_USER_MODEL, dispatch_uid='signal_3')
 def send_hello_email(sender, instance, **kwargs):
     """Sending of hello email"""
     subject = 'Спасибо за регистрацию!'
