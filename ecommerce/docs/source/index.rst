@@ -10,6 +10,7 @@ Welcome to ecommerce's documentation!
    :maxdepth: 2
    :caption: Contents:
 
+   modules/models.rst
 
 
 Indices and tables
