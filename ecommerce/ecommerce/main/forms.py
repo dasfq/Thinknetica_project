@@ -4,6 +4,7 @@ from django.forms.models import inlineformset_factory
 from django.forms import modelformset_factory
 from datetime import date
 
+
 class ProfileForm(forms.ModelForm):
 
     def clean_birth_date(self):
@@ -17,17 +18,20 @@ class ProfileForm(forms.ModelForm):
         model = Profile
         fields = ('birth_date', "email", "last_name", "first_name", "groups", 'group', 'phone_number')
 
+
 class TicketCarForm(forms.ModelForm):
 
     class Meta:
         model = TicketCar
         exclude = ('seller', 'category', )
 
+
 class TicketItemForm(forms.ModelForm):
 
     class Meta:
         model = TicketItem
         exclude = ('seller', 'category', )
+
 
 class TicketServiceForm(forms.ModelForm):
 
@@ -41,4 +45,10 @@ PictureFormSet = inlineformset_factory(
     Picture,
     fields=('image',),
     max_num=3
+)
+
+CarFormSet = modelformset_factory(
+    TicketCar,
+    fields=('name', 'text', 'model', 'year', 'color', 'price', 'tag',),
+    max_num=1,
 )

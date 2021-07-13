@@ -17,8 +17,9 @@ from django.contrib import admin
 from django.urls import path, include
 from main.views import IndexView
 from django.contrib.flatpages.views import flatpage
-from main.views import CarList, ServiceList, ItemList, CarDetailView, ServiceDetailView, ItemDetailView, ProfileUpdateView,\
-CarCreateView, ItemCreateView, ServiceCreateView, CarUpdateView, ItemUpdateView, ServiceUpdateView
+from main.views import CarList, ServiceList, ItemList, CarDetailView, ServiceDetailView, ItemDetailView,\
+    ProfileUpdateView, CarCreateView, ItemCreateView, ServiceCreateView, CarUpdateView, ItemUpdateView,\
+    ServiceUpdateView
 from django.conf.urls.static import static
 from django.conf import settings
 

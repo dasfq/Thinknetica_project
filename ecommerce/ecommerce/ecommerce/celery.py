@@ -27,13 +27,13 @@ app.autodiscover_tasks()
 #         main.weekly_send.s(),
 #         name='weekly_newsletter'
 #     )
-#     sender.add_periodic_task(10.0, add.s(3,5), name='test task')
+#     sender.add_periodic_task(10.0, add.s(3, 5), name='test task')
 
 app.conf.beat_schedule = {
     'random_name': {
         'task': "main.tasks.add",
         "schedule": 10.0,
-        "args": (15,10)
+        "args": (15, 10)
     },
     "send_weekly_newsletter": {
         "task": "main.tasks.weekly_send",

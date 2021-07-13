@@ -1,5 +1,6 @@
 from django.test import TestCase
 
+
 class TestListViews(TestCase):
 
     def test_cars(self):
