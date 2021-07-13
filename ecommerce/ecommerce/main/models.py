@@ -60,6 +60,7 @@ class Category(models.Model):
     name = models.CharField(verbose_name='Название категории', max_length=15)
     slug = models.SlugField(unique=True, default='')
 
+
     class Meta:
         verbose_name = "Категория"
         verbose_name_plural = "Категории"
