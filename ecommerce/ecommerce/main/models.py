@@ -39,7 +39,7 @@ class CustomUser(AbstractBaseUser, PermissionsMixin):
 
     objects = CustomUserManager()
 
-    def __str__(self):
+    def __str__(self) -> str:
         return f'{self.first_name} {self.last_name}'
 
     class Meta:
@@ -64,7 +64,7 @@ class Profile(CustomUser):
         verbose_name = 'Профиль'
         verbose_name_plural = 'Профили'
 
-    def get_absolute_url(self):
+    def get_absolute_url(self) -> str:
         """Функция определения url к объекту :class:'Profile'
 
         :return: url к объекту :class:'Profile'
@@ -93,7 +93,7 @@ class Category(models.Model):
         verbose_name_plural = "Категории"
         ordering = ('name',)
 
-    def __str__(self):
+    def __str__(self) -> str:
         return str(self.name)
 
     def save(self, *args, **kwargs):
@@ -112,7 +112,7 @@ class Tag(models.Model):
         verbose_name = "Тег"
         verbose_name_plural = "Теги"
 
-    def __str__(self):
+    def __str__(self) -> str:
         return str(self.name)
 
 
@@ -127,7 +127,7 @@ class Seller(models.Model):
             count += i.objects.filter(seller=self).count()
         return count
 
-    def __str__(self):
+    def __str__(self) -> str:
         return str(f'{self.user.first_name} {self.user.last_name}')
 
     class Meta:
@@ -155,7 +155,7 @@ class BaseTicket(models.Model):
         ordering = ('-date_modified',)
         abstract = True
 
-    def __str__(self):
+    def __str__(self) -> str:
         return str(self.name)
 
 
@@ -224,7 +224,7 @@ class Picture(models.Model):
         verbose_name = 'Изображение'
         verbose_name_plural = 'Изображения'
 
-    def __str__(self):
+    def __str__(self) -> str:
         return self.car.name + str(self.id)
 
 
@@ -237,7 +237,7 @@ class Subscriber(models.Model):
         verbose_name = "Подписчик"
         verbose_name_plural = "Подписчики"
 
-    def __str__(self):
+    def __str__(self) -> str:
         return str(self.profile)
 
 
