@@ -7,6 +7,17 @@ from django.urls import reverse
 
 
 class CustomUser(AbstractBaseUser, PermissionsMixin):
+    """User model from :class:'django.contrib.auth.base_user.AbstractBaseUser' class.
+
+    :param username: User's username
+    :type username: str, optional
+    :param email: User's email
+    :type email: 'models.EmailField'
+    :param first_name: First name
+    :type first_name: str, optional
+    :param group: permission groups which user is in
+    :type group: str, optional
+    """
     username = models.CharField(verbose_name="Логин", null=True, blank=True, max_length=10)
     email = models.EmailField(verbose_name="E-mail", unique=True)
     first_name = models.CharField(verbose_name='Имя', max_length=30, blank=True)
@@ -38,6 +49,13 @@ class CustomUser(AbstractBaseUser, PermissionsMixin):
 
 
 class Profile(CustomUser):
+    """Класс для профиля пользователя. Нужно объединить его с CustomUser и оставить один.
+
+    :param birth_date: Дата рождения
+    :type birth_date: 'models.DateTimeField'
+    :param avatar: Аватарка пользователя
+    :type avatar: 'models.ImageField'
+    """
     birth_date = models.DateTimeField(blank=True)
     avatar = models.ImageField(upload_to='avatars', default='avatars/default_ava.png')
     phone_number = models.CharField(max_length=12, verbose_name="Номер телефона", null=True, blank=True)
@@ -47,10 +65,20 @@ class Profile(CustomUser):
         verbose_name_plural = 'Профили'
 
     def get_absolute_url(self):
+        """Функция определения url к объекту :class:'Profile'
+
+        :return: url к объекту :class:'Profile'
+        :rtype: str, optional
+        """
         return reverse('profile_update', kwargs={'pk': self.pk})
 
 
 class Category(models.Model):
+    """Класс категории объявления.
+
+    :param slug: Короткое название категории (слаг). Автоматически генерируется.
+    :type slug: 'models.SlugField'
+    """
 
     class CatChoices(models.TextChoices):
         ITEMS = 'items', 'Вещи'
@@ -70,6 +98,9 @@ class Category(models.Model):
         return str(self.name)
 
     def save(self, *args, **kwargs):
+        """Переопределение метода save() с добавлением генерации значения для поля :param slug.
+        """
+
         if self.slug is None:
             self.slug = slugify(self.name)
         super(Category, self).save(*args, **kwargs)
@@ -106,6 +137,9 @@ class Seller(models.Model):
 
 
 class BaseTicket(models.Model):
+    """Абстрактный класс объявления.
+    """
+
     name = models.CharField(verbose_name="Название", max_length=25)
     text = models.CharField(verbose_name="Текст", max_length=200)
     seller = models.ForeignKey(Seller, verbose_name="Продавец", related_name="%(app_label)s_%(class)s_seller",
@@ -209,6 +243,9 @@ class Subscriber(models.Model):
 
 
 class SMSLog(models.Model):
+    """Класс для хранения данных после отправки СМС через Twillio
+    """
+
     code = models.CharField(max_length=4, verbose_name="Код")
     response = models.JSONField(max_length=50, verbose_name="Ответ сервера")
     phone_number = models.CharField(max_length=12, verbose_name="Номер телефона")
