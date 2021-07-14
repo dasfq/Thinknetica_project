@@ -62,6 +62,9 @@ INSTALLED_APPS = [
     # celery
     "django_celery_results",
     "django_celery_beat",
+
+    # channels
+    'channels',
 ]
 
 SOCIALACCOUNT_PROVIDERS = {
@@ -187,7 +190,7 @@ CKEDITOR_UPLOAD_PATH = "uploads/"
 CKEDITOR_FILENAME_GENERATOR = 'utils.get_filename'
 CKEDITOR_BASEPATH = "/static/ckeditor/ckeditor/"
 
-AUTH_USER_MODEL = 'main.CustomUser'
+AUTH_USER_MODEL = 'main.Profile'
 ACCOUNT_AUTHENTICATION_METHOD = 'email'
 ACCOUNT_EMAIL_REQUIRED = True
 
@@ -224,4 +227,15 @@ CACHES = {
     }
 }
 
-CACHE_TIMEOUT = 300
+CACHE_TIMEOUT = 3
+
+# Конфигурация Channels
+ASGI_APPLICATION = "ecommerce.asgi.application"
+CHANNEL_LAYERS = {
+    'default': {
+        'BACKEND': 'channels_redis.core.RedisChannelLayer',
+        'CONFIG': {
+            "hosts": [("redis", 6379)],
+        },
+    },
+}
