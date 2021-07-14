@@ -47,7 +47,7 @@ class TagAdmin(admin.ModelAdmin):
 
 
 class TicketAdmin(admin.ModelAdmin):
-    list_display = ('name', 'seller', 'price',)
+    list_display = ('name', 'seller', 'price', 'is_sold')
     ordering = ('date_modified',)
 
 

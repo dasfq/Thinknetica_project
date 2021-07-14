@@ -148,6 +148,7 @@ class BaseTicket(models.Model):
     tag = models.ManyToManyField(Tag, verbose_name="Тег", related_name='%(app_label)s_%(class)s_tag',
                                  related_query_name='%(app_label)s_%(class)s_tag')
     price = models.PositiveIntegerField(verbose_name="Цена", default=1)
+    is_sold = models.BooleanField(verbose_name='Продано', default=False)
 
     class Meta:
         verbose_name = 'Объявление'
