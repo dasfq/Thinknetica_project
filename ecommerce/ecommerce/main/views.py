@@ -34,9 +34,9 @@ class DetailView(DetailView):
 def IndexView(request: HttpRequest) -> HttpResponse:
     template_name = 'index.html'
     queryset = FlatPage.objects.all()
-    test3.delay()
-    test1.delay()
-    test2.delay()
+    # test3.delay()
+    # test1.delay()
+    # test2.delay()
     context = {
         'pages': queryset,
         'user': request.user,
