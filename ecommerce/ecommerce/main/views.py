@@ -1,11 +1,11 @@
 from django.shortcuts import render
+from django.http import HttpResponse, HttpRequest
 from django.contrib.flatpages.models import FlatPage
 from django.conf import settings
 from django.views.generic import ListView, DetailView, UpdateView, CreateView
 from django.views.generic.base import View
 from django.utils.decorators import method_decorator
 from django.views.decorators.cache import cache_page
-from .forms import ProfileForm, TicketCarForm, TicketItemForm, TicketServiceForm, PictureFormSet
 from django.contrib.auth.mixins import LoginRequiredMixin, PermissionRequiredMixin
 from django.forms import model_to_dict
 from django.core.cache import caches
@@ -13,6 +13,7 @@ import random
 from main.models import TicketCar, TicketItem, TicketService, Profile, Seller
 from main.tasks import test1, test2, test3, send_notification, send_sms_phone_confirm
 from main.asserts.generators import generate_cache_key
+from main.forms import ProfileForm, TicketCarForm, TicketItemForm, TicketServiceForm, PictureFormSet
 
 
 class DetailView(DetailView):
@@ -30,7 +31,7 @@ class DetailView(DetailView):
         return context
 
 
-def IndexView(request):
+def IndexView(request: HttpRequest) -> HttpResponse:
     template_name = 'index.html'
     queryset = FlatPage.objects.all()
     test3.delay()
@@ -48,14 +49,14 @@ def IndexView(request):
 class BaseView(View):
     '''Общий класс для всех ListView, через который применяется кэширование'''
 
-    def base_queryset(self, model_name):
+    def base_queryset(self, model_name: str) -> None:
         tag = self.request.GET.get('tag')
         if tag:
             return model_name.objects.filter(tag__id=tag)
         else:
             return model_name.objects.all()
 
-    def base_get_tags(model_name):
+    def base_get_tags(model_name: str) -> None:
         tags_list = model_name.objects.values_list('tag__name', 'tag__id')
         tags_list = set(tags_list)
         return tags_list
