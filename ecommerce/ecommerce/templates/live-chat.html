@@ -1,0 +1,96 @@
+{% block js %}
+    <div class="livechat">
+
+        <div class="chat-btn">
+            <input id="id-text" type="text" size="100"><br>
+            <input id="send-message" type="button" value="Enter">
+        </div>
+
+        <div class="row" id="msgs-list"></div>
+
+    </div>
+{#    <div>#}
+{#        <textarea name="message" id="message" cols="30" rows="10"></textarea>#}
+{#    </div>#}
+{##}
+{#    <button id="btnSubmit">Submit</button>#}
+
+    <script src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
+{#    <script>#}
+{#        $(document).ready(function(){#}
+{#            var msgArea = $('#live-chat')#}
+{#            var elementMessage = $('#message')#}
+{#            var webSocket = new WebSocket('ws://' + window.location.host + '/live-chat/');#}
+{##}
+{#            webSocket.onmessage = function(message) {#}
+{#                var data = JSON.parse(message.data)#}
+{#                livechat.append('<p><strong>'+ data.sender + '</strong>: ' + data.message + '</p>')#}
+{#            }#}
+{#            $('#btnSubmit').click(function(e) {#}
+{#                webSocket.send(elementMessage.val())#}
+{#            })#}
+{#        })#}
+{#    </script>#}
+
+    <script type="text/javascript">
+        const ChatRoomConsumer = new WebSocket(
+            'ws://'
+            + window.location.host
+            + '/live-chat/'
+        )
+
+        ChatRoomConsumer.onmessage = function (message) {
+            var data = JSON.parse(message.data)
+            console.log('onmessages')
+            console.log(data)
+            msgList = document.getElementById('msgs-list')
+            if (data['message']['status'] == "found"){
+                msgList.insertAdjacentHTML(
+                    'afterbegin',
+                    '<div class="ticket-lines">' +
+                    '<p><strong>' + data['message']['title'] + '</strong></p>' +
+                    '<p>' + data['message']['text'] + '</p>' +
+                    '<p>' + 'Цена:' + data['message']['price'] +  'руб.' + '</p>' +
+                    '</div>'
+                )
+            } else {
+                msgList.insertAdjacentHTML(
+                    'afterbegin',
+                    '<div class="ticket-lines">' +
+                    '<p><strong>' + data['message']['text'] + '</strong></p>' +
+                    '</div>'
+                )
+            };
+        };
+
+        document.querySelector('#send-message').onclick = function (msg) {
+            msg.preventDefault()
+            const message = document.querySelector('#id-text');
+            const text = message.value;
+            console.log(message)
+            console.log(text)
+            console.log('onclickls')
+            ChatRoomConsumer.send(JSON.stringify({
+                'text': text
+            }));
+            message.value = '';
+        };
+    </script>
+{% endblock js %}
+
+{##}
+{#if (data['status'] == "sold") {#}
+{#msgList.insertAdjacentHTML(#}
+{#'beforebegin',#}
+{#'<div class="ticket-lines">' +#}
+{#    '<p>Данный товар уже продан =(</p>' +#}
+{#    '</div>'#}
+{#)#}
+{#} else if (data['status'] == "not_found") {#}
+{#msgList.insertAdjacentHTML(#}
+{#'beforebegin',#}
+{#'<div class="ticket-lines">' +#}
+{#    '<p>Такой товар не найден =(</p>' +#}
+{#    '</div>'#}
+{#)#}
+{#}#}
