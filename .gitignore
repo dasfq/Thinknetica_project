@@ -4,3 +4,5 @@
 /ecommerce/ecommerce/main/static/
 /ecommerce/ecommerce/db.sqlite3
 /ecommerce/ecommerce/media/
+ecommerce/ecommerce/static
+ecommerce/ecommerce/fixtures.json
