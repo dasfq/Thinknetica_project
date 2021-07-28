@@ -1,0 +1,5313 @@
+[
+{
+  "model": "admin.logentry",
+  "pk": 1,
+  "fields": {
+    "action_time": "2021-05-31T18:48:20.291Z",
+    "user": 1,
+    "content_type": 10,
+    "object_id": "1",
+    "object_repr": " ",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 2,
+  "fields": {
+    "action_time": "2021-05-31T18:48:35.685Z",
+    "user": 1,
+    "content_type": 11,
+    "object_id": "1",
+    "object_repr": "Активное",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 3,
+  "fields": {
+    "action_time": "2021-05-31T18:48:52.907Z",
+    "user": 1,
+    "content_type": 9,
+    "object_id": "1",
+    "object_repr": "Автомобили",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 4,
+  "fields": {
+    "action_time": "2021-05-31T18:49:12.493Z",
+    "user": 1,
+    "content_type": 14,
+    "object_id": "1",
+    "object_repr": "Продам Пежо",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 5,
+  "fields": {
+    "action_time": "2021-05-31T19:20:58.588Z",
+    "user": 1,
+    "content_type": 8,
+    "object_id": "1",
+    "object_repr": "Denis Ivanov",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"\\u0418\\u043c\\u044f\", \"\\u0424\\u0430\\u043c\\u0438\\u043b\\u0438\\u044f\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 6,
+  "fields": {
+    "action_time": "2021-05-31T19:21:32.080Z",
+    "user": 1,
+    "content_type": 14,
+    "object_id": "1",
+    "object_repr": "Продам Пежо",
+    "action_flag": 2,
+    "change_message": "[]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 7,
+  "fields": {
+    "action_time": "2021-06-06T18:01:22.715Z",
+    "user": 1,
+    "content_type": 9,
+    "object_id": "2",
+    "object_repr": "Вещи",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 8,
+  "fields": {
+    "action_time": "2021-06-06T18:01:37.270Z",
+    "user": 1,
+    "content_type": 9,
+    "object_id": "3",
+    "object_repr": "Услуги",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 9,
+  "fields": {
+    "action_time": "2021-06-06T18:02:36.482Z",
+    "user": 1,
+    "content_type": 14,
+    "object_id": "2",
+    "object_repr": "Куплю волгу",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 10,
+  "fields": {
+    "action_time": "2021-06-06T18:31:28.066Z",
+    "user": 1,
+    "content_type": 14,
+    "object_id": "2",
+    "object_repr": "Куплю волгу !",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"\\u041d\\u0430\\u0437\\u0432\\u0430\\u043d\\u0438\\u0435\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 11,
+  "fields": {
+    "action_time": "2021-06-06T18:51:48.066Z",
+    "user": 1,
+    "content_type": 13,
+    "object_id": "1",
+    "object_repr": "Отдам стельки",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 12,
+  "fields": {
+    "action_time": "2021-06-06T18:52:18.017Z",
+    "user": 1,
+    "content_type": 13,
+    "object_id": "2",
+    "object_repr": "Куплю телевизо",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 13,
+  "fields": {
+    "action_time": "2021-06-06T18:53:28.060Z",
+    "user": 1,
+    "content_type": 12,
+    "object_id": "1",
+    "object_repr": "Обшивка вагонкой",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 14,
+  "fields": {
+    "action_time": "2021-06-06T18:54:13.773Z",
+    "user": 1,
+    "content_type": 12,
+    "object_id": "2",
+    "object_repr": "Обучение игре на гитаре",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 15,
+  "fields": {
+    "action_time": "2021-06-06T18:55:02.070Z",
+    "user": 1,
+    "content_type": 13,
+    "object_id": "2",
+    "object_repr": "Куплю телевизор",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"\\u041d\\u0430\\u0437\\u0432\\u0430\\u043d\\u0438\\u0435\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 16,
+  "fields": {
+    "action_time": "2021-06-07T16:48:29.125Z",
+    "user": 1,
+    "content_type": 14,
+    "object_id": "3",
+    "object_repr": "Авто 3",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 17,
+  "fields": {
+    "action_time": "2021-06-07T16:48:46.119Z",
+    "user": 1,
+    "content_type": 11,
+    "object_id": "2",
+    "object_repr": "б/у",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 18,
+  "fields": {
+    "action_time": "2021-06-07T16:48:56.041Z",
+    "user": 1,
+    "content_type": 11,
+    "object_id": "3",
+    "object_repr": "Кемерово",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 19,
+  "fields": {
+    "action_time": "2021-06-07T16:49:12.453Z",
+    "user": 1,
+    "content_type": 14,
+    "object_id": "4",
+    "object_repr": "Авто 4",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 20,
+  "fields": {
+    "action_time": "2021-06-07T16:49:27.152Z",
+    "user": 1,
+    "content_type": 11,
+    "object_id": "4",
+    "object_repr": "Даром",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 21,
+  "fields": {
+    "action_time": "2021-06-07T16:49:36.290Z",
+    "user": 1,
+    "content_type": 11,
+    "object_id": "5",
+    "object_repr": "меняю",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 22,
+  "fields": {
+    "action_time": "2021-06-07T16:49:52.667Z",
+    "user": 1,
+    "content_type": 14,
+    "object_id": "5",
+    "object_repr": "Авто 5",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 23,
+  "fields": {
+    "action_time": "2021-06-07T16:50:31.122Z",
+    "user": 1,
+    "content_type": 11,
+    "object_id": "6",
+    "object_repr": "От души!",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 24,
+  "fields": {
+    "action_time": "2021-06-07T16:50:53.027Z",
+    "user": 1,
+    "content_type": 14,
+    "object_id": "6",
+    "object_repr": "Авто 6",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 25,
+  "fields": {
+    "action_time": "2021-06-07T16:51:20.695Z",
+    "user": 1,
+    "content_type": 14,
+    "object_id": "7",
+    "object_repr": "Авто 7",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 26,
+  "fields": {
+    "action_time": "2021-06-07T16:51:41.336Z",
+    "user": 1,
+    "content_type": 14,
+    "object_id": "8",
+    "object_repr": "Авто 8",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 27,
+  "fields": {
+    "action_time": "2021-06-07T16:51:53.924Z",
+    "user": 1,
+    "content_type": 11,
+    "object_id": "7",
+    "object_repr": "Москва",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 28,
+  "fields": {
+    "action_time": "2021-06-07T16:52:11.908Z",
+    "user": 1,
+    "content_type": 14,
+    "object_id": "9",
+    "object_repr": "Авто 9",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 29,
+  "fields": {
+    "action_time": "2021-06-07T16:52:42.491Z",
+    "user": 1,
+    "content_type": 14,
+    "object_id": "10",
+    "object_repr": "Авто 10",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 30,
+  "fields": {
+    "action_time": "2021-06-07T16:53:13.083Z",
+    "user": 1,
+    "content_type": 14,
+    "object_id": "11",
+    "object_repr": "Авто 11",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 31,
+  "fields": {
+    "action_time": "2021-06-07T16:53:37.469Z",
+    "user": 1,
+    "content_type": 14,
+    "object_id": "12",
+    "object_repr": "Авто 12",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 32,
+  "fields": {
+    "action_time": "2021-06-07T19:58:30.776Z",
+    "user": 1,
+    "content_type": 14,
+    "object_id": "12",
+    "object_repr": "авто 12",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"\\u0422\\u0435\\u0433\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 33,
+  "fields": {
+    "action_time": "2021-06-07T20:11:07.751Z",
+    "user": 1,
+    "content_type": 17,
+    "object_id": "2",
+    "object_repr": "Обучение игре на гитаре",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"\\u0422\\u0435\\u0433\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 34,
+  "fields": {
+    "action_time": "2021-06-08T13:52:16.956Z",
+    "user": 1,
+    "content_type": 20,
+    "object_id": "2",
+    "object_repr": "profile1 profile1",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 35,
+  "fields": {
+    "action_time": "2021-06-09T16:40:36.411Z",
+    "user": 1,
+    "content_type": 13,
+    "object_id": "1",
+    "object_repr": "Отдам стельки",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"\\u0422\\u0435\\u0433\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 36,
+  "fields": {
+    "action_time": "2021-06-09T17:29:36.783Z",
+    "user": 1,
+    "content_type": 8,
+    "object_id": "2",
+    "object_repr": "profile1-changed profile1",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Superuser status\", \"Staff status\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 37,
+  "fields": {
+    "action_time": "2021-06-09T17:29:57.695Z",
+    "user": 1,
+    "content_type": 10,
+    "object_id": "2",
+    "object_repr": "profile1-changed profile1",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 38,
+  "fields": {
+    "action_time": "2021-06-09T18:57:19.398Z",
+    "user": 1,
+    "content_type": 20,
+    "object_id": "2",
+    "object_repr": "profile1-changed profile1",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Avatar\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 39,
+  "fields": {
+    "action_time": "2021-06-09T19:05:22.864Z",
+    "user": 1,
+    "content_type": 20,
+    "object_id": "2",
+    "object_repr": "profile1-changed profile1",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Avatar\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 40,
+  "fields": {
+    "action_time": "2021-06-09T19:11:20.287Z",
+    "user": 1,
+    "content_type": 20,
+    "object_id": "2",
+    "object_repr": "profile1-changed profile1",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Avatar\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 41,
+  "fields": {
+    "action_time": "2021-06-09T19:11:33.482Z",
+    "user": 1,
+    "content_type": 20,
+    "object_id": "2",
+    "object_repr": "profile1-changed profile1",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Avatar\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 42,
+  "fields": {
+    "action_time": "2021-06-09T19:40:18.083Z",
+    "user": 3,
+    "content_type": 8,
+    "object_id": "3",
+    "object_repr": "Admin2 ",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"\\u0418\\u043c\\u044f\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 43,
+  "fields": {
+    "action_time": "2021-06-09T19:41:25.578Z",
+    "user": 3,
+    "content_type": 20,
+    "object_id": "4",
+    "object_repr": "profile2 ",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 44,
+  "fields": {
+    "action_time": "2021-06-09T19:47:30.436Z",
+    "user": 3,
+    "content_type": 8,
+    "object_id": "4",
+    "object_repr": "profile2 ",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Password\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 45,
+  "fields": {
+    "action_time": "2021-06-09T19:51:26.520Z",
+    "user": 1,
+    "content_type": 20,
+    "object_id": "1",
+    "object_repr": "Denis Ivanov",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Avatar\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 46,
+  "fields": {
+    "action_time": "2021-06-09T19:55:24.483Z",
+    "user": 1,
+    "content_type": 20,
+    "object_id": "5",
+    "object_repr": "profile3 ",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 47,
+  "fields": {
+    "action_time": "2021-06-09T19:58:19.649Z",
+    "user": 1,
+    "content_type": 8,
+    "object_id": "2",
+    "object_repr": "profile1-changed profile1",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 48,
+  "fields": {
+    "action_time": "2021-06-09T19:59:20.460Z",
+    "user": 1,
+    "content_type": 20,
+    "object_id": "4",
+    "object_repr": "profile2 ",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Password\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 49,
+  "fields": {
+    "action_time": "2021-06-10T19:07:07.911Z",
+    "user": 4,
+    "content_type": 10,
+    "object_id": "3",
+    "object_repr": "profile2 ",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 50,
+  "fields": {
+    "action_time": "2021-06-10T19:29:30.155Z",
+    "user": 4,
+    "content_type": 14,
+    "object_id": "34",
+    "object_repr": "инлайн2",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"\\u041a\\u0430\\u0442\\u0435\\u0433\\u043e\\u0440\\u0438\\u044f\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 51,
+  "fields": {
+    "action_time": "2021-06-10T19:32:16.312Z",
+    "user": 4,
+    "content_type": 14,
+    "object_id": "33",
+    "object_repr": "инлайн",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"\\u041a\\u0430\\u0442\\u0435\\u0433\\u043e\\u0440\\u0438\\u044f\"]}}, {\"added\": {\"name\": \"\\u0418\\u0437\\u043e\\u0431\\u0440\\u0430\\u0436\\u0435\\u043d\\u0438\\u0435\", \"object\": \"\\u0438\\u043d\\u043b\\u0430\\u0439\\u043d1\"}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 52,
+  "fields": {
+    "action_time": "2021-06-10T19:33:39.185Z",
+    "user": 4,
+    "content_type": 14,
+    "object_id": "33",
+    "object_repr": "инлайн",
+    "action_flag": 2,
+    "change_message": "[{\"added\": {\"name\": \"\\u0418\\u0437\\u043e\\u0431\\u0440\\u0430\\u0436\\u0435\\u043d\\u0438\\u0435\", \"object\": \"\\u0438\\u043d\\u043b\\u0430\\u0439\\u043d2\"}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 53,
+  "fields": {
+    "action_time": "2021-06-12T09:06:51.726Z",
+    "user": 4,
+    "content_type": 14,
+    "object_id": "60",
+    "object_repr": "555",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"\\u041a\\u0430\\u0442\\u0435\\u0433\\u043e\\u0440\\u0438\\u044f\"]}}, {\"deleted\": {\"name\": \"\\u0418\\u0437\\u043e\\u0431\\u0440\\u0430\\u0436\\u0435\\u043d\\u0438\\u0435\", \"object\": \"555None\"}}, {\"deleted\": {\"name\": \"\\u0418\\u0437\\u043e\\u0431\\u0440\\u0430\\u0436\\u0435\\u043d\\u0438\\u0435\", \"object\": \"555None\"}}, {\"deleted\": {\"name\": \"\\u0418\\u0437\\u043e\\u0431\\u0440\\u0430\\u0436\\u0435\\u043d\\u0438\\u0435\", \"object\": \"555None\"}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 54,
+  "fields": {
+    "action_time": "2021-06-12T10:28:20.293Z",
+    "user": 4,
+    "content_type": 20,
+    "object_id": "4",
+    "object_repr": "profile2 ",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Avatar\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 55,
+  "fields": {
+    "action_time": "2021-06-12T16:32:09.776Z",
+    "user": 4,
+    "content_type": 6,
+    "object_id": "1",
+    "object_repr": "http://127.0.0.1:8000",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Domain name\", \"Display name\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 56,
+  "fields": {
+    "action_time": "2021-06-12T16:36:44.906Z",
+    "user": 4,
+    "content_type": 25,
+    "object_id": "1",
+    "object_repr": "profile2 ",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 57,
+  "fields": {
+    "action_time": "2021-06-12T16:43:23.958Z",
+    "user": 4,
+    "content_type": 6,
+    "object_id": "1",
+    "object_repr": "example.com",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Domain name\", \"Display name\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 58,
+  "fields": {
+    "action_time": "2021-06-12T16:45:16.442Z",
+    "user": 4,
+    "content_type": 6,
+    "object_id": "2",
+    "object_repr": "http://127.0.0.1:8000/",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 59,
+  "fields": {
+    "action_time": "2021-06-12T16:46:49.246Z",
+    "user": 4,
+    "content_type": 26,
+    "object_id": "1",
+    "object_repr": "Oauth",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 60,
+  "fields": {
+    "action_time": "2021-06-13T10:04:22.868Z",
+    "user": 4,
+    "content_type": 3,
+    "object_id": "1",
+    "object_repr": "Common Users",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 61,
+  "fields": {
+    "action_time": "2021-06-13T17:00:04.637Z",
+    "user": 4,
+    "content_type": 8,
+    "object_id": "7",
+    "object_repr": "e wer",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 62,
+  "fields": {
+    "action_time": "2021-06-13T17:22:05.005Z",
+    "user": 4,
+    "content_type": 17,
+    "object_id": "4",
+    "object_repr": "123",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 63,
+  "fields": {
+    "action_time": "2021-06-13T17:22:36.535Z",
+    "user": 4,
+    "content_type": 17,
+    "object_id": "5",
+    "object_repr": "123",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 64,
+  "fields": {
+    "action_time": "2021-06-13T17:23:16.658Z",
+    "user": 4,
+    "content_type": 8,
+    "object_id": "8",
+    "object_repr": "sdfsdf 3qw",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 65,
+  "fields": {
+    "action_time": "2021-06-13T17:25:15.338Z",
+    "user": 4,
+    "content_type": 8,
+    "object_id": "9",
+    "object_repr": "sdfsdf 3qw",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 66,
+  "fields": {
+    "action_time": "2021-06-13T17:26:13.270Z",
+    "user": 4,
+    "content_type": 8,
+    "object_id": "10",
+    "object_repr": "testt 3qw",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 67,
+  "fields": {
+    "action_time": "2021-06-13T18:34:16.028Z",
+    "user": 4,
+    "content_type": 8,
+    "object_id": "11",
+    "object_repr": "sdf sdf",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 68,
+  "fields": {
+    "action_time": "2021-06-13T18:36:06.846Z",
+    "user": 4,
+    "content_type": 8,
+    "object_id": "7",
+    "object_repr": "Testtt wer",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"E-mail\", \"\\u0418\\u043c\\u044f\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 69,
+  "fields": {
+    "action_time": "2021-06-13T18:46:00.780Z",
+    "user": 4,
+    "content_type": 20,
+    "object_id": "12",
+    "object_repr": "Dass ad",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 70,
+  "fields": {
+    "action_time": "2021-06-13T18:47:21.901Z",
+    "user": 4,
+    "content_type": 20,
+    "object_id": "13",
+    "object_repr": "1111 ",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 71,
+  "fields": {
+    "action_time": "2021-06-13T18:50:17.834Z",
+    "user": 4,
+    "content_type": 20,
+    "object_id": "14",
+    "object_repr": "222 ",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 72,
+  "fields": {
+    "action_time": "2021-06-13T19:20:05.692Z",
+    "user": 4,
+    "content_type": 3,
+    "object_id": "2",
+    "object_repr": "Sellers",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 73,
+  "fields": {
+    "action_time": "2021-06-13T19:35:18.912Z",
+    "user": 4,
+    "content_type": 3,
+    "object_id": "2",
+    "object_repr": "Sellers",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Permissions\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 74,
+  "fields": {
+    "action_time": "2021-06-13T19:35:52.821Z",
+    "user": 4,
+    "content_type": 20,
+    "object_id": "4",
+    "object_repr": "profile2 ",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Groups\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 75,
+  "fields": {
+    "action_time": "2021-06-13T19:36:04.639Z",
+    "user": 4,
+    "content_type": 20,
+    "object_id": "4",
+    "object_repr": "profile2 ",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"\\u0413\\u0440\\u0443\\u043f\\u043f\\u0430\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 76,
+  "fields": {
+    "action_time": "2021-06-13T19:45:46.455Z",
+    "user": 4,
+    "content_type": 20,
+    "object_id": "4",
+    "object_repr": "profile2 ",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Superuser status\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 77,
+  "fields": {
+    "action_time": "2021-06-13T19:46:41.168Z",
+    "user": 4,
+    "content_type": 20,
+    "object_id": "4",
+    "object_repr": "profile2 ",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Groups\", \"\\u0413\\u0440\\u0443\\u043f\\u043f\\u0430\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 78,
+  "fields": {
+    "action_time": "2021-06-13T19:47:39.308Z",
+    "user": 4,
+    "content_type": 10,
+    "object_id": "4",
+    "object_repr": "1111 ",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 79,
+  "fields": {
+    "action_time": "2021-06-13T19:51:25.154Z",
+    "user": 4,
+    "content_type": 3,
+    "object_id": "2",
+    "object_repr": "Sellers",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Permissions\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 80,
+  "fields": {
+    "action_time": "2021-06-13T20:09:29.990Z",
+    "user": 4,
+    "content_type": 20,
+    "object_id": "4",
+    "object_repr": "profile2 ",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Groups\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 81,
+  "fields": {
+    "action_time": "2021-06-13T20:09:39.286Z",
+    "user": 4,
+    "content_type": 20,
+    "object_id": "4",
+    "object_repr": "profile2 ",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"\\u0413\\u0440\\u0443\\u043f\\u043f\\u0430\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 82,
+  "fields": {
+    "action_time": "2021-06-13T20:10:00.180Z",
+    "user": 4,
+    "content_type": 20,
+    "object_id": "4",
+    "object_repr": "profile2 ",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Superuser status\", \"User permissions\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 83,
+  "fields": {
+    "action_time": "2021-06-13T20:10:14.307Z",
+    "user": 4,
+    "content_type": 20,
+    "object_id": "4",
+    "object_repr": "profile2 ",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Superuser status\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 84,
+  "fields": {
+    "action_time": "2021-06-13T20:10:43.889Z",
+    "user": 4,
+    "content_type": 20,
+    "object_id": "4",
+    "object_repr": "profile2 ",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Superuser status\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 85,
+  "fields": {
+    "action_time": "2021-06-13T20:11:30.523Z",
+    "user": 4,
+    "content_type": 20,
+    "object_id": "4",
+    "object_repr": "profile2 ",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Superuser status\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 86,
+  "fields": {
+    "action_time": "2021-06-13T20:11:54.785Z",
+    "user": 4,
+    "content_type": 20,
+    "object_id": "4",
+    "object_repr": "profile2 ",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"User permissions\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 87,
+  "fields": {
+    "action_time": "2021-06-15T20:36:43.508Z",
+    "user": 4,
+    "content_type": 20,
+    "object_id": "15",
+    "object_repr": "testemail ",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 88,
+  "fields": {
+    "action_time": "2021-06-15T20:37:24.482Z",
+    "user": 4,
+    "content_type": 20,
+    "object_id": "4",
+    "object_repr": "profile2 ",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Superuser status\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 89,
+  "fields": {
+    "action_time": "2021-06-15T20:39:48.377Z",
+    "user": 4,
+    "content_type": 20,
+    "object_id": "16",
+    "object_repr": "testemail ",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 90,
+  "fields": {
+    "action_time": "2021-06-15T20:40:13.034Z",
+    "user": 4,
+    "content_type": 20,
+    "object_id": "17",
+    "object_repr": "testemail ",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 91,
+  "fields": {
+    "action_time": "2021-06-15T20:44:16.051Z",
+    "user": 4,
+    "content_type": 20,
+    "object_id": "18",
+    "object_repr": "testemail ",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 92,
+  "fields": {
+    "action_time": "2021-06-15T20:46:39.841Z",
+    "user": 4,
+    "content_type": 20,
+    "object_id": "19",
+    "object_repr": "testemail ",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 93,
+  "fields": {
+    "action_time": "2021-06-15T20:50:31.303Z",
+    "user": 4,
+    "content_type": 20,
+    "object_id": "20",
+    "object_repr": "testemail ",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 94,
+  "fields": {
+    "action_time": "2021-06-15T21:08:18.605Z",
+    "user": 4,
+    "content_type": 20,
+    "object_id": "21",
+    "object_repr": "testemail ",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 95,
+  "fields": {
+    "action_time": "2021-06-17T14:09:42.185Z",
+    "user": 4,
+    "content_type": 28,
+    "object_id": "1",
+    "object_repr": "1111 ",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 96,
+  "fields": {
+    "action_time": "2021-06-17T14:09:49.973Z",
+    "user": 4,
+    "content_type": 28,
+    "object_id": "2",
+    "object_repr": "222 ",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 97,
+  "fields": {
+    "action_time": "2021-06-17T14:09:53.979Z",
+    "user": 4,
+    "content_type": 28,
+    "object_id": "3",
+    "object_repr": "1111 ",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 98,
+  "fields": {
+    "action_time": "2021-06-17T14:10:23.420Z",
+    "user": 4,
+    "content_type": 28,
+    "object_id": "4",
+    "object_repr": "Dass ad",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 99,
+  "fields": {
+    "action_time": "2021-06-17T14:10:30.882Z",
+    "user": 4,
+    "content_type": 28,
+    "object_id": "5",
+    "object_repr": "profile2 ",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 100,
+  "fields": {
+    "action_time": "2021-06-17T14:10:35.889Z",
+    "user": 4,
+    "content_type": 28,
+    "object_id": "6",
+    "object_repr": "Denis Ivanov",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 101,
+  "fields": {
+    "action_time": "2021-06-17T14:26:05.958Z",
+    "user": 4,
+    "content_type": 13,
+    "object_id": "4",
+    "object_repr": "Тест рассылки",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 102,
+  "fields": {
+    "action_time": "2021-06-17T14:37:43.908Z",
+    "user": 4,
+    "content_type": 8,
+    "object_id": "22",
+    "object_repr": "ded ded",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 103,
+  "fields": {
+    "action_time": "2021-06-17T16:58:38.352Z",
+    "user": 4,
+    "content_type": 28,
+    "object_id": "1",
+    "object_repr": "1111 ",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 104,
+  "fields": {
+    "action_time": "2021-07-10T18:40:30.592Z",
+    "user": 4,
+    "content_type": 13,
+    "object_id": "1",
+    "object_repr": "Отдам стельки",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"\\u0426\\u0435\\u043d\\u0430\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 105,
+  "fields": {
+    "action_time": "2021-07-10T18:43:10.955Z",
+    "user": 4,
+    "content_type": 12,
+    "object_id": "6",
+    "object_repr": "После кеша",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 106,
+  "fields": {
+    "action_time": "2021-07-14T10:41:36.741Z",
+    "user": 4,
+    "content_type": 20,
+    "object_id": "4",
+    "object_repr": "profile2 Mina",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"\\u0424\\u0430\\u043c\\u0438\\u043b\\u0438\\u044f\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 107,
+  "fields": {
+    "action_time": "2021-07-14T18:29:33.054Z",
+    "user": 4,
+    "content_type": 20,
+    "object_id": "4",
+    "object_repr": "profile2 Mina",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"\\u041b\\u043e\\u0433\\u0438\\u043d\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 108,
+  "fields": {
+    "action_time": "2021-07-14T20:45:55.250Z",
+    "user": 4,
+    "content_type": 13,
+    "object_id": "2",
+    "object_repr": "Куплю телевизор",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"\\u041f\\u0440\\u043e\\u0434\\u0430\\u043d\\u043e\"]}}]"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 1,
+  "fields": {
+    "name": "Can add log entry",
+    "content_type": 1,
+    "codename": "add_logentry"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 2,
+  "fields": {
+    "name": "Can change log entry",
+    "content_type": 1,
+    "codename": "change_logentry"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 3,
+  "fields": {
+    "name": "Can delete log entry",
+    "content_type": 1,
+    "codename": "delete_logentry"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 4,
+  "fields": {
+    "name": "Can view log entry",
+    "content_type": 1,
+    "codename": "view_logentry"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 5,
+  "fields": {
+    "name": "Can add permission",
+    "content_type": 2,
+    "codename": "add_permission"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 6,
+  "fields": {
+    "name": "Can change permission",
+    "content_type": 2,
+    "codename": "change_permission"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 7,
+  "fields": {
+    "name": "Can delete permission",
+    "content_type": 2,
+    "codename": "delete_permission"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 8,
+  "fields": {
+    "name": "Can view permission",
+    "content_type": 2,
+    "codename": "view_permission"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 9,
+  "fields": {
+    "name": "Can add group",
+    "content_type": 3,
+    "codename": "add_group"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 10,
+  "fields": {
+    "name": "Can change group",
+    "content_type": 3,
+    "codename": "change_group"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 11,
+  "fields": {
+    "name": "Can delete group",
+    "content_type": 3,
+    "codename": "delete_group"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 12,
+  "fields": {
+    "name": "Can view group",
+    "content_type": 3,
+    "codename": "view_group"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 13,
+  "fields": {
+    "name": "Can add content type",
+    "content_type": 4,
+    "codename": "add_contenttype"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 14,
+  "fields": {
+    "name": "Can change content type",
+    "content_type": 4,
+    "codename": "change_contenttype"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 15,
+  "fields": {
+    "name": "Can delete content type",
+    "content_type": 4,
+    "codename": "delete_contenttype"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 16,
+  "fields": {
+    "name": "Can view content type",
+    "content_type": 4,
+    "codename": "view_contenttype"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 17,
+  "fields": {
+    "name": "Can add session",
+    "content_type": 5,
+    "codename": "add_session"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 18,
+  "fields": {
+    "name": "Can change session",
+    "content_type": 5,
+    "codename": "change_session"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 19,
+  "fields": {
+    "name": "Can delete session",
+    "content_type": 5,
+    "codename": "delete_session"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 20,
+  "fields": {
+    "name": "Can view session",
+    "content_type": 5,
+    "codename": "view_session"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 21,
+  "fields": {
+    "name": "Can add site",
+    "content_type": 6,
+    "codename": "add_site"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 22,
+  "fields": {
+    "name": "Can change site",
+    "content_type": 6,
+    "codename": "change_site"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 23,
+  "fields": {
+    "name": "Can delete site",
+    "content_type": 6,
+    "codename": "delete_site"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 24,
+  "fields": {
+    "name": "Can view site",
+    "content_type": 6,
+    "codename": "view_site"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 25,
+  "fields": {
+    "name": "Can add flat page",
+    "content_type": 7,
+    "codename": "add_flatpage"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 26,
+  "fields": {
+    "name": "Can change flat page",
+    "content_type": 7,
+    "codename": "change_flatpage"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 27,
+  "fields": {
+    "name": "Can delete flat page",
+    "content_type": 7,
+    "codename": "delete_flatpage"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 28,
+  "fields": {
+    "name": "Can view flat page",
+    "content_type": 7,
+    "codename": "view_flatpage"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 29,
+  "fields": {
+    "name": "Can add Пользователь",
+    "content_type": 8,
+    "codename": "add_customuser"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 30,
+  "fields": {
+    "name": "Can change Пользователь",
+    "content_type": 8,
+    "codename": "change_customuser"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 31,
+  "fields": {
+    "name": "Can delete Пользователь",
+    "content_type": 8,
+    "codename": "delete_customuser"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 32,
+  "fields": {
+    "name": "Can view Пользователь",
+    "content_type": 8,
+    "codename": "view_customuser"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 33,
+  "fields": {
+    "name": "Can add Категория",
+    "content_type": 9,
+    "codename": "add_category"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 34,
+  "fields": {
+    "name": "Can change Категория",
+    "content_type": 9,
+    "codename": "change_category"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 35,
+  "fields": {
+    "name": "Can delete Категория",
+    "content_type": 9,
+    "codename": "delete_category"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 36,
+  "fields": {
+    "name": "Can view Категория",
+    "content_type": 9,
+    "codename": "view_category"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 37,
+  "fields": {
+    "name": "Can add Продавец",
+    "content_type": 10,
+    "codename": "add_seller"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 38,
+  "fields": {
+    "name": "Can change Продавец",
+    "content_type": 10,
+    "codename": "change_seller"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 39,
+  "fields": {
+    "name": "Can delete Продавец",
+    "content_type": 10,
+    "codename": "delete_seller"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 40,
+  "fields": {
+    "name": "Can view Продавец",
+    "content_type": 10,
+    "codename": "view_seller"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 41,
+  "fields": {
+    "name": "Can add Тег",
+    "content_type": 11,
+    "codename": "add_tag"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 42,
+  "fields": {
+    "name": "Can change Тег",
+    "content_type": 11,
+    "codename": "change_tag"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 43,
+  "fields": {
+    "name": "Can delete Тег",
+    "content_type": 11,
+    "codename": "delete_tag"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 44,
+  "fields": {
+    "name": "Can view Тег",
+    "content_type": 11,
+    "codename": "view_tag"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 45,
+  "fields": {
+    "name": "Can add Объявление - услуги",
+    "content_type": 12,
+    "codename": "add_ticketservice"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 46,
+  "fields": {
+    "name": "Can change Объявление - услуги",
+    "content_type": 12,
+    "codename": "change_ticketservice"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 47,
+  "fields": {
+    "name": "Can delete Объявление - услуги",
+    "content_type": 12,
+    "codename": "delete_ticketservice"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 48,
+  "fields": {
+    "name": "Can view Объявление - услуги",
+    "content_type": 12,
+    "codename": "view_ticketservice"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 49,
+  "fields": {
+    "name": "Can add Объявление - вещи",
+    "content_type": 13,
+    "codename": "add_ticketitem"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 50,
+  "fields": {
+    "name": "Can change Объявление - вещи",
+    "content_type": 13,
+    "codename": "change_ticketitem"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 51,
+  "fields": {
+    "name": "Can delete Объявление - вещи",
+    "content_type": 13,
+    "codename": "delete_ticketitem"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 52,
+  "fields": {
+    "name": "Can view Объявление - вещи",
+    "content_type": 13,
+    "codename": "view_ticketitem"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 53,
+  "fields": {
+    "name": "Can add Объявление - авто",
+    "content_type": 14,
+    "codename": "add_ticketcar"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 54,
+  "fields": {
+    "name": "Can change Объявление - авто",
+    "content_type": 14,
+    "codename": "change_ticketcar"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 55,
+  "fields": {
+    "name": "Can delete Объявление - авто",
+    "content_type": 14,
+    "codename": "delete_ticketcar"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 56,
+  "fields": {
+    "name": "Can view Объявление - авто",
+    "content_type": 14,
+    "codename": "view_ticketcar"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 57,
+  "fields": {
+    "name": "Can add ticket car archive",
+    "content_type": 15,
+    "codename": "add_ticketcararchive"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 58,
+  "fields": {
+    "name": "Can change ticket car archive",
+    "content_type": 15,
+    "codename": "change_ticketcararchive"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 59,
+  "fields": {
+    "name": "Can delete ticket car archive",
+    "content_type": 15,
+    "codename": "delete_ticketcararchive"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 60,
+  "fields": {
+    "name": "Can view ticket car archive",
+    "content_type": 15,
+    "codename": "view_ticketcararchive"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 61,
+  "fields": {
+    "name": "Can add ticket item archive",
+    "content_type": 16,
+    "codename": "add_ticketitemarchive"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 62,
+  "fields": {
+    "name": "Can change ticket item archive",
+    "content_type": 16,
+    "codename": "change_ticketitemarchive"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 63,
+  "fields": {
+    "name": "Can delete ticket item archive",
+    "content_type": 16,
+    "codename": "delete_ticketitemarchive"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 64,
+  "fields": {
+    "name": "Can view ticket item archive",
+    "content_type": 16,
+    "codename": "view_ticketitemarchive"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 65,
+  "fields": {
+    "name": "Can add ticket service archive",
+    "content_type": 17,
+    "codename": "add_ticketservicearchive"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 66,
+  "fields": {
+    "name": "Can change ticket service archive",
+    "content_type": 17,
+    "codename": "change_ticketservicearchive"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 67,
+  "fields": {
+    "name": "Can delete ticket service archive",
+    "content_type": 17,
+    "codename": "delete_ticketservicearchive"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 68,
+  "fields": {
+    "name": "Can view ticket service archive",
+    "content_type": 17,
+    "codename": "view_ticketservicearchive"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 69,
+  "fields": {
+    "name": "Can change config",
+    "content_type": 18,
+    "codename": "change_config"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 70,
+  "fields": {
+    "name": "Can view config",
+    "content_type": 18,
+    "codename": "view_config"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 71,
+  "fields": {
+    "name": "Can add constance",
+    "content_type": 19,
+    "codename": "add_constance"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 72,
+  "fields": {
+    "name": "Can change constance",
+    "content_type": 19,
+    "codename": "change_constance"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 73,
+  "fields": {
+    "name": "Can delete constance",
+    "content_type": 19,
+    "codename": "delete_constance"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 74,
+  "fields": {
+    "name": "Can view constance",
+    "content_type": 19,
+    "codename": "view_constance"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 75,
+  "fields": {
+    "name": "Can add profile",
+    "content_type": 20,
+    "codename": "add_profile"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 76,
+  "fields": {
+    "name": "Can change profile",
+    "content_type": 20,
+    "codename": "change_profile"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 77,
+  "fields": {
+    "name": "Can delete profile",
+    "content_type": 20,
+    "codename": "delete_profile"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 78,
+  "fields": {
+    "name": "Can view profile",
+    "content_type": 20,
+    "codename": "view_profile"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 79,
+  "fields": {
+    "name": "Can add kv store",
+    "content_type": 21,
+    "codename": "add_kvstore"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 80,
+  "fields": {
+    "name": "Can change kv store",
+    "content_type": 21,
+    "codename": "change_kvstore"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 81,
+  "fields": {
+    "name": "Can delete kv store",
+    "content_type": 21,
+    "codename": "delete_kvstore"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 82,
+  "fields": {
+    "name": "Can view kv store",
+    "content_type": 21,
+    "codename": "view_kvstore"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 83,
+  "fields": {
+    "name": "Can add picture",
+    "content_type": 22,
+    "codename": "add_picture"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 84,
+  "fields": {
+    "name": "Can change picture",
+    "content_type": 22,
+    "codename": "change_picture"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 85,
+  "fields": {
+    "name": "Can delete picture",
+    "content_type": 22,
+    "codename": "delete_picture"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 86,
+  "fields": {
+    "name": "Can view picture",
+    "content_type": 22,
+    "codename": "view_picture"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 87,
+  "fields": {
+    "name": "Can add email address",
+    "content_type": 23,
+    "codename": "add_emailaddress"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 88,
+  "fields": {
+    "name": "Can change email address",
+    "content_type": 23,
+    "codename": "change_emailaddress"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 89,
+  "fields": {
+    "name": "Can delete email address",
+    "content_type": 23,
+    "codename": "delete_emailaddress"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 90,
+  "fields": {
+    "name": "Can view email address",
+    "content_type": 23,
+    "codename": "view_emailaddress"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 91,
+  "fields": {
+    "name": "Can add email confirmation",
+    "content_type": 24,
+    "codename": "add_emailconfirmation"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 92,
+  "fields": {
+    "name": "Can change email confirmation",
+    "content_type": 24,
+    "codename": "change_emailconfirmation"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 93,
+  "fields": {
+    "name": "Can delete email confirmation",
+    "content_type": 24,
+    "codename": "delete_emailconfirmation"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 94,
+  "fields": {
+    "name": "Can view email confirmation",
+    "content_type": 24,
+    "codename": "view_emailconfirmation"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 95,
+  "fields": {
+    "name": "Can add social account",
+    "content_type": 25,
+    "codename": "add_socialaccount"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 96,
+  "fields": {
+    "name": "Can change social account",
+    "content_type": 25,
+    "codename": "change_socialaccount"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 97,
+  "fields": {
+    "name": "Can delete social account",
+    "content_type": 25,
+    "codename": "delete_socialaccount"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 98,
+  "fields": {
+    "name": "Can view social account",
+    "content_type": 25,
+    "codename": "view_socialaccount"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 99,
+  "fields": {
+    "name": "Can add social application",
+    "content_type": 26,
+    "codename": "add_socialapp"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 100,
+  "fields": {
+    "name": "Can change social application",
+    "content_type": 26,
+    "codename": "change_socialapp"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 101,
+  "fields": {
+    "name": "Can delete social application",
+    "content_type": 26,
+    "codename": "delete_socialapp"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 102,
+  "fields": {
+    "name": "Can view social application",
+    "content_type": 26,
+    "codename": "view_socialapp"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 103,
+  "fields": {
+    "name": "Can add social application token",
+    "content_type": 27,
+    "codename": "add_socialtoken"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 104,
+  "fields": {
+    "name": "Can change social application token",
+    "content_type": 27,
+    "codename": "change_socialtoken"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 105,
+  "fields": {
+    "name": "Can delete social application token",
+    "content_type": 27,
+    "codename": "delete_socialtoken"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 106,
+  "fields": {
+    "name": "Can view social application token",
+    "content_type": 27,
+    "codename": "view_socialtoken"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 107,
+  "fields": {
+    "name": "Can add subscriber",
+    "content_type": 28,
+    "codename": "add_subscriber"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 108,
+  "fields": {
+    "name": "Can change subscriber",
+    "content_type": 28,
+    "codename": "change_subscriber"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 109,
+  "fields": {
+    "name": "Can delete subscriber",
+    "content_type": 28,
+    "codename": "delete_subscriber"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 110,
+  "fields": {
+    "name": "Can view subscriber",
+    "content_type": 28,
+    "codename": "view_subscriber"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 111,
+  "fields": {
+    "name": "Can add django job",
+    "content_type": 29,
+    "codename": "add_djangojob"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 112,
+  "fields": {
+    "name": "Can change django job",
+    "content_type": 29,
+    "codename": "change_djangojob"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 113,
+  "fields": {
+    "name": "Can delete django job",
+    "content_type": 29,
+    "codename": "delete_djangojob"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 114,
+  "fields": {
+    "name": "Can view django job",
+    "content_type": 29,
+    "codename": "view_djangojob"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 115,
+  "fields": {
+    "name": "Can add django job execution",
+    "content_type": 30,
+    "codename": "add_djangojobexecution"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 116,
+  "fields": {
+    "name": "Can change django job execution",
+    "content_type": 30,
+    "codename": "change_djangojobexecution"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 117,
+  "fields": {
+    "name": "Can delete django job execution",
+    "content_type": 30,
+    "codename": "delete_djangojobexecution"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 118,
+  "fields": {
+    "name": "Can view django job execution",
+    "content_type": 30,
+    "codename": "view_djangojobexecution"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 119,
+  "fields": {
+    "name": "Can add task result",
+    "content_type": 31,
+    "codename": "add_taskresult"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 120,
+  "fields": {
+    "name": "Can change task result",
+    "content_type": 31,
+    "codename": "change_taskresult"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 121,
+  "fields": {
+    "name": "Can delete task result",
+    "content_type": 31,
+    "codename": "delete_taskresult"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 122,
+  "fields": {
+    "name": "Can view task result",
+    "content_type": 31,
+    "codename": "view_taskresult"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 123,
+  "fields": {
+    "name": "Can add chord counter",
+    "content_type": 32,
+    "codename": "add_chordcounter"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 124,
+  "fields": {
+    "name": "Can change chord counter",
+    "content_type": 32,
+    "codename": "change_chordcounter"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 125,
+  "fields": {
+    "name": "Can delete chord counter",
+    "content_type": 32,
+    "codename": "delete_chordcounter"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 126,
+  "fields": {
+    "name": "Can view chord counter",
+    "content_type": 32,
+    "codename": "view_chordcounter"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 127,
+  "fields": {
+    "name": "Can add group result",
+    "content_type": 33,
+    "codename": "add_groupresult"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 128,
+  "fields": {
+    "name": "Can change group result",
+    "content_type": 33,
+    "codename": "change_groupresult"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 129,
+  "fields": {
+    "name": "Can delete group result",
+    "content_type": 33,
+    "codename": "delete_groupresult"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 130,
+  "fields": {
+    "name": "Can view group result",
+    "content_type": 33,
+    "codename": "view_groupresult"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 131,
+  "fields": {
+    "name": "Can add crontab",
+    "content_type": 34,
+    "codename": "add_crontabschedule"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 132,
+  "fields": {
+    "name": "Can change crontab",
+    "content_type": 34,
+    "codename": "change_crontabschedule"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 133,
+  "fields": {
+    "name": "Can delete crontab",
+    "content_type": 34,
+    "codename": "delete_crontabschedule"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 134,
+  "fields": {
+    "name": "Can view crontab",
+    "content_type": 34,
+    "codename": "view_crontabschedule"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 135,
+  "fields": {
+    "name": "Can add interval",
+    "content_type": 35,
+    "codename": "add_intervalschedule"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 136,
+  "fields": {
+    "name": "Can change interval",
+    "content_type": 35,
+    "codename": "change_intervalschedule"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 137,
+  "fields": {
+    "name": "Can delete interval",
+    "content_type": 35,
+    "codename": "delete_intervalschedule"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 138,
+  "fields": {
+    "name": "Can view interval",
+    "content_type": 35,
+    "codename": "view_intervalschedule"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 139,
+  "fields": {
+    "name": "Can add periodic task",
+    "content_type": 36,
+    "codename": "add_periodictask"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 140,
+  "fields": {
+    "name": "Can change periodic task",
+    "content_type": 36,
+    "codename": "change_periodictask"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 141,
+  "fields": {
+    "name": "Can delete periodic task",
+    "content_type": 36,
+    "codename": "delete_periodictask"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 142,
+  "fields": {
+    "name": "Can view periodic task",
+    "content_type": 36,
+    "codename": "view_periodictask"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 143,
+  "fields": {
+    "name": "Can add periodic tasks",
+    "content_type": 37,
+    "codename": "add_periodictasks"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 144,
+  "fields": {
+    "name": "Can change periodic tasks",
+    "content_type": 37,
+    "codename": "change_periodictasks"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 145,
+  "fields": {
+    "name": "Can delete periodic tasks",
+    "content_type": 37,
+    "codename": "delete_periodictasks"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 146,
+  "fields": {
+    "name": "Can view periodic tasks",
+    "content_type": 37,
+    "codename": "view_periodictasks"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 147,
+  "fields": {
+    "name": "Can add solar event",
+    "content_type": 38,
+    "codename": "add_solarschedule"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 148,
+  "fields": {
+    "name": "Can change solar event",
+    "content_type": 38,
+    "codename": "change_solarschedule"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 149,
+  "fields": {
+    "name": "Can delete solar event",
+    "content_type": 38,
+    "codename": "delete_solarschedule"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 150,
+  "fields": {
+    "name": "Can view solar event",
+    "content_type": 38,
+    "codename": "view_solarschedule"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 151,
+  "fields": {
+    "name": "Can add clocked",
+    "content_type": 39,
+    "codename": "add_clockedschedule"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 152,
+  "fields": {
+    "name": "Can change clocked",
+    "content_type": 39,
+    "codename": "change_clockedschedule"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 153,
+  "fields": {
+    "name": "Can delete clocked",
+    "content_type": 39,
+    "codename": "delete_clockedschedule"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 154,
+  "fields": {
+    "name": "Can view clocked",
+    "content_type": 39,
+    "codename": "view_clockedschedule"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 155,
+  "fields": {
+    "name": "Can add sms log",
+    "content_type": 40,
+    "codename": "add_smslog"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 156,
+  "fields": {
+    "name": "Can change sms log",
+    "content_type": 40,
+    "codename": "change_smslog"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 157,
+  "fields": {
+    "name": "Can delete sms log",
+    "content_type": 40,
+    "codename": "delete_smslog"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 158,
+  "fields": {
+    "name": "Can view sms log",
+    "content_type": 40,
+    "codename": "view_smslog"
+  }
+},
+{
+  "model": "auth.group",
+  "pk": 1,
+  "fields": {
+    "name": "Common Users",
+    "permissions": [
+      49,
+      50,
+      51,
+      52,
+      41,
+      42,
+      43,
+      44,
+      83,
+      84,
+      85,
+      86,
+      45,
+      46,
+      47,
+      48,
+      91,
+      92,
+      93,
+      94,
+      87,
+      88,
+      89,
+      90,
+      53,
+      54,
+      55,
+      56,
+      75,
+      76,
+      77,
+      78,
+      37,
+      38,
+      39,
+      40
+    ]
+  }
+},
+{
+  "model": "auth.group",
+  "pk": 2,
+  "fields": {
+    "name": "Sellers",
+    "permissions": [
+      49,
+      50,
+      51,
+      52,
+      45,
+      46,
+      47,
+      48,
+      53,
+      54,
+      55,
+      56
+    ]
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 1,
+  "fields": {
+    "app_label": "admin",
+    "model": "logentry"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 2,
+  "fields": {
+    "app_label": "constance",
+    "model": "config"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 3,
+  "fields": {
+    "app_label": "auth",
+    "model": "permission"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 4,
+  "fields": {
+    "app_label": "auth",
+    "model": "group"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 5,
+  "fields": {
+    "app_label": "contenttypes",
+    "model": "contenttype"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 6,
+  "fields": {
+    "app_label": "sessions",
+    "model": "session"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 7,
+  "fields": {
+    "app_label": "sites",
+    "model": "site"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 8,
+  "fields": {
+    "app_label": "flatpages",
+    "model": "flatpage"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 9,
+  "fields": {
+    "app_label": "database",
+    "model": "constance"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 10,
+  "fields": {
+    "app_label": "thumbnail",
+    "model": "kvstore"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 11,
+  "fields": {
+    "app_label": "main",
+    "model": "customuser"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 12,
+  "fields": {
+    "app_label": "main",
+    "model": "profile"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 13,
+  "fields": {
+    "app_label": "main",
+    "model": "category"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 14,
+  "fields": {
+    "app_label": "main",
+    "model": "tag"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 15,
+  "fields": {
+    "app_label": "main",
+    "model": "seller"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 16,
+  "fields": {
+    "app_label": "main",
+    "model": "ticketservice"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 17,
+  "fields": {
+    "app_label": "main",
+    "model": "ticketcar"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 18,
+  "fields": {
+    "app_label": "main",
+    "model": "ticketitem"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 19,
+  "fields": {
+    "app_label": "main",
+    "model": "ticketservicearchive"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 20,
+  "fields": {
+    "app_label": "main",
+    "model": "ticketcararchive"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 21,
+  "fields": {
+    "app_label": "main",
+    "model": "ticketitemarchive"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 22,
+  "fields": {
+    "app_label": "main",
+    "model": "picture"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 23,
+  "fields": {
+    "app_label": "main",
+    "model": "subscriber"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 24,
+  "fields": {
+    "app_label": "main",
+    "model": "smslog"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 25,
+  "fields": {
+    "app_label": "account",
+    "model": "emailaddress"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 26,
+  "fields": {
+    "app_label": "account",
+    "model": "emailconfirmation"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 27,
+  "fields": {
+    "app_label": "socialaccount",
+    "model": "socialapp"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 28,
+  "fields": {
+    "app_label": "socialaccount",
+    "model": "socialaccount"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 29,
+  "fields": {
+    "app_label": "socialaccount",
+    "model": "socialtoken"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 30,
+  "fields": {
+    "app_label": "django_apscheduler",
+    "model": "djangojob"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 31,
+  "fields": {
+    "app_label": "django_apscheduler",
+    "model": "djangojobexecution"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 32,
+  "fields": {
+    "app_label": "django_celery_results",
+    "model": "taskresult"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 33,
+  "fields": {
+    "app_label": "django_celery_results",
+    "model": "chordcounter"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 34,
+  "fields": {
+    "app_label": "django_celery_results",
+    "model": "groupresult"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 35,
+  "fields": {
+    "app_label": "django_celery_beat",
+    "model": "solarschedule"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 36,
+  "fields": {
+    "app_label": "django_celery_beat",
+    "model": "intervalschedule"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 37,
+  "fields": {
+    "app_label": "django_celery_beat",
+    "model": "clockedschedule"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 38,
+  "fields": {
+    "app_label": "django_celery_beat",
+    "model": "crontabschedule"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 39,
+  "fields": {
+    "app_label": "django_celery_beat",
+    "model": "periodictasks"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 40,
+  "fields": {
+    "app_label": "django_celery_beat",
+    "model": "periodictask"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "5mvmackp03ngm8zdon7ajs0d4jmudih4",
+  "fields": {
+    "session_data": ".eJxVjMsOwiAQRf-FtSEMTHm4dO83EB6DVA0kpV0Z_12bdKHbe865L-bDtla_DVr8nNmZITv9bjGkB7Ud5Htot85Tb-syR74r_KCDX3um5-Vw_w5qGPVbm2SNoTKpHA2AjsqCUwQlTgBOSG2liAW0U2hLQSUAgyXEJAsETWjZ-wPDajbr:1m0Ro0:YOVtZX2YTcAD3HvciyFtsrmnCq5u9FW-vwHEeQMQoLE",
+    "expire_date": "2021-07-19T16:50:48.048Z"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "gktvrge018ktmhjv1m20kn8evqd7qypx",
+  "fields": {
+    "session_data": ".eJxVjMsOwiAQRf-FtSEMTHm4dO83EB6DVA0kpV0Z_12bdKHbe865L-bDtla_DVr8nNmZITv9bjGkB7Ud5Htot85Tb-syR74r_KCDX3um5-Vw_w5qGPVbm2SNoTKpHA2AjsqCUwQlTgBOSG2liAW0U2hLQSUAgyXEJAsETWjZ-wPDajbr:1m47bS:ksE9FKJjm8A4IBQwq5LgtfochV0gejb-Aje1MWCW4vE",
+    "expire_date": "2021-07-29T20:05:02.671Z"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "nii4p1h79xvimivc0a2d808dgk087onp",
+  "fields": {
+    "session_data": ".eJxVjMsOwiAQRf-FtSEMTHm4dO83EB6DVA0kpV0Z_12bdKHbe865L-bDtla_DVr8nNmZITv9bjGkB7Ud5Htot85Tb-syR74r_KCDX3um5-Vw_w5qGPVbm2SNoTKpHA2AjsqCUwQlTgBOSG2liAW0U2hLQSUAgyXEJAsETWjZ-wPDajbr:1lyzjW:kaSoZDmHol-tPrYg672rDnTn0QcZDJ9FNlEycJWDrSQ",
+    "expire_date": "2021-07-15T16:40:10.139Z"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "qj0ywnltodb3fdtl1jlz0kdb89s5py5i",
+  "fields": {
+    "session_data": ".eJxVjMsOwiAQRf-FtSEMTHm4dO83EB6DVA0kpV0Z_12bdKHbe865L-bDtla_DVr8nNmZITv9bjGkB7Ud5Htot85Tb-syR74r_KCDX3um5-Vw_w5qGPVbm2SNoTKpHA2AjsqCUwQlTgBOSG2liAW0U2hLQSUAgyXEJAsETWjZ-wPDajbr:1lsMvE:tY2vTmNi42bJVtWrss3WLwCZJ2evxdDL4fhUdbonxLc",
+    "expire_date": "2021-06-27T10:00:52.573Z"
+  }
+},
+{
+  "model": "sites.site",
+  "pk": 2,
+  "fields": {
+    "domain": "example.com",
+    "name": "example.com"
+  }
+},
+{
+  "model": "sites.site",
+  "pk": 3,
+  "fields": {
+    "domain": "http://127.0.0.1:8000/",
+    "name": "http://127.0.0.1:8000/"
+  }
+},
+{
+  "model": "thumbnail.kvstore",
+  "pk": "sorl-thumbnail||image||100f67d3825b0abbbdab0d65714729c0",
+  "fields": {
+    "value": "{\"name\": \"avatars/62ZCEccrOIk.jpg\", \"storage\": \"django.core.files.storage.FileSystemStorage\", \"size\": [1073, 1080]}"
+  }
+},
+{
+  "model": "thumbnail.kvstore",
+  "pk": "sorl-thumbnail||image||192a4e9217d7b2980c3fbd719fdb10dd",
+  "fields": {
+    "value": "{\"name\": \"cache/b8/ec/b8ec90967bbde4bebe2aaf50e1ef5174.jpg\", \"storage\": \"django.core.files.storage.FileSystemStorage\", \"size\": [30, 30]}"
+  }
+},
+{
+  "model": "thumbnail.kvstore",
+  "pk": "sorl-thumbnail||image||1df34834df97d3595b4768ec8cbe9303",
+  "fields": {
+    "value": "{\"name\": \"cache/b0/c8/b0c88f8e9b49debb543ed28202315a87.jpg\", \"storage\": \"django.core.files.storage.FileSystemStorage\", \"size\": [30, 30]}"
+  }
+},
+{
+  "model": "thumbnail.kvstore",
+  "pk": "sorl-thumbnail||image||702ac5ac2aa30ea2af9a97578d93c90c",
+  "fields": {
+    "value": "{\"name\": \"cache/3c/6f/3c6f4dcc1cbdbb992f6bf457e2ba3a0e.jpg\", \"storage\": \"django.core.files.storage.FileSystemStorage\", \"size\": [30, 30]}"
+  }
+},
+{
+  "model": "thumbnail.kvstore",
+  "pk": "sorl-thumbnail||image||83cecc02ce5344355ca61fda346418f2",
+  "fields": {
+    "value": "{\"name\": \"avatars/default_ava.png\", \"storage\": \"django.core.files.storage.FileSystemStorage\", \"size\": [469, 512]}"
+  }
+},
+{
+  "model": "thumbnail.kvstore",
+  "pk": "sorl-thumbnail||image||985d4e8c0ba5eacf867d555506d1821a",
+  "fields": {
+    "value": "{\"name\": \"avatars/doc00554720210518145331_001.jpg\", \"storage\": \"django.core.files.storage.FileSystemStorage\", \"size\": [4960, 7014]}"
+  }
+},
+{
+  "model": "thumbnail.kvstore",
+  "pk": "sorl-thumbnail||image||b70bd13921c05c98eb64265372717850",
+  "fields": {
+    "value": "{\"name\": \"avatars/default_ava_gtvnci6.png\", \"storage\": \"django.core.files.storage.FileSystemStorage\", \"size\": [469, 512]}"
+  }
+},
+{
+  "model": "thumbnail.kvstore",
+  "pk": "sorl-thumbnail||image||d9155a225649b6000e77b063fa2e4a4c",
+  "fields": {
+    "value": "{\"name\": \"cache/1e/59/1e59ca8a35e2f0c5b982cc0cf8ed3c23.jpg\", \"storage\": \"django.core.files.storage.FileSystemStorage\", \"size\": [30, 30]}"
+  }
+},
+{
+  "model": "thumbnail.kvstore",
+  "pk": "sorl-thumbnail||thumbnails||100f67d3825b0abbbdab0d65714729c0",
+  "fields": {
+    "value": "[\"d9155a225649b6000e77b063fa2e4a4c\"]"
+  }
+},
+{
+  "model": "thumbnail.kvstore",
+  "pk": "sorl-thumbnail||thumbnails||83cecc02ce5344355ca61fda346418f2",
+  "fields": {
+    "value": "[\"1df34834df97d3595b4768ec8cbe9303\"]"
+  }
+},
+{
+  "model": "thumbnail.kvstore",
+  "pk": "sorl-thumbnail||thumbnails||985d4e8c0ba5eacf867d555506d1821a",
+  "fields": {
+    "value": "[\"192a4e9217d7b2980c3fbd719fdb10dd\"]"
+  }
+},
+{
+  "model": "thumbnail.kvstore",
+  "pk": "sorl-thumbnail||thumbnails||b70bd13921c05c98eb64265372717850",
+  "fields": {
+    "value": "[\"702ac5ac2aa30ea2af9a97578d93c90c\"]"
+  }
+},
+{
+  "model": "main.category",
+  "pk": 1,
+  "fields": {
+    "name": "Автомобили",
+    "slug": "avtomobili"
+  }
+},
+{
+  "model": "main.category",
+  "pk": 2,
+  "fields": {
+    "name": "Вещи",
+    "slug": "veshi"
+  }
+},
+{
+  "model": "main.category",
+  "pk": 3,
+  "fields": {
+    "name": "Услуги",
+    "slug": "uslugi"
+  }
+},
+{
+  "model": "main.tag",
+  "pk": 1,
+  "fields": {
+    "name": "Активное"
+  }
+},
+{
+  "model": "main.tag",
+  "pk": 2,
+  "fields": {
+    "name": "б/у"
+  }
+},
+{
+  "model": "main.tag",
+  "pk": 3,
+  "fields": {
+    "name": "Кемерово"
+  }
+},
+{
+  "model": "main.tag",
+  "pk": 4,
+  "fields": {
+    "name": "Даром"
+  }
+},
+{
+  "model": "main.tag",
+  "pk": 5,
+  "fields": {
+    "name": "меняю"
+  }
+},
+{
+  "model": "main.tag",
+  "pk": 6,
+  "fields": {
+    "name": "От души!"
+  }
+},
+{
+  "model": "main.tag",
+  "pk": 7,
+  "fields": {
+    "name": "Москва"
+  }
+},
+{
+  "model": "main.seller",
+  "pk": 1,
+  "fields": {
+    "user": 1
+  }
+},
+{
+  "model": "main.seller",
+  "pk": 3,
+  "fields": {
+    "user": 4
+  }
+},
+{
+  "model": "main.seller",
+  "pk": 4,
+  "fields": {
+    "user": 13
+  }
+},
+{
+  "model": "main.ticketservice",
+  "pk": 1,
+  "fields": {
+    "name": "Обшивка вагонкой",
+    "text": "Выполню работы по обшивке вагонкой (балкон, баня, стены, потолок)",
+    "seller": 1,
+    "date_created": "2021-06-06T18:53:28.056Z",
+    "date_modified": "2021-06-06T18:53:28.056Z",
+    "price": 100,
+    "is_sold": false,
+    "term_days": 10,
+    "warranty_days": 2,
+    "tag": [
+      1
+    ],
+    "category": [
+      3
+    ]
+  }
+},
+{
+  "model": "main.ticketservice",
+  "pk": 2,
+  "fields": {
+    "name": "Обучение игре на гитаре",
+    "text": "Научу играть на гитаре с нуля",
+    "seller": 1,
+    "date_created": "2021-06-06T18:54:13.768Z",
+    "date_modified": "2021-06-07T20:11:07.747Z",
+    "price": 1000,
+    "is_sold": false,
+    "term_days": 10,
+    "warranty_days": 1,
+    "tag": [
+      1,
+      4,
+      6
+    ],
+    "category": [
+      3
+    ]
+  }
+},
+{
+  "model": "main.ticketservice",
+  "pk": 3,
+  "fields": {
+    "name": "Услуга медвежья",
+    "text": "тест",
+    "seller": 1,
+    "date_created": "2021-06-09T17:42:37.088Z",
+    "date_modified": "2021-06-09T17:42:37.088Z",
+    "price": 11233,
+    "is_sold": false,
+    "term_days": 20,
+    "warranty_days": 123,
+    "tag": [
+      1,
+      3
+    ],
+    "category": []
+  }
+},
+{
+  "model": "main.ticketservice",
+  "pk": 4,
+  "fields": {
+    "name": "123",
+    "text": "123",
+    "seller": 1,
+    "date_created": "2021-06-13T17:22:05.001Z",
+    "date_modified": "2021-06-13T17:22:05.001Z",
+    "price": 1,
+    "is_sold": false,
+    "term_days": 3232,
+    "warranty_days": 32,
+    "tag": [
+      3
+    ],
+    "category": [
+      3
+    ]
+  }
+},
+{
+  "model": "main.ticketservice",
+  "pk": 5,
+  "fields": {
+    "name": "123",
+    "text": "4123",
+    "seller": 1,
+    "date_created": "2021-06-13T17:22:36.531Z",
+    "date_modified": "2021-06-13T17:22:36.531Z",
+    "price": 1,
+    "is_sold": false,
+    "term_days": 123,
+    "warranty_days": 123,
+    "tag": [
+      4
+    ],
+    "category": [
+      3
+    ]
+  }
+},
+{
+  "model": "main.ticketservice",
+  "pk": 6,
+  "fields": {
+    "name": "После кеша",
+    "text": "После кеша тест",
+    "seller": 1,
+    "date_created": "2021-07-10T18:43:10.255Z",
+    "date_modified": "2021-07-10T18:43:10.255Z",
+    "price": 1123,
+    "is_sold": false,
+    "term_days": 12,
+    "warranty_days": 12,
+    "tag": [
+      2
+    ],
+    "category": [
+      3
+    ]
+  }
+},
+{
+  "model": "main.ticketcar",
+  "pk": 1,
+  "fields": {
+    "name": "Продам Рено!",
+    "text": "Продам пыжика. торг.",
+    "seller": 1,
+    "date_created": "2021-05-31T18:49:12.488Z",
+    "date_modified": "2021-06-09T16:33:09.971Z",
+    "price": 1000,
+    "is_sold": false,
+    "model": "307",
+    "year": 2009,
+    "color": "белый",
+    "tag": [
+      1
+    ],
+    "category": [
+      1
+    ]
+  }
+},
+{
+  "model": "main.ticketcar",
+  "pk": 2,
+  "fields": {
+    "name": "Продам машину!",
+    "text": "Продам машинку",
+    "seller": 1,
+    "date_created": "2021-06-06T18:02:36.474Z",
+    "date_modified": "2021-06-06T18:31:28.063Z",
+    "price": 1,
+    "is_sold": false,
+    "model": "3110",
+    "year": 2010,
+    "color": "белый",
+    "tag": [
+      1
+    ],
+    "category": [
+      1
+    ]
+  }
+},
+{
+  "model": "main.ticketcar",
+  "pk": 3,
+  "fields": {
+    "name": "авто 3",
+    "text": "авто 3",
+    "seller": 1,
+    "date_created": "2021-06-07T16:48:29.102Z",
+    "date_modified": "2021-06-07T16:48:29.102Z",
+    "price": 111,
+    "is_sold": false,
+    "model": "Авто 3",
+    "year": 2003,
+    "color": "чёрный",
+    "tag": [
+      1
+    ],
+    "category": [
+      1
+    ]
+  }
+},
+{
+  "model": "main.ticketcar",
+  "pk": 4,
+  "fields": {
+    "name": "авто 4",
+    "text": "авто 4",
+    "seller": 1,
+    "date_created": "2021-06-07T16:49:12.449Z",
+    "date_modified": "2021-06-07T16:49:12.449Z",
+    "price": 444,
+    "is_sold": false,
+    "model": "авто 4",
+    "year": 2004,
+    "color": "баклажан",
+    "tag": [
+      1,
+      2,
+      3
+    ],
+    "category": [
+      1
+    ]
+  }
+},
+{
+  "model": "main.ticketcar",
+  "pk": 5,
+  "fields": {
+    "name": "авто 5",
+    "text": "авто 5",
+    "seller": 1,
+    "date_created": "2021-06-07T16:49:52.663Z",
+    "date_modified": "2021-06-07T16:49:52.663Z",
+    "price": 5555,
+    "is_sold": false,
+    "model": "авто 5",
+    "year": 2005,
+    "color": "баклажан",
+    "tag": [
+      2,
+      4,
+      5
+    ],
+    "category": [
+      1
+    ]
+  }
+},
+{
+  "model": "main.ticketcar",
+  "pk": 6,
+  "fields": {
+    "name": "авто 6",
+    "text": "авто 6",
+    "seller": 1,
+    "date_created": "2021-06-07T16:50:53.023Z",
+    "date_modified": "2021-06-07T16:50:53.023Z",
+    "price": 666,
+    "is_sold": false,
+    "model": "авто 6",
+    "year": 2006,
+    "color": "׸бронза",
+    "tag": [
+      2,
+      4,
+      6
+    ],
+    "category": [
+      1
+    ]
+  }
+},
+{
+  "model": "main.ticketcar",
+  "pk": 7,
+  "fields": {
+    "name": "авто 7",
+    "text": "авто 7",
+    "seller": 1,
+    "date_created": "2021-06-07T16:51:20.691Z",
+    "date_modified": "2021-06-07T16:51:20.691Z",
+    "price": 777,
+    "is_sold": false,
+    "model": "авто 7",
+    "year": 2007,
+    "color": "белый",
+    "tag": [
+      2,
+      5,
+      6
+    ],
+    "category": [
+      1
+    ]
+  }
+},
+{
+  "model": "main.ticketcar",
+  "pk": 8,
+  "fields": {
+    "name": "авто 8",
+    "text": "авто 8",
+    "seller": 1,
+    "date_created": "2021-06-07T16:51:41.332Z",
+    "date_modified": "2021-06-07T16:51:41.332Z",
+    "price": 888,
+    "is_sold": false,
+    "model": "авто 8",
+    "year": 2008,
+    "color": "чёрный",
+    "tag": [
+      1,
+      2,
+      4
+    ],
+    "category": [
+      1
+    ]
+  }
+},
+{
+  "model": "main.ticketcar",
+  "pk": 9,
+  "fields": {
+    "name": "авто 9",
+    "text": "авто 9",
+    "seller": 1,
+    "date_created": "2021-06-07T16:52:11.904Z",
+    "date_modified": "2021-06-07T16:52:11.904Z",
+    "price": 999,
+    "is_sold": false,
+    "model": "авто 9",
+    "year": 2009,
+    "color": "белый",
+    "tag": [
+      4,
+      6,
+      7
+    ],
+    "category": [
+      1
+    ]
+  }
+},
+{
+  "model": "main.ticketcar",
+  "pk": 10,
+  "fields": {
+    "name": "авто 10",
+    "text": "авто 10",
+    "seller": 1,
+    "date_created": "2021-06-07T16:52:42.487Z",
+    "date_modified": "2021-06-07T16:52:42.487Z",
+    "price": 10000,
+    "is_sold": false,
+    "model": "авто 10",
+    "year": 2010,
+    "color": "красный",
+    "tag": [
+      1,
+      2,
+      3
+    ],
+    "category": [
+      1
+    ]
+  }
+},
+{
+  "model": "main.ticketcar",
+  "pk": 11,
+  "fields": {
+    "name": "авто 11",
+    "text": "авто 11",
+    "seller": 1,
+    "date_created": "2021-06-07T16:53:13.079Z",
+    "date_modified": "2021-06-07T16:53:13.079Z",
+    "price": 11000,
+    "is_sold": false,
+    "model": "авто 11",
+    "year": 2011,
+    "color": "синий",
+    "tag": [
+      2
+    ],
+    "category": [
+      1
+    ]
+  }
+},
+{
+  "model": "main.ticketcar",
+  "pk": 12,
+  "fields": {
+    "name": "авто 12",
+    "text": "авто 12",
+    "seller": 1,
+    "date_created": "2021-06-07T16:53:37.445Z",
+    "date_modified": "2021-06-07T19:58:30.770Z",
+    "price": 12000,
+    "is_sold": false,
+    "model": "авто 12",
+    "year": 2012,
+    "color": "синий",
+    "tag": [
+      7
+    ],
+    "category": [
+      1
+    ]
+  }
+},
+{
+  "model": "main.ticketcar",
+  "pk": 13,
+  "fields": {
+    "name": "авто 13",
+    "text": "авто 13",
+    "seller": 1,
+    "date_created": "2021-06-07T16:53:37.445Z",
+    "date_modified": "2021-06-07T16:53:37.445Z",
+    "price": 12000,
+    "is_sold": false,
+    "model": "авто 12",
+    "year": 2013,
+    "color": "синий",
+    "tag": [
+      2
+    ],
+    "category": [
+      1
+    ]
+  }
+},
+{
+  "model": "main.ticketcar",
+  "pk": 14,
+  "fields": {
+    "name": "авто 14",
+    "text": "авто 14",
+    "seller": 1,
+    "date_created": "2021-06-07T16:53:37.445Z",
+    "date_modified": "2021-06-07T16:53:37.445Z",
+    "price": 12000,
+    "is_sold": false,
+    "model": "авто 14",
+    "year": 2012,
+    "color": "синий",
+    "tag": [
+      2
+    ],
+    "category": [
+      1
+    ]
+  }
+},
+{
+  "model": "main.ticketcar",
+  "pk": 15,
+  "fields": {
+    "name": "авто 15",
+    "text": "авто 15",
+    "seller": 1,
+    "date_created": "2021-06-07T16:53:37.445Z",
+    "date_modified": "2021-06-07T16:53:37.445Z",
+    "price": 12000,
+    "is_sold": false,
+    "model": "авто 15",
+    "year": 2015,
+    "color": "синий",
+    "tag": [
+      2
+    ],
+    "category": [
+      1
+    ]
+  }
+},
+{
+  "model": "main.ticketcar",
+  "pk": 16,
+  "fields": {
+    "name": "авто 16",
+    "text": "авто 16",
+    "seller": 1,
+    "date_created": "2021-06-07T16:53:37.445Z",
+    "date_modified": "2021-06-07T16:53:37.445Z",
+    "price": 12000,
+    "is_sold": false,
+    "model": "авто 16",
+    "year": 2016,
+    "color": "синий",
+    "tag": [
+      2
+    ],
+    "category": [
+      1
+    ]
+  }
+},
+{
+  "model": "main.ticketcar",
+  "pk": 17,
+  "fields": {
+    "name": "авто 17",
+    "text": "авто 17",
+    "seller": 1,
+    "date_created": "2021-06-07T16:53:37.445Z",
+    "date_modified": "2021-06-07T16:53:37.445Z",
+    "price": 12000,
+    "is_sold": false,
+    "model": "авто 17",
+    "year": 2017,
+    "color": "синий",
+    "tag": [
+      2
+    ],
+    "category": [
+      1
+    ]
+  }
+},
+{
+  "model": "main.ticketcar",
+  "pk": 18,
+  "fields": {
+    "name": "авто 18",
+    "text": "авто 18",
+    "seller": 1,
+    "date_created": "2021-06-07T16:53:37.445Z",
+    "date_modified": "2021-06-07T16:53:37.445Z",
+    "price": 12000,
+    "is_sold": false,
+    "model": "авто 18",
+    "year": 2018,
+    "color": "синий",
+    "tag": [
+      2
+    ],
+    "category": [
+      1
+    ]
+  }
+},
+{
+  "model": "main.ticketcar",
+  "pk": 19,
+  "fields": {
+    "name": "авто 19",
+    "text": "авто 19",
+    "seller": 1,
+    "date_created": "2021-06-07T16:53:37.445Z",
+    "date_modified": "2021-06-07T16:53:37.445Z",
+    "price": 12000,
+    "is_sold": false,
+    "model": "авто 19",
+    "year": 2012,
+    "color": "синий",
+    "tag": [
+      2
+    ],
+    "category": [
+      1
+    ]
+  }
+},
+{
+  "model": "main.ticketcar",
+  "pk": 20,
+  "fields": {
+    "name": "авто 20",
+    "text": "авто 20",
+    "seller": 1,
+    "date_created": "2021-06-07T16:53:37.445Z",
+    "date_modified": "2021-06-07T16:53:37.445Z",
+    "price": 12000,
+    "is_sold": false,
+    "model": "авто 20",
+    "year": 2020,
+    "color": "синий",
+    "tag": [
+      2
+    ],
+    "category": [
+      1
+    ]
+  }
+},
+{
+  "model": "main.ticketcar",
+  "pk": 21,
+  "fields": {
+    "name": "авто 21",
+    "text": "авто 21",
+    "seller": 1,
+    "date_created": "2021-06-07T16:53:37.445Z",
+    "date_modified": "2021-06-07T16:53:37.445Z",
+    "price": 12000,
+    "is_sold": false,
+    "model": "авто 21",
+    "year": 2021,
+    "color": "синий",
+    "tag": [
+      2
+    ],
+    "category": [
+      1
+    ]
+  }
+},
+{
+  "model": "main.ticketcar",
+  "pk": 22,
+  "fields": {
+    "name": "авто 22",
+    "text": "авто 22",
+    "seller": 1,
+    "date_created": "2021-06-07T16:53:37.445Z",
+    "date_modified": "2021-06-07T16:53:37.445Z",
+    "price": 12000,
+    "is_sold": false,
+    "model": "авто 22",
+    "year": 2022,
+    "color": "синий",
+    "tag": [
+      2
+    ],
+    "category": [
+      1
+    ]
+  }
+},
+{
+  "model": "main.ticketcar",
+  "pk": 23,
+  "fields": {
+    "name": "авто 23",
+    "text": "авто 23",
+    "seller": 1,
+    "date_created": "2021-06-07T16:53:37.445Z",
+    "date_modified": "2021-06-07T16:53:37.445Z",
+    "price": 12000,
+    "is_sold": false,
+    "model": "авто 23",
+    "year": 2023,
+    "color": "синий",
+    "tag": [
+      2
+    ],
+    "category": [
+      1
+    ]
+  }
+},
+{
+  "model": "main.ticketcar",
+  "pk": 24,
+  "fields": {
+    "name": "авто 24",
+    "text": "авто 24",
+    "seller": 1,
+    "date_created": "2021-06-07T16:53:37.445Z",
+    "date_modified": "2021-06-07T16:53:37.445Z",
+    "price": 12000,
+    "is_sold": false,
+    "model": "авто 24",
+    "year": 2020,
+    "color": "синий",
+    "tag": [
+      2
+    ],
+    "category": [
+      1
+    ]
+  }
+},
+{
+  "model": "main.ticketcar",
+  "pk": 25,
+  "fields": {
+    "name": "авто 25",
+    "text": "авто 25",
+    "seller": 1,
+    "date_created": "2021-06-07T16:53:37.445Z",
+    "date_modified": "2021-06-07T16:53:37.445Z",
+    "price": 12000,
+    "is_sold": false,
+    "model": "авто 25",
+    "year": 2012,
+    "color": "синий",
+    "tag": [
+      2
+    ],
+    "category": [
+      1
+    ]
+  }
+},
+{
+  "model": "main.ticketcar",
+  "pk": 26,
+  "fields": {
+    "name": "авто 26",
+    "text": "авто 26",
+    "seller": 1,
+    "date_created": "2021-06-07T16:53:37.445Z",
+    "date_modified": "2021-06-07T16:53:37.445Z",
+    "price": 12000,
+    "is_sold": false,
+    "model": "авто 26",
+    "year": 2012,
+    "color": "синий",
+    "tag": [
+      2
+    ],
+    "category": [
+      1
+    ]
+  }
+},
+{
+  "model": "main.ticketcar",
+  "pk": 27,
+  "fields": {
+    "name": "авто 27",
+    "text": "авто 27",
+    "seller": 1,
+    "date_created": "2021-06-07T16:53:37.445Z",
+    "date_modified": "2021-06-07T16:53:37.445Z",
+    "price": 12000,
+    "is_sold": false,
+    "model": "авто 27",
+    "year": 2012,
+    "color": "синий",
+    "tag": [
+      2
+    ],
+    "category": [
+      1
+    ]
+  }
+},
+{
+  "model": "main.ticketcar",
+  "pk": 28,
+  "fields": {
+    "name": "Создал форму",
+    "text": "через сайт",
+    "seller": 1,
+    "date_created": "2021-06-09T17:32:35.269Z",
+    "date_modified": "2021-06-09T17:32:35.269Z",
+    "price": 98765,
+    "is_sold": false,
+    "model": "тестовая",
+    "year": 2021,
+    "color": "как небо",
+    "tag": [
+      4,
+      5,
+      6
+    ],
+    "category": []
+  }
+},
+{
+  "model": "main.ticketcar",
+  "pk": 29,
+  "fields": {
+    "name": "Ещё одно",
+    "text": "тест",
+    "seller": 1,
+    "date_created": "2021-06-09T17:39:20.284Z",
+    "date_modified": "2021-06-09T17:39:20.285Z",
+    "price": 11234,
+    "is_sold": false,
+    "model": "2000",
+    "year": 2021,
+    "color": "нет",
+    "tag": [
+      2,
+      3
+    ],
+    "category": []
+  }
+},
+{
+  "model": "main.ticketcar",
+  "pk": 30,
+  "fields": {
+    "name": "инлайн",
+    "text": "инлайн",
+    "seller": 3,
+    "date_created": "2021-06-10T19:07:17.275Z",
+    "date_modified": "2021-06-10T19:07:17.275Z",
+    "price": 113123,
+    "is_sold": false,
+    "model": "12313",
+    "year": 123123,
+    "color": "12331",
+    "tag": [
+      2,
+      4
+    ],
+    "category": []
+  }
+},
+{
+  "model": "main.ticketcar",
+  "pk": 31,
+  "fields": {
+    "name": "инлайн",
+    "text": "инлайн",
+    "seller": 3,
+    "date_created": "2021-06-10T19:09:17.336Z",
+    "date_modified": "2021-06-10T19:09:17.336Z",
+    "price": 113123,
+    "is_sold": false,
+    "model": "12313",
+    "year": 123123,
+    "color": "12331",
+    "tag": [
+      2,
+      4
+    ],
+    "category": []
+  }
+},
+{
+  "model": "main.ticketcar",
+  "pk": 32,
+  "fields": {
+    "name": "инлайн",
+    "text": "инлайн",
+    "seller": 3,
+    "date_created": "2021-06-10T19:10:25.766Z",
+    "date_modified": "2021-06-10T19:10:25.766Z",
+    "price": 113123,
+    "is_sold": false,
+    "model": "12313",
+    "year": 123123,
+    "color": "12331",
+    "tag": [
+      2,
+      4
+    ],
+    "category": []
+  }
+},
+{
+  "model": "main.ticketcar",
+  "pk": 33,
+  "fields": {
+    "name": "инлайн",
+    "text": "инлайн",
+    "seller": 3,
+    "date_created": "2021-06-10T19:10:50.908Z",
+    "date_modified": "2021-06-10T19:33:39.132Z",
+    "price": 113123,
+    "is_sold": false,
+    "model": "12313",
+    "year": 123123,
+    "color": "12331",
+    "tag": [
+      2,
+      4
+    ],
+    "category": [
+      1
+    ]
+  }
+},
+{
+  "model": "main.ticketcar",
+  "pk": 34,
+  "fields": {
+    "name": "инлайн2",
+    "text": "инлайн2",
+    "seller": 3,
+    "date_created": "2021-06-10T19:19:09.837Z",
+    "date_modified": "2021-06-10T19:29:30.151Z",
+    "price": 112,
+    "is_sold": false,
+    "model": "123",
+    "year": 123,
+    "color": "123",
+    "tag": [
+      2,
+      3
+    ],
+    "category": [
+      1
+    ]
+  }
+},
+{
+  "model": "main.ticketcar",
+  "pk": 35,
+  "fields": {
+    "name": "инлайн33",
+    "text": "инлайн3",
+    "seller": 3,
+    "date_created": "2021-06-10T19:53:29.783Z",
+    "date_modified": "2021-06-10T19:53:30.010Z",
+    "price": 1,
+    "is_sold": false,
+    "model": "12",
+    "year": 12,
+    "color": "12",
+    "tag": [
+      3
+    ],
+    "category": []
+  }
+},
+{
+  "model": "main.ticketcar",
+  "pk": 36,
+  "fields": {
+    "name": "инлайн4",
+    "text": "инлайн4",
+    "seller": 3,
+    "date_created": "2021-06-10T19:57:07.582Z",
+    "date_modified": "2021-06-10T19:57:07.814Z",
+    "price": 4,
+    "is_sold": false,
+    "model": "инлайн4",
+    "year": 4,
+    "color": "инлайн4",
+    "tag": [
+      2
+    ],
+    "category": []
+  }
+},
+{
+  "model": "main.ticketcar",
+  "pk": 37,
+  "fields": {
+    "name": "инлайн5",
+    "text": "инлайн4",
+    "seller": 3,
+    "date_created": "2021-06-10T20:00:54.970Z",
+    "date_modified": "2021-06-10T20:00:55.212Z",
+    "price": 4,
+    "is_sold": false,
+    "model": "инлайн4",
+    "year": 4,
+    "color": "инлайн4",
+    "tag": [
+      2
+    ],
+    "category": []
+  }
+},
+{
+  "model": "main.ticketcar",
+  "pk": 38,
+  "fields": {
+    "name": "инлайн6",
+    "text": "инлайн4",
+    "seller": 3,
+    "date_created": "2021-06-10T20:02:12.364Z",
+    "date_modified": "2021-06-10T20:02:12.364Z",
+    "price": 4,
+    "is_sold": false,
+    "model": "инлайн4",
+    "year": 4,
+    "color": "инлайн4",
+    "tag": [
+      2
+    ],
+    "category": []
+  }
+},
+{
+  "model": "main.ticketcar",
+  "pk": 39,
+  "fields": {
+    "name": "инлайн6",
+    "text": "инлайн4",
+    "seller": 3,
+    "date_created": "2021-06-10T20:04:26.031Z",
+    "date_modified": "2021-06-10T20:04:26.031Z",
+    "price": 4,
+    "is_sold": false,
+    "model": "инлайн4",
+    "year": 4,
+    "color": "инлайн4",
+    "tag": [
+      2
+    ],
+    "category": []
+  }
+},
+{
+  "model": "main.ticketcar",
+  "pk": 40,
+  "fields": {
+    "name": "инлайн6",
+    "text": "инлайн4",
+    "seller": 3,
+    "date_created": "2021-06-10T20:04:49.326Z",
+    "date_modified": "2021-06-10T20:04:49.637Z",
+    "price": 4,
+    "is_sold": false,
+    "model": "инлайн4",
+    "year": 4,
+    "color": "инлайн4",
+    "tag": [
+      2
+    ],
+    "category": []
+  }
+},
+{
+  "model": "main.ticketcar",
+  "pk": 41,
+  "fields": {
+    "name": "инлайн7",
+    "text": "инлайн7",
+    "seller": 3,
+    "date_created": "2021-06-10T20:06:28.280Z",
+    "date_modified": "2021-06-10T20:06:28.561Z",
+    "price": 17,
+    "is_sold": false,
+    "model": "инлайн7",
+    "year": 7,
+    "color": "инлайн7",
+    "tag": [
+      2
+    ],
+    "category": []
+  }
+},
+{
+  "model": "main.ticketcar",
+  "pk": 42,
+  "fields": {
+    "name": "инлайн7",
+    "text": "инлайн7",
+    "seller": 3,
+    "date_created": "2021-06-10T20:22:43.294Z",
+    "date_modified": "2021-06-10T20:22:43.678Z",
+    "price": 17,
+    "is_sold": false,
+    "model": "инлайн7",
+    "year": 7,
+    "color": "инлайн7",
+    "tag": [
+      2
+    ],
+    "category": []
+  }
+},
+{
+  "model": "main.ticketcar",
+  "pk": 43,
+  "fields": {
+    "name": "123",
+    "text": "13",
+    "seller": 3,
+    "date_created": "2021-06-10T20:26:02.354Z",
+    "date_modified": "2021-06-10T20:26:02.771Z",
+    "price": 1123,
+    "is_sold": false,
+    "model": "13",
+    "year": 123,
+    "color": "123",
+    "tag": [
+      1
+    ],
+    "category": []
+  }
+},
+{
+  "model": "main.ticketcar",
+  "pk": 44,
+  "fields": {
+    "name": "123",
+    "text": "13",
+    "seller": 3,
+    "date_created": "2021-06-10T20:41:31.993Z",
+    "date_modified": "2021-06-10T20:41:32.445Z",
+    "price": 1123,
+    "is_sold": false,
+    "model": "13",
+    "year": 123,
+    "color": "123",
+    "tag": [
+      1
+    ],
+    "category": []
+  }
+},
+{
+  "model": "main.ticketcar",
+  "pk": 45,
+  "fields": {
+    "name": "123",
+    "text": "13",
+    "seller": 3,
+    "date_created": "2021-06-11T12:15:50.404Z",
+    "date_modified": "2021-06-11T12:15:50.702Z",
+    "price": 1123,
+    "is_sold": false,
+    "model": "13",
+    "year": 123,
+    "color": "123",
+    "tag": [
+      1
+    ],
+    "category": []
+  }
+},
+{
+  "model": "main.ticketcar",
+  "pk": 46,
+  "fields": {
+    "name": "123",
+    "text": "13",
+    "seller": 3,
+    "date_created": "2021-06-11T12:17:15.786Z",
+    "date_modified": "2021-06-11T12:17:16.074Z",
+    "price": 1123,
+    "is_sold": false,
+    "model": "13",
+    "year": 123,
+    "color": "123",
+    "tag": [
+      1
+    ],
+    "category": []
+  }
+},
+{
+  "model": "main.ticketcar",
+  "pk": 47,
+  "fields": {
+    "name": "123",
+    "text": "123",
+    "seller": 3,
+    "date_created": "2021-06-11T12:19:39.594Z",
+    "date_modified": "2021-06-11T12:19:40.034Z",
+    "price": 1123,
+    "is_sold": false,
+    "model": "123",
+    "year": 13,
+    "color": "123",
+    "tag": [
+      2
+    ],
+    "category": []
+  }
+},
+{
+  "model": "main.ticketcar",
+  "pk": 48,
+  "fields": {
+    "name": "123",
+    "text": "123",
+    "seller": 3,
+    "date_created": "2021-06-11T12:20:15.829Z",
+    "date_modified": "2021-06-11T12:20:16.137Z",
+    "price": 1123,
+    "is_sold": false,
+    "model": "123",
+    "year": 13,
+    "color": "123",
+    "tag": [
+      2
+    ],
+    "category": []
+  }
+},
+{
+  "model": "main.ticketcar",
+  "pk": 49,
+  "fields": {
+    "name": "321",
+    "text": "321",
+    "seller": 3,
+    "date_created": "2021-06-11T12:23:25.846Z",
+    "date_modified": "2021-06-11T12:23:25.846Z",
+    "price": 1321,
+    "is_sold": false,
+    "model": "213",
+    "year": 213,
+    "color": "123",
+    "tag": [
+      3
+    ],
+    "category": []
+  }
+},
+{
+  "model": "main.ticketcar",
+  "pk": 50,
+  "fields": {
+    "name": "321",
+    "text": "321",
+    "seller": 3,
+    "date_created": "2021-06-11T12:23:52.649Z",
+    "date_modified": "2021-06-11T12:23:53.121Z",
+    "price": 1321,
+    "is_sold": false,
+    "model": "213",
+    "year": 213,
+    "color": "123",
+    "tag": [
+      3
+    ],
+    "category": []
+  }
+},
+{
+  "model": "main.ticketcar",
+  "pk": 51,
+  "fields": {
+    "name": "321",
+    "text": "321",
+    "seller": 3,
+    "date_created": "2021-06-11T12:27:16.706Z",
+    "date_modified": "2021-06-11T12:27:17.218Z",
+    "price": 1321,
+    "is_sold": false,
+    "model": "213",
+    "year": 213,
+    "color": "123",
+    "tag": [
+      3
+    ],
+    "category": []
+  }
+},
+{
+  "model": "main.ticketcar",
+  "pk": 52,
+  "fields": {
+    "name": "321",
+    "text": "321",
+    "seller": 3,
+    "date_created": "2021-06-11T12:29:38.967Z",
+    "date_modified": "2021-06-11T12:29:39.518Z",
+    "price": 1321,
+    "is_sold": false,
+    "model": "213",
+    "year": 213,
+    "color": "123",
+    "tag": [
+      3
+    ],
+    "category": []
+  }
+},
+{
+  "model": "main.ticketcar",
+  "pk": 53,
+  "fields": {
+    "name": "444",
+    "text": "444",
+    "seller": 3,
+    "date_created": "2021-06-11T12:57:42.345Z",
+    "date_modified": "2021-06-11T12:57:42.346Z",
+    "price": 14,
+    "is_sold": false,
+    "model": "4",
+    "year": 4,
+    "color": "4",
+    "tag": [
+      2
+    ],
+    "category": []
+  }
+},
+{
+  "model": "main.ticketcar",
+  "pk": 54,
+  "fields": {
+    "name": "444",
+    "text": "444",
+    "seller": 3,
+    "date_created": "2021-06-11T13:00:05.676Z",
+    "date_modified": "2021-06-11T13:00:05.676Z",
+    "price": 14,
+    "is_sold": false,
+    "model": "4",
+    "year": 4,
+    "color": "4",
+    "tag": [
+      2
+    ],
+    "category": []
+  }
+},
+{
+  "model": "main.ticketcar",
+  "pk": 55,
+  "fields": {
+    "name": "444",
+    "text": "444",
+    "seller": 3,
+    "date_created": "2021-06-11T13:01:11.544Z",
+    "date_modified": "2021-06-11T13:01:11.544Z",
+    "price": 14,
+    "is_sold": false,
+    "model": "4",
+    "year": 4,
+    "color": "4",
+    "tag": [
+      2
+    ],
+    "category": []
+  }
+},
+{
+  "model": "main.ticketcar",
+  "pk": 56,
+  "fields": {
+    "name": "444",
+    "text": "444",
+    "seller": 3,
+    "date_created": "2021-06-11T13:02:10.131Z",
+    "date_modified": "2021-06-11T13:02:10.574Z",
+    "price": 14,
+    "is_sold": false,
+    "model": "4",
+    "year": 4,
+    "color": "4",
+    "tag": [
+      2
+    ],
+    "category": []
+  }
+},
+{
+  "model": "main.ticketcar",
+  "pk": 57,
+  "fields": {
+    "name": "555",
+    "text": "444",
+    "seller": 3,
+    "date_created": "2021-06-11T13:11:35.293Z",
+    "date_modified": "2021-06-11T13:11:36.010Z",
+    "price": 14,
+    "is_sold": false,
+    "model": "4",
+    "year": 4,
+    "color": "4",
+    "tag": [
+      2
+    ],
+    "category": []
+  }
+},
+{
+  "model": "main.ticketcar",
+  "pk": 58,
+  "fields": {
+    "name": "555",
+    "text": "444",
+    "seller": 3,
+    "date_created": "2021-06-11T13:12:29.817Z",
+    "date_modified": "2021-06-11T13:12:30.214Z",
+    "price": 14,
+    "is_sold": false,
+    "model": "4",
+    "year": 4,
+    "color": "4",
+    "tag": [
+      2
+    ],
+    "category": []
+  }
+},
+{
+  "model": "main.ticketcar",
+  "pk": 59,
+  "fields": {
+    "name": "555",
+    "text": "444",
+    "seller": 3,
+    "date_created": "2021-06-11T13:14:45.090Z",
+    "date_modified": "2021-06-11T13:14:45.335Z",
+    "price": 14,
+    "is_sold": false,
+    "model": "4",
+    "year": 4,
+    "color": "4",
+    "tag": [
+      2
+    ],
+    "category": []
+  }
+},
+{
+  "model": "main.ticketcar",
+  "pk": 60,
+  "fields": {
+    "name": "555",
+    "text": "new",
+    "seller": 3,
+    "date_created": "2021-06-11T13:34:37.458Z",
+    "date_modified": "2021-06-12T09:10:12.430Z",
+    "price": 500,
+    "is_sold": false,
+    "model": "new",
+    "year": 4,
+    "color": "4",
+    "tag": [
+      3,
+      4
+    ],
+    "category": [
+      1
+    ]
+  }
+},
+{
+  "model": "main.ticketitem",
+  "pk": 1,
+  "fields": {
+    "name": "Отдам стельки",
+    "text": "Отдам бесплатно ортопедические стельки",
+    "seller": 1,
+    "date_created": "2021-06-06T18:51:48.062Z",
+    "date_modified": "2021-07-10T18:40:30.574Z",
+    "price": 500,
+    "is_sold": false,
+    "state": "used",
+    "qty": 2,
+    "tag": [
+      3,
+      4
+    ],
+    "category": [
+      2
+    ]
+  }
+},
+{
+  "model": "main.ticketitem",
+  "pk": 2,
+  "fields": {
+    "name": "Куплю телевизор",
+    "text": "Нужен ТВ с DVBT2",
+    "seller": 1,
+    "date_created": "2021-06-06T18:52:18.013Z",
+    "date_modified": "2021-07-14T20:45:55.240Z",
+    "price": 5000,
+    "is_sold": true,
+    "state": "used",
+    "qty": 1,
+    "tag": [
+      1
+    ],
+    "category": [
+      2
+    ]
+  }
+},
+{
+  "model": "main.ticketitem",
+  "pk": 3,
+  "fields": {
+    "name": "отдам кота",
+    "text": "тестик",
+    "seller": 1,
+    "date_created": "2021-06-09T17:45:15.370Z",
+    "date_modified": "2021-06-09T17:45:15.370Z",
+    "price": 1321,
+    "is_sold": false,
+    "state": "new",
+    "qty": 123,
+    "tag": [
+      1,
+      3
+    ],
+    "category": []
+  }
+},
+{
+  "model": "main.ticketitem",
+  "pk": 4,
+  "fields": {
+    "name": "Тест рассылки",
+    "text": "Тест тест",
+    "seller": 3,
+    "date_created": "2021-06-17T14:26:05.907Z",
+    "date_modified": "2021-06-17T14:26:05.907Z",
+    "price": 1000,
+    "is_sold": false,
+    "state": "new",
+    "qty": 12,
+    "tag": [
+      4,
+      6
+    ],
+    "category": [
+      2
+    ]
+  }
+},
+{
+  "model": "main.ticketitem",
+  "pk": 5,
+  "fields": {
+    "name": "Тест celery",
+    "text": "Продам коня",
+    "seller": 3,
+    "date_created": "2021-07-04T15:53:08.233Z",
+    "date_modified": "2021-07-04T15:53:08.233Z",
+    "price": 111,
+    "is_sold": false,
+    "state": "new",
+    "qty": 10,
+    "tag": [
+      2
+    ],
+    "category": []
+  }
+},
+{
+  "model": "main.ticketitem",
+  "pk": 6,
+  "fields": {
+    "name": "Тест celery",
+    "text": "Продам коня",
+    "seller": 3,
+    "date_created": "2021-07-04T15:59:57.746Z",
+    "date_modified": "2021-07-04T15:59:57.746Z",
+    "price": 111,
+    "is_sold": false,
+    "state": "new",
+    "qty": 10,
+    "tag": [
+      2
+    ],
+    "category": []
+  }
+},
+{
+  "model": "main.ticketitem",
+  "pk": 7,
+  "fields": {
+    "name": "test",
+    "text": "test",
+    "seller": 3,
+    "date_created": "2021-07-04T16:00:34.261Z",
+    "date_modified": "2021-07-04T16:00:34.261Z",
+    "price": 1,
+    "is_sold": false,
+    "state": "new",
+    "qty": 123,
+    "tag": [
+      3
+    ],
+    "category": []
+  }
+},
+{
+  "model": "main.ticketitem",
+  "pk": 8,
+  "fields": {
+    "name": "test",
+    "text": "test",
+    "seller": 3,
+    "date_created": "2021-07-04T16:01:37.889Z",
+    "date_modified": "2021-07-04T16:01:37.889Z",
+    "price": 1,
+    "is_sold": false,
+    "state": "new",
+    "qty": 123,
+    "tag": [
+      3
+    ],
+    "category": []
+  }
+},
+{
+  "model": "main.ticketitem",
+  "pk": 9,
+  "fields": {
+    "name": "test",
+    "text": "test",
+    "seller": 3,
+    "date_created": "2021-07-04T16:04:36.737Z",
+    "date_modified": "2021-07-04T16:04:36.737Z",
+    "price": 1,
+    "is_sold": false,
+    "state": "new",
+    "qty": 123,
+    "tag": [
+      3
+    ],
+    "category": []
+  }
+},
+{
+  "model": "main.picture",
+  "pk": 1,
+  "fields": {
+    "car": 33,
+    "image": "IMG_0926_F8Diq2R.JPG"
+  }
+},
+{
+  "model": "main.picture",
+  "pk": 2,
+  "fields": {
+    "car": 33,
+    "image": "20210525_205426.jpg"
+  }
+},
+{
+  "model": "main.picture",
+  "pk": 6,
+  "fields": {
+    "car": 60,
+    "image": "Уплотнитель_радиатора_водяного_охлаждения51757145287__qyD7RCS.JPG"
+  }
+},
+{
+  "model": "main.picture",
+  "pk": 7,
+  "fields": {
+    "car": 60,
+    "image": "Уплотнитель_радиатора_водяного_охлаждения51757145287__NEvVEjD.JPG"
+  }
+},
+{
+  "model": "main.picture",
+  "pk": 8,
+  "fields": {
+    "car": 60,
+    "image": "64319313519__салонный_фильтр_bJFvWKY.jpg"
+  }
+},
+{
+  "model": "main.subscriber",
+  "pk": 2,
+  "fields": {
+    "profile": 14,
+    "is_active": true,
+    "from_date": "2021-06-17T14:09:49.971Z"
+  }
+},
+{
+  "model": "main.subscriber",
+  "pk": 3,
+  "fields": {
+    "profile": 13,
+    "is_active": true,
+    "from_date": "2021-06-17T14:09:53.976Z"
+  }
+},
+{
+  "model": "main.subscriber",
+  "pk": 4,
+  "fields": {
+    "profile": 12,
+    "is_active": true,
+    "from_date": "2021-06-17T14:10:23.419Z"
+  }
+},
+{
+  "model": "main.subscriber",
+  "pk": 5,
+  "fields": {
+    "profile": 4,
+    "is_active": true,
+    "from_date": "2021-06-17T14:10:30.881Z"
+  }
+},
+{
+  "model": "main.subscriber",
+  "pk": 6,
+  "fields": {
+    "profile": 1,
+    "is_active": true,
+    "from_date": "2021-06-17T14:10:35.888Z"
+  }
+},
+{
+  "model": "main.smslog",
+  "pk": 1,
+  "fields": {
+    "code": "5026",
+    "response": "123",
+    "phone_number": "+79199444349"
+  }
+},
+{
+  "model": "main.smslog",
+  "pk": 2,
+  "fields": {
+    "code": "4757",
+    "response": "123",
+    "phone_number": "+79199444349"
+  }
+},
+{
+  "model": "main.smslog",
+  "pk": 3,
+  "fields": {
+    "code": "7427",
+    "response": "SM1d7091bb0c2742cdb3507bb7afe064dc",
+    "phone_number": "+79199444349"
+  }
+},
+{
+  "model": "account.emailaddress",
+  "pk": 1,
+  "fields": {
+    "user": 6,
+    "email": "samec.bonobo@gmail.com",
+    "verified": true,
+    "primary": true
+  }
+},
+{
+  "model": "account.emailaddress",
+  "pk": 2,
+  "fields": {
+    "user": 4,
+    "email": "profile2@mail.ru",
+    "verified": false,
+    "primary": false
+  }
+},
+{
+  "model": "django_celery_beat.intervalschedule",
+  "pk": 1,
+  "fields": {
+    "every": 10,
+    "period": "seconds"
+  }
+},
+{
+  "model": "django_celery_beat.crontabschedule",
+  "pk": 1,
+  "fields": {
+    "minute": "0",
+    "hour": "4",
+    "day_of_week": "*",
+    "day_of_month": "*",
+    "month_of_year": "*",
+    "timezone": "UTC"
+  }
+},
+{
+  "model": "django_celery_beat.crontabschedule",
+  "pk": 2,
+  "fields": {
+    "minute": "0",
+    "hour": "12",
+    "day_of_week": "1",
+    "day_of_month": "*",
+    "month_of_year": "*",
+    "timezone": "UTC"
+  }
+},
+{
+  "model": "django_celery_beat.periodictasks",
+  "pk": 1,
+  "fields": {
+    "last_update": "2021-07-15T20:04:20.156Z"
+  }
+},
+{
+  "model": "django_celery_beat.periodictask",
+  "pk": 1,
+  "fields": {
+    "name": "celery.backend_cleanup",
+    "task": "celery.backend_cleanup",
+    "interval": null,
+    "crontab": 1,
+    "solar": null,
+    "clocked": null,
+    "args": "[]",
+    "kwargs": "{}",
+    "queue": null,
+    "exchange": null,
+    "routing_key": null,
+    "headers": "{}",
+    "priority": null,
+    "expires": null,
+    "expire_seconds": 43200,
+    "one_off": false,
+    "start_time": null,
+    "enabled": true,
+    "last_run_at": "2021-07-15T15:31:31.599Z",
+    "total_run_count": 8,
+    "date_changed": "2021-07-15T20:04:19.444Z",
+    "description": ""
+  }
+},
+{
+  "model": "django_celery_beat.periodictask",
+  "pk": 2,
+  "fields": {
+    "name": "add_every_30_seconds",
+    "task": "main.tasks.add",
+    "interval": 1,
+    "crontab": null,
+    "solar": null,
+    "clocked": null,
+    "args": "[16, 10]",
+    "kwargs": "{}",
+    "queue": null,
+    "exchange": null,
+    "routing_key": null,
+    "headers": "{}",
+    "priority": null,
+    "expires": null,
+    "expire_seconds": null,
+    "one_off": false,
+    "start_time": null,
+    "enabled": false,
+    "last_run_at": null,
+    "total_run_count": 1468,
+    "date_changed": "2021-07-05T17:01:47.408Z",
+    "description": ""
+  }
+},
+{
+  "model": "django_celery_beat.periodictask",
+  "pk": 3,
+  "fields": {
+    "name": "random_name",
+    "task": "main.tasks.add",
+    "interval": 1,
+    "crontab": null,
+    "solar": null,
+    "clocked": null,
+    "args": "[15, 10]",
+    "kwargs": "{}",
+    "queue": null,
+    "exchange": null,
+    "routing_key": null,
+    "headers": "{}",
+    "priority": null,
+    "expires": null,
+    "expire_seconds": null,
+    "one_off": false,
+    "start_time": null,
+    "enabled": false,
+    "last_run_at": null,
+    "total_run_count": 835,
+    "date_changed": "2021-07-15T20:04:19.820Z",
+    "description": ""
+  }
+},
+{
+  "model": "django_celery_beat.periodictask",
+  "pk": 4,
+  "fields": {
+    "name": "send_weekly_newsletter",
+    "task": "main.tasks.weekly_send",
+    "interval": null,
+    "crontab": 2,
+    "solar": null,
+    "clocked": null,
+    "args": "[]",
+    "kwargs": "{}",
+    "queue": null,
+    "exchange": null,
+    "routing_key": null,
+    "headers": "{}",
+    "priority": null,
+    "expires": null,
+    "expire_seconds": null,
+    "one_off": false,
+    "start_time": null,
+    "enabled": true,
+    "last_run_at": null,
+    "total_run_count": 0,
+    "date_changed": "2021-07-15T20:04:20.412Z",
+    "description": ""
+  }
+}
+]
