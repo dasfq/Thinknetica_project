@@ -224,7 +224,6 @@ class ItemUpdateView(UpdateView):
 
 
 class ProfileUpdateView(LoginRequiredMixin, UpdateView):
-
     model = Profile
     form_class = ProfileForm
     template_name_suffix = '_update_form'
